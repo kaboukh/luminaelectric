@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Gratis Offerte Elektricien Brussel & Brabant | Contact Lumina Electric</title>
+    <meta name="description" content="Vraag uw gratis offerte online aan. Antwoord binnen 24u per telefoon of email. Professionele elektricien AREI-gecertificeerd in Brussels Hoofdstedelijk Gewest, Vlaams-Brabant en Waals-Brabant.">
+    
+    <link rel="icon" type="image/png" href="../images/logo-lumina-electric.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="../css/mobile.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-bar-container">
+            <div class="top-bar-info">
+                <a href="tel:+32485166635" class="top-bar-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+32 485 16 66 35</span>
+                </a>
+                <a href="mailto:info@luminaelectric.be" class="top-bar-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>info@luminaelectric.be</span>
+                </a>
+            </div>
+            <div class="lang-switcher">
+                <button onclick="window.location.href='../contact.html'">FR</button>
+                <button class="active">NL</button>
+                <button onclick="window.location.href='../en/contact.html'">EN</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="../images/logo-lumina-electric.png" alt="Lumina Electric" style="height: 120px; width: auto;">
+            </a>
+
+            <nav class="nav">
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="diensten.html" class="nav-link">Diensten</a></li>
+                    <li><a href="realisaties.html" class="nav-link">Realisaties</a></li>
+                    <li><a href="faq.html" class="nav-link">FAQ</a></li>
+                    <li><a href="over-ons.html" class="nav-link">Over ons</a></li>
+                    <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                </ul>
+                
+                <div class="header-cta">
+                    <a href="tel:+32485166635" class="btn btn-outline btn-sm">
+                        <i class="fas fa-phone"></i>
+                        Bellen
+                    </a>
+                    <a href="contact.html" class="btn btn-primary btn-sm">
+                        <i class="fas fa-file-invoice"></i>
+                        Gratis offerte
+                    </a>
+                </div>
+            </nav>
+
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Vraag een gratis offerte aan</h1>
+            <p class="lead">Vul het onderstaande formulier in of bel ons rechtstreeks. Wij antwoorden binnen 24u.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-page">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Formulaire -->
+                <div class="contact-form-container">
+                    <h2 class="mb-lg">Contactformulier</h2>
+                    
+                    <div class="alert alert-info">
+                        <i class="fas fa-clock"></i>
+                        <strong>Antwoord binnen 24u maximum</strong><br>
+                        Wij bestuderen uw aanvraag en nemen snel contact met u op per telefoon of email.
+                    </div>
+                    
+                    <form id="contactForm" action="https://formsubmit.co/info@luminaelectric.be" method="POST" name="contact_form">
+                        <!-- Champs cachés FormSubmit -->
+                        <input type="hidden" name="_subject" value="Nieuwe offerteaanvraag - Lumina Electric (NL)">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        
+                        <!-- Informations personnelles -->
+                        <div class="form-group">
+                            <label for="name" class="form-label required">Volledige naam</label>
+                            <input type="text" id="name" name="name" class="form-control" required placeholder="Uw voor- en achternaam">
+                        </div>
+                        
+                        <div class="grid grid-2">
+                            <div class="form-group">
+                                <label for="phone" class="form-label required">Telefoon</label>
+                                <input type="tel" id="phone" name="phone" class="form-control" required placeholder="+32 485 16 66 35">
+                                <span class="form-help">Wij bellen u snel terug</span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email" class="form-label required">Email</label>
+                                <input type="email" id="email" name="email" class="form-control" required placeholder="uw@email.be">
+                            </div>
+                        </div>
+                        
+                        <!-- Localisation -->
+                        <div class="grid grid-2">
+                            <div class="form-group">
+                                <label for="postal_code" class="form-label required">Postcode</label>
+                                <input type="text" id="postal_code" name="postal_code" class="form-control" required placeholder="1000" maxlength="4" pattern="[0-9]{4}">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="city" class="form-label required">Gemeente</label>
+                                <input type="text" id="city" name="city" class="form-control" required placeholder="Brussel">
+                            </div>
+                        </div>
+                        
+                        <!-- Type de projet -->
+                        <div class="form-group">
+                            <label for="service_type" class="form-label required">Type project</label>
+                            <select id="service_type" name="service_type" class="form-control" required>
+                                <option value="">Selecteer een dienst</option>
+                                <option value="arei-conformiteit">AREI-conformiteit</option>
+                                <option value="renovatie">Volledige elektrische renovatie</option>
+                                <option value="storing">Storing / Spoed</option>
+                                <option value="elektrisch-bord">Elektrisch bord</option>
+                                <option value="verlichting">LED-verlichting</option>
+                                <option value="domotica">Domotica / Smart home</option>
+                                <option value="laadpaal">Laadpaal EV</option>
+                                <option value="zonnepanelen">Zonnepanelen / Optimalisatie</option>
+                                <option value="andere">Andere</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Description -->
+                        <div class="form-group">
+                            <label for="message" class="form-label required">Beschrijving van uw project</label>
+                            <textarea id="message" name="message" class="form-control" required minlength="20" placeholder="Beschrijf uw project in een paar woorden: type werk, urgentie, bijzondere beperkingen..."></textarea>
+                            <span class="form-help">Minimum 20 karakters</span>
+                        </div>
+                        
+                        <!-- Photos (optionnel) -->
+                        <div class="form-group">
+                            <label for="photos" class="form-label">Foto's toevoegen (optioneel)</label>
+                            <input type="file" id="photos" name="photos" class="form-control" multiple accept="image/*">
+                            <span class="form-help">Foto's van uw huidige installatie (max 5 foto's, 10MB)</span>
+                        </div>
+                        
+                        <!-- Disponibilité -->
+                        <div class="form-group">
+                            <label for="availability" class="form-label">Gewenste beschikbaarheid</label>
+                            <select id="availability" name="availability" class="form-control">
+                                <option value="asap">Zo spoedig mogelijk</option>
+                                <option value="this-week">Deze week</option>
+                                <option value="2-weeks">Binnen 2 weken</option>
+                                <option value="1-month">Binnen een maand</option>
+                                <option value="flexible">Flexibel</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Comment nous avez-vous connu -->
+                        <div class="form-group">
+                            <label for="referral" class="form-label">Hoe heeft u ons leren kennen?</label>
+                            <select id="referral" name="referral" class="form-control">
+                                <option value="">Selecteer</option>
+                                <option value="google">Google</option>
+                                <option value="recommendation">Aanbeveling</option>
+                                <option value="social-media">Sociale media</option>
+                                <option value="flyer">Flyer / Reclame</option>
+                                <option value="other">Andere</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Consentements RGPD -->
+                        <div class="form-check">
+                            <input type="checkbox" id="privacy" name="privacy" required>
+                            <label for="privacy">
+                                Ik aanvaard het <a href="juridisch.html#privacy" target="_blank">privacybeleid</a> en de verwerking van mijn persoonlijke gegevens. *
+                            </label>
+                        </div>
+                        
+                        <div class="form-check">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <label for="newsletter">
+                                Ik wil tips en nieuws per email ontvangen (optioneel)
+                            </label>
+                        </div>
+                        
+                        <!-- Bouton de soumission -->
+                        <button type="submit" class="btn btn-primary btn-lg btn-full mt-lg">
+                            <i class="fas fa-paper-plane"></i>
+                            Mijn aanvraag versturen
+                        </button>
+                        
+                        <p style="font-size: var(--text-sm); color: var(--neutral-600); text-align: center; margin-top: var(--space-md);">
+                            * Verplichte velden
+                        </p>
+                    </form>
+                </div>
+                
+                <!-- Informations de contact -->
+                <div class="contact-info">
+                    <h2 class="mb-lg">Andere manieren om ons te contacteren</h2>
+                    
+                    <!-- Contact direct -->
+                    <div class="card mb-lg">
+                        <div class="card-body">
+                            <h3 style="font-size: var(--text-xl); margin-bottom: var(--space-lg);">
+                                <i class="fas fa-phone" style="color: var(--primary);"></i>
+                                Per telefoon
+                            </h3>
+                            <p><strong>Centrale</strong></p>
+                            <p style="font-size: var(--text-2xl); color: var(--primary); font-weight: var(--font-bold); margin-bottom: var(--space-md);">
+                                <a href="tel:+32485166635">+32 485 16 66 35</a>
+                            </p>
+                            <p style="font-size: var(--text-sm); color: var(--neutral-600);">
+                                Ma-Vr: 8u-18u<br>
+                                Za: 9u-13u
+                            </p>
+                            <p style="font-size: var(--text-sm); color: var(--error); font-weight: var(--font-semibold); margin-top: var(--space-md);">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                Spoed: Beschikbaar 7/7
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Email -->
+                    <div class="card mb-lg">
+                        <div class="card-body">
+                            <h3 style="font-size: var(--text-xl); margin-bottom: var(--space-lg);">
+                                <i class="fas fa-envelope" style="color: var(--primary);"></i>
+                                Per email
+                            </h3>
+                            <p><a href="mailto:info@luminaelectric.be" style="font-size: var(--text-lg); color: var(--primary);">
+                                info@luminaelectric.be
+                            </a></p>
+                            <p style="font-size: var(--text-sm); color: var(--neutral-600); margin-top: var(--space-sm);">
+                                Antwoord binnen 24u (werkdagen)
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- WhatsApp -->
+                    <a href="https://wa.me/32485166635" class="card mb-lg" style="display: block; text-decoration: none; transition: transform var(--transition-base);" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">
+                        <div class="card-body">
+                            <h3 style="font-size: var(--text-xl); margin-bottom: var(--space-lg);">
+                                <i class="fab fa-whatsapp" style="color: #25D366;"></i>
+                                Via WhatsApp
+                            </h3>
+                            <p style="font-size: var(--text-base); margin-bottom: var(--space-sm);">
+                                Stuur ons een bericht
+                            </p>
+                            <p style="font-size: var(--text-sm); color: var(--neutral-600);">
+                                Snelle reactie tijdens kantooruren
+                            </p>
+                        </div>
+                    </a>
+                    
+                    <!-- Zones intervention -->
+                    <div class="card" style="background: var(--primary-pale); border: 2px solid var(--primary-light);">
+                        <div class="card-body">
+                            <h3 style="font-size: var(--text-xl); margin-bottom: var(--space-lg); color: var(--primary);">
+                                <i class="fas fa-map-marked-alt"></i>
+                                Interventiezones
+                            </h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li style="margin-bottom: var(--space-sm); color: var(--neutral-700);">
+                                    <i class="fas fa-check-circle" style="color: var(--primary); margin-right: var(--space-sm);"></i>
+                                    Brussels Hoofdstedelijk Gewest
+                                </li>
+                                <li style="margin-bottom: var(--space-sm); color: var(--neutral-700);">
+                                    <i class="fas fa-check-circle" style="color: var(--primary); margin-right: var(--space-sm);"></i>
+                                    Vlaams-Brabant
+                                </li>
+                                <li style="color: var(--neutral-700);">
+                                    <i class="fas fa-check-circle" style="color: var(--primary); margin-right: var(--space-sm);"></i>
+                                    Waals-Brabant
+                                </li>
+                            </ul>
+                            <p style="font-size: var(--text-sm); color: var(--neutral-600); margin-top: var(--space-md);">
+                                <strong>BTW-nr:</strong> BE1008470101
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <img src="../images/logo-lumina-electric.png" alt="Lumina Electric" style="height: 60px; width: auto; margin-bottom: 1rem;">
+                    </div>
+                    <p style="color: var(--neutral-400); margin-bottom: 1rem;">Professionele elektricien in België. AREI-conformiteit, renovatie, storing en slimme installaties.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4 class="footer-title">Diensten</h4>
+                    <ul class="footer-links">
+                        <li><a href="diensten/arei-conformiteit.html">AREI-conformiteit</a></li>
+                        <li><a href="diensten/elektrische-renovatie.html">Elektrische renovatie</a></li>
+                        <li><a href="diensten/storing.html">Spoedstoring</a></li>
+                        <li><a href="diensten/elektrisch-bord.html">Elektrisch bord</a></li>
+                        <li><a href="diensten/domotica.html">Domotica</a></li>
+                        <li><a href="diensten/laadpaal.html">Laadpaal EV</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4 class="footer-title">Bedrijf</h4>
+                    <ul class="footer-links">
+                        <li><a href="over-ons.html">Over ons</a></li>
+                        <li><a href="realisaties.html">Realisaties</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="juridisch.html">Juridische vermeldingen</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4 class="footer-title">Contact</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+32485166635">+32 485 16 66 35</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:info@luminaelectric.be">info@luminaelectric.be</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Brussel, Vlaams-Brabant, Waals-Brabant</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-id-card"></i>
+                            <strong>BTW-nr:</strong> BE1008470101
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Lumina Electric. Alle rechten voorbehouden.</p>
+                <div class="footer-bottom-links">
+                    <a href="juridisch.html">Juridische vermeldingen</a>
+                    <a href="juridisch.html#privacy">Privacybeleid</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,242 @@
+/* ============================================
+   LUMINA ELECTRIC - DESIGN SYSTEM
+   Style: Premium, Moderne, Rassurant
+   ============================================ */
+
+:root {
+  /* === PALETTE COULEURS === */
+  /* Primaire: Bleu électrique professionnel */
+  --primary: #0047AB;
+  --primary-dark: #003380;
+  --primary-light: #1E5FCC;
+  --primary-pale: #E8F0FF;
+  
+  /* Secondaire: Orange énergie (CTA, accents) */
+  --secondary: #FF6B35;
+  --secondary-dark: #E55528;
+  --secondary-light: #FF8A5C;
+  
+  /* Neutre: Gris professionnels */
+  --neutral-900: #1A1A1A;
+  --neutral-800: #2D2D2D;
+  --neutral-700: #4A4A4A;
+  --neutral-600: #6B6B6B;
+  --neutral-500: #8C8C8C;
+  --neutral-400: #ADADAD;
+  --neutral-300: #D4D4D4;
+  --neutral-200: #E8E8E8;
+  --neutral-100: #F5F5F5;
+  --white: #FFFFFF;
+  
+  /* Succès/Alerte */
+  --success: #28A745;
+  --warning: #FFC107;
+  --error: #DC3545;
+  --info: #17A2B8;
+  
+  /* === TYPOGRAPHIE === */
+  /* Headlines: Inter (moderne, lisible) */
+  --font-heading: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  /* Body: Inter (cohérence) */
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  
+  /* Tailles */
+  --text-xs: 0.75rem;    /* 12px */
+  --text-sm: 0.875rem;   /* 14px */
+  --text-base: 1rem;     /* 16px */
+  --text-lg: 1.125rem;   /* 18px */
+  --text-xl: 1.25rem;    /* 20px */
+  --text-2xl: 1.5rem;    /* 24px */
+  --text-3xl: 1.875rem;  /* 30px */
+  --text-4xl: 2.25rem;   /* 36px */
+  --text-5xl: 3rem;      /* 48px */
+  
+  /* Poids */
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  
+  /* === ESPACEMENTS === */
+  --space-xs: 0.5rem;    /* 8px */
+  --space-sm: 0.75rem;   /* 12px */
+  --space-md: 1rem;      /* 16px */
+  --space-lg: 1.5rem;    /* 24px */
+  --space-xl: 2rem;      /* 32px */
+  --space-2xl: 3rem;     /* 48px */
+  --space-3xl: 4rem;     /* 64px */
+  --space-4xl: 6rem;     /* 96px */
+  
+  /* === BORDURES === */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+  
+  /* === OMBRES === */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.15);
+  --shadow-card: 0 2px 8px rgba(0, 71, 171, 0.08);
+  
+  /* === TRANSITIONS === */
+  --transition-fast: 150ms ease-in-out;
+  --transition-base: 250ms ease-in-out;
+  --transition-slow: 350ms ease-in-out;
+  
+  /* === BREAKPOINTS (référence) === */
+  /* sm: 640px */
+  /* md: 768px */
+  /* lg: 1024px */
+  /* xl: 1280px */
+  /* 2xl: 1536px */
+  
+  /* === CONTENEURS === */
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+  --container-padding: 1.5rem;
+}
+
+/* === RESET & BASE === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: var(--font-normal);
+  line-height: 1.6;
+  color: var(--neutral-800);
+  background: var(--white);
+}
+
+/* === TYPOGRAPHIE === */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: var(--font-bold);
+  line-height: 1.2;
+  color: var(--neutral-900);
+  margin-bottom: var(--space-md);
+}
+
+h1 {
+  font-size: var(--text-4xl);
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: var(--text-3xl);
+  letter-spacing: -0.01em;
+}
+
+h3 {
+  font-size: var(--text-2xl);
+}
+
+h4 {
+  font-size: var(--text-xl);
+}
+
+h5 {
+  font-size: var(--text-lg);
+}
+
+h6 {
+  font-size: var(--text-base);
+  font-weight: var(--font-semibold);
+}
+
+p {
+  margin-bottom: var(--space-md);
+  color: var(--neutral-700);
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--primary-dark);
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  :root {
+    --text-4xl: 2rem;      /* 32px */
+    --text-3xl: 1.5rem;    /* 24px */
+    --text-2xl: 1.25rem;   /* 20px */
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --text-5xl: 3.5rem;    /* 56px */
+    --text-4xl: 2.5rem;    /* 40px */
+  }
+}
+
+/* === CONTENEUR === */
+.container {
+  width: 100%;
+  max-width: var(--container-xl);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.container-narrow {
+  max-width: var(--container-lg);
+}
+
+/* === SECTIONS === */
+section {
+  padding: var(--space-3xl) 0;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: var(--space-2xl) 0;
+  }
+}
+
+/* === UTILITAIRES === */
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.mb-0 { margin-bottom: 0; }
+.mb-sm { margin-bottom: var(--space-sm); }
+.mb-md { margin-bottom: var(--space-md); }
+.mb-lg { margin-bottom: var(--space-lg); }
+.mb-xl { margin-bottom: var(--space-xl); }
+.mb-2xl { margin-bottom: var(--space-2xl); }
+
+.mt-0 { margin-top: 0; }
+.mt-sm { margin-top: var(--space-sm); }
+.mt-md { margin-top: var(--space-md); }
+.mt-lg { margin-top: var(--space-lg); }
+.mt-xl { margin-top: var(--space-xl); }
+.mt-2xl { margin-top: var(--space-2xl); }
