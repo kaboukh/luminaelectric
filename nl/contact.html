@@ -98,11 +98,12 @@
                         Wij bestuderen uw aanvraag en nemen snel contact met u op per telefoon of email.
                     </div>
                     
-                    <form id="contactForm" action="https://formsubmit.co/info@luminaelectric.be" method="POST" name="contact_form">
-                        <!-- Champs cachés FormSubmit -->
-                        <input type="hidden" name="_subject" value="Nieuwe offerteaanvraag - Lumina Electric (NL)">
-                        <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_template" value="table">
+                    <form id="contactForm" name="contact-nl" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                        <!-- Netlify Forms velden -->
+                        <input type="hidden" name="form-name" value="contact-nl">
+                        <p style="display:none;">
+                            <label>Niet invullen (anti-spam) : <input name="bot-field" /></label>
+                        </p>
                         
                         <!-- Informations personnelles -->
                         <div class="form-group">

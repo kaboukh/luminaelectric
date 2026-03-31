@@ -102,11 +102,12 @@
                         Nous étudions votre demande et vous recontactons rapidement par téléphone ou email.
                     </div>
                     
-                    <form id="contactForm" action="https://formsubmit.co/info@luminaelectric.be" method="POST" name="contact_form">
-                        <!-- Champs cachés FormSubmit -->
-                        <input type="hidden" name="_subject" value="Nouvelle demande de devis - Lumina Electric">
-                        <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_template" value="table">
+                    <form id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                        <!-- Champs Netlify Forms -->
+                        <input type="hidden" name="form-name" value="contact">
+                        <p style="display:none;">
+                            <label>Ne pas remplir (anti-spam) : <input name="bot-field" /></label>
+                        </p>
                         
                         <!-- Informations personnelles -->
                         <div class="form-group">

@@ -98,11 +98,12 @@
                         We will review your request and contact you quickly by phone or email.
                     </div>
                     
-                    <form id="contactForm" action="https://formsubmit.co/info@luminaelectric.be" method="POST" name="contact_form">
-                        <!-- Hidden FormSubmit fields -->
-                        <input type="hidden" name="_subject" value="New quote request - Lumina Electric (EN)">
-                        <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_template" value="table">
+                    <form id="contactForm" name="contact-en" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                        <!-- Netlify Forms fields -->
+                        <input type="hidden" name="form-name" value="contact-en">
+                        <p style="display:none;">
+                            <label>Don't fill this out (anti-spam) : <input name="bot-field" /></label>
+                        </p>
                         
                         <!-- Personal information -->
                         <div class="form-group">
