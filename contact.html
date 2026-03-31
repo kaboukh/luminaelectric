@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Devis Gratuit Électricien Bruxelles & Brabant | Contact Lumina Electric</title>
+    <meta name="description" content="Demandez votre devis gratuit en ligne. Réponse sous 24h par téléphone ou email. Électricien professionnel certifié RGIE à Bruxelles-Capitale, Brabant Flamand et Brabant Wallon.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo-lumina-electric.png">
+    <link rel="apple-touch-icon" href="images/logo-lumina-electric.png">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/mobile.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-bar-container">
+            <div class="top-bar-info">
+                <a href="tel:+32XXXXXXXXX" class="top-bar-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+32 485 16 66 35</span>
+                </a>
+                <a href="mailto:info@luminaelectric.be" class="top-bar-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>info@luminaelectric.be</span>
+                </a>
+            </div>
+            <div class="lang-switcher">
+                <button class="active">FR</button>
+                <button onclick="window.location.href='nl/contact.html'">NL</button>
+                <button onclick="window.location.href='en/contact.html'">EN</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo-lumina-electric.png" alt="Lumina Electric - cherish your energy" style="height: 120px; width: auto;">
+            </a>
+
+            <nav class="nav">
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="realisations.html" class="nav-link">Réalisations</a></li>
+                    <li><a href="faq.html" class="nav-link">FAQ</a></li>
+                    <li><a href="a-propos.html" class="nav-link">À propos</a></li>
+                    <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                </ul>
+                
+                <div class="header-cta">
+                    <a href="tel:+32XXXXXXXXX" class="btn btn-outline btn-sm">
+                        <i class="fas fa-phone"></i>
+                        Appeler
+                    </a>
+                </div>
+            </nav>
+
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Demander un devis gratuit</h1>
+            <p class="lead">Remplissez le formulaire ci-dessous ou appelez-nous directement. Nous vous répondons sous 24h.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-page">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Formulaire -->
+                <div class="contact-form-container">
+                    <h2 class="mb-lg">Formulaire de contact</h2>
+                    
+                    <div class="alert alert-info">
+                        <i class="fas fa-clock"></i>
+                        <strong>Réponse sous 24h maximum</strong><br>
+                        Nous étudions votre demande et vous recontactons rapidement par téléphone ou email.
+                    </div>
+                    
+                    <form id="contactForm" action="https://formsubmit.co/info@luminaelectric.be" method="POST" name="contact_form">
+                        <!-- Champs cachés FormSubmit -->
+                        <input type="hidden" name="_subject" value="Nouvelle demande de devis - Lumina Electric">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        
+                        <!-- Informations personnelles -->
+                        <div class="form-group">
+                            <label for="name" class="form-label required">Nom complet</label>
+                            <input type="text" id="name" name="name" class="form-control" required placeholder="Votre nom et prénom">
+                        </div>
+                        
+                        <div class="grid grid-2">
+                            <div class="form-group">
+                                <label for="phone" class="form-label required">Téléphone</label>
+                                <input type="tel" id="phone" name="phone" class="form-control" required placeholder="+32 485 16 66 35">
+                                <span class="form-help">Nous vous rappelons rapidement</span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email" class="form-label required">Email</label>
+                                <input type="email" id="email" name="email" class="form-control" required placeholder="votre@email.be">
+                            </div>
+                        </div>
+                        
+                        <!-- Localisation -->
+                        <div class="grid grid-2">
+                            <div class="form-group">
+                                <label for="postal_code" class="form-label required">Code postal</label>
+                                <input type="text" id="postal_code" name="postal_code" class="form-control" required placeholder="1000" maxlength="4" pattern="[0-9]{4}">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="city" class="form-label required">Commune</label>
+                                <input type="text" id="city" name="city" class="form-control" required placeholder="Bruxelles">
+                            </div>
+                        </div>
+                        
+                        <!-- Type de projet -->
+                        <div class="form-group">
+                            <label for="service_type" class="form-label required">Type de projet</label>
+                            <select id="service_type" name="service_type" class="form-control" required>
+                                <option value="">Sélectionnez un service</option>
+                                <option value="conformite-rgie">Mise en conformité RGIE</option>
+                                <option value="renovation">Rénovation électrique complète</option>
+                                <option value="depannage">Dépannage / Urgence</option>
+                                <option value="tableau">Tableau électrique</option>
+                                <option value="eclairage">Éclairage LED</option>
+                                <option value="domotique">Domotique / Smart home</option>
+                                <option value="borne-ev">Borne de recharge EV</option>
+                                <option value="solaire">Panneaux solaires / Optimisation</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Description -->
+                        <div class="form-group">
+                            <label for="message" class="form-label required">Description de votre projet</label>
+                            <textarea id="message" name="message" class="form-control" required minlength="20" placeholder="Décrivez votre projet en quelques mots : type de travaux, urgence, contraintes particulières..."></textarea>
+                            <span class="form-help">Minimum 20 caractères</span>
+                        </div>
+                        
+                        <!-- Photos (optionnel) -->
+                        <div class="form-group">
+                            <label for="photos" class="form-label">Joindre des photos (optionnel)</label>
+                            <input type="file" id="photos" name="photos" class="form-control" multiple accept="image/*">
+                            <span class="form-help">Photos de votre installation actuelle (max 5 photos, 10MB)</span>
+                        </div>
+                        
+                        <!-- Disponibilité -->
+                        <div class="form-group">
+                            <label for="availability" class="form-label">Disponibilité souhaitée</label>
+                            <select id="availability" name="availability" class="form-control">
+                                <option value="asap">Dès que possible</option>
+                                <option value="this-week">Cette semaine</option>
+                                <option value="2-weeks">Dans les 2 semaines</option>
+                                <option value="1-month">Dans le mois</option>
+                                <option value="flexible">Pas pressé</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Comment nous avez-vous connu -->
+                        <div class="form-group">
+                            <label for="referral" class="form-label">Comment nous avez-vous connu ?</label>
+                            <select id="referral" name="referral" class="form-control">
+                                <option value="">Sélectionnez</option>
+                                <option value="google">Google</option>
+                                <option value="recommendation">Recommandation</option>
+                                <option value="social-media">Réseaux sociaux</option>
+                                <option value="flyer">Flyer / Publicité</option>
+                                <option value="other">Autre</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Consentements RGPD -->
+                        <div class="form-check">
+                            <input type="checkbox" id="privacy" name="privacy" required>
+                            <label for="privacy">
+                                J'accepte la <a href="confidentialite.html" target="_blank">politique de confidentialité</a> et le traitement de mes données personnelles. *
+                            </label>
+                        </div>
+                        
+                        <div class="form-check">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <label for="newsletter">
+                                Je souhaite recevoir des conseils et actualités par email (optionnel)
+                            </label>
+                        </div>
+                        
+                        <!-- Bouton de soumission -->
+                        <button type="submit" class="btn btn-primary btn-lg btn-full mt-lg">
+                            <i class="fas fa-paper-plane"></i>
+                            Envoyer ma demande
+                        </button>
+                        
+                        <p style="font-size: var(--text-sm); color: var(--neutral-600); text-align: center; margin-top: var(--space-md);">
+                            * Champs obligatoires
+                        </p>
+                    </form>
+                </div>
+                
+                <!-- Informations de contact -->
+                <div class="contact-info">
+                    <h2 class="mb-lg">Autres moyens de nous contacter</h2>
+                    
+                    <!-- Contact direct -->
+                    <div class="card mb-lg">
+                        <div class="card-body">
+                            <h3 style="font-size: var(--text-xl); margin-bottom: var(--space-lg);">
+                                <i class="fas fa-phone" style="color: var(--primary);"></i>
+                                Par téléphone
+                            </h3>
+                            <p><strong>Standard</strong></p>
+                            <p style="font-size: var(--text-2xl); color: var(--primary); font-weight: var(--font-bold); margin-bottom: var(--space-md);">
+                                <a href="tel:+32XXXXXXXXX">+32 485 16 66 35</a>
+                            </p>
+                            <p style="font-size: var(--text-sm); color: var(--neutral-600);">
+                                Lun-Ven : 8h-18h<br>
+                                Sam : 9h-13h
+                            </p>
+                            <p style="font-size: var(--text-sm); color: var(--error); font-weight: var(--font-semibold); margin-top: var(--space-md);">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                Urgence : Disponible 7j/7
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Email -->
+                    <div class="card mb-lg">
+                        <div class="card-body">
+                            <h3 style="font-size: var(--text-xl); margin-bottom: var(--space-lg);">
+                                <i class="fas fa-envelope" style="color: var(--primary);"></i>
+                                Par email
+                            </h3>
+                            <p><a href="mailto:info@luminaelectric.be" style="font-size: var(--text-lg); color: var(--primary);">
+                                info@luminaelectric.be
+                            </a></p>
+                            <p style="font-size: var(--text-sm); color: var(--neutral-600); margin-top: var(--space-sm);">
+                                Réponse sous 24h (jours ouvrables)
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- WhatsApp -->
+                    <a href="https://wa.me/32485166635" class="card mb-lg" style="display: block; text-decoration: none; transition: transform var(--transition-base);" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">
+                        <div class="card-body">
+                            <h3 style="font-size: var(--text-xl); margin-bottom: var(--space-md);">
+                                <i class="fab fa-whatsapp" style="color: #25D366;"></i>
+                                Via WhatsApp
+                            </h3>
+                            <p style="color: var(--neutral-700);">Discutez avec nous directement</p>
+                            <div class="btn btn-outline btn-sm mt-md" style="display: inline-flex;">
+                                Ouvrir WhatsApp
+                                <i class="fas fa-external-link-alt"></i>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <!-- Checklist pour devis rapide -->
+                    <div class="card" style="background: var(--primary-pale); border-color: var(--primary-light);">
+                        <div class="card-body">
+                            <h3 style="font-size: var(--text-lg); margin-bottom: var(--space-md); color: var(--primary);">
+                                <i class="fas fa-lightbulb"></i>
+                                Pour accélérer votre devis
+                            </h3>
+                            <p style="font-size: var(--text-sm); margin-bottom: var(--space-md);">
+                                Pensez à nous indiquer :
+                            </p>
+                            <ul style="list-style: none; font-size: var(--text-sm); line-height: 1.8;">
+                                <li>✓ Âge approximatif de l'installation</li>
+                                <li>✓ Surface du logement (m²)</li>
+                                <li>✓ Nombre de pièces</li>
+                                <li>✓ Photos de l'installation actuelle</li>
+                                <li>✓ Urgence ou délai souhaité</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Zones d'intervention -->
+                    <div class="mt-xl">
+                        <h3 class="mb-md">Zones d'intervention</h3>
+                        <p style="font-size: var(--text-sm); color: var(--neutral-600); line-height: 1.7;">
+                            <i class="fas fa-map-marker-alt" style="color: var(--primary);"></i>
+                            <strong>Bruxelles-Capitale</strong> (toutes communes)<br>
+                            <i class="fas fa-map-marker-alt" style="color: var(--primary);"></i>
+                            <strong>Brabant Flamand</strong> (Leuven, Vilvoorde, Dilbeek, Halle, Tervuren, etc.)<br>
+                            <i class="fas fa-map-marker-alt" style="color: var(--primary);"></i>
+                            <strong>Brabant Wallon</strong> (Waterloo, Wavre, Nivelles, Braine-l'Alleud, etc.)
+                        </p>
+                    </div>
+                    
+                    <!-- Infos entreprise -->
+                    <div class="mt-xl" style="padding: var(--space-lg); background: var(--neutral-100); border-radius: var(--radius-md); font-size: var(--text-sm);">
+                        <h4 class="mb-md">Informations légales</h4>
+                        <p style="color: var(--neutral-700); line-height: 1.7; margin: 0;">
+                            <strong>Lumina Electric</strong><br>
+                            TVA : BE1008470101<br>
+                            Assurance RC professionnelle<br>
+                            Certifié RGIE / AREI
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RGPD Notice -->
+    <section style="background: var(--neutral-100); padding: var(--space-2xl) 0;">
+        <div class="container-narrow">
+            <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+                <h3 style="font-size: var(--text-xl); margin-bottom: var(--space-md);">
+                    <i class="fas fa-shield-check" style="color: var(--success);"></i>
+                    Vos données sont protégées
+                </h3>
+                <p style="font-size: var(--text-sm); color: var(--neutral-700); line-height: 1.7;">
+                    Nous utilisons vos informations personnelles uniquement pour traiter votre demande de devis. 
+                    Conformément au <strong>RGPD</strong>, vous disposez d'un droit d'accès, de modification et de suppression de vos données. 
+                    Vos coordonnées ne seront jamais partagées avec des tiers. 
+                    Pour plus d'informations, consultez notre <a href="confidentialite.html">politique de confidentialité</a>.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-main">
+                <div class="footer-about">
+                    <a href="index.html" class="footer-logo">
+                        <img src="images/logo-lumina-electric.png" alt="Lumina Electric" style="height: 160px; width: auto; margin-bottom: var(--space-lg);">
+                    </a>
+                    <p>
+                        Expert en électricité en Belgique. Conformité RGIE, rénovation, dépannage et installations smart home. 
+                        Intervention à Bruxelles-Capitale, Brabant Flamand et Brabant Wallon.
+                    </p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-title">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services/conformite-rgie.html">Conformité RGIE</a></li>
+                        <li><a href="services/renovation-electrique.html">Rénovation électrique</a></li>
+                        <li><a href="services/depannage.html">Dépannage urgent</a></li>
+                        <li><a href="services/domotique.html">Domotique</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-title">Entreprise</h4>
+                    <ul class="footer-links">
+                        <li><a href="a-propos.html">À propos</a></li>
+                        <li><a href="realisations.html">Réalisations</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-title">Contact</h4>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div><a href="tel:+32XXXXXXXXX">+32 485 16 66 35</a></div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div><a href="mailto:info@luminaelectric.be">info@luminaelectric.be</a></div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>Lun-Ven : 8h-18h<br>Sam : 9h-13h</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Lumina Electric. Tous droits réservés.</p>
+                <div class="footer-legal">
+                    <a href="mentions-legales.html">Mentions légales</a>
+                    <a href="confidentialite.html">Confidentialité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    
+    <style>
+        .page-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: var(--white);
+            padding: var(--space-3xl) 0;
+            text-align: center;
+        }
+        
+        .page-header h1 {
+            color: var(--white);
+            margin-bottom: var(--space-md);
+        }
+        
+        .page-header .lead {
+            font-size: var(--text-lg);
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        @media (max-width: 768px) {
+            .page-header {
+                padding: var(--space-2xl) 0;
+            }
+        }
+    </style>
+</body>
+</html>

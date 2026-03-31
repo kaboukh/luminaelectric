@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test FAQ avec CSS du site</title>
+    
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/pages.css">
+    
+    <style>
+        body {
+            padding: 40px;
+            background: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 16px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-item:hover {
+            border-color: var(--primary, #0066cc);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .faq-question {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            text-align: left;
+            transition: background 0.3s ease;
+        }
+        
+        .faq-question:hover {
+            background: #f9f9f9;
+        }
+        
+        .faq-question i {
+            transition: transform 0.3s ease;
+            color: var(--primary, #0066cc);
+        }
+        
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+            padding: 0 20px;
+            background: #fafafa;
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 1000px;
+            padding: 20px;
+        }
+        
+        .faq-answer p {
+            margin-bottom: 16px;
+            line-height: 1.7;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Test FAQ - Cliquez pour ouvrir</h1>
+        <p style="margin-bottom: 30px;">Status: <span id="status">En attente...</span></p>
+        
+        <div class="faq-item">
+            <button class="faq-question">
+                <span>Question 1: Premier test ?</span>
+                <i class="fas fa-chevron-down">▼</i>
+            </button>
+            <div class="faq-answer">
+                <p>Réponse 1: Ceci est la première réponse. Elle devrait s'ouvrir en douceur.</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <button class="faq-question">
+                <span>Question 2: Deuxième test ?</span>
+                <i class="fas fa-chevron-down">▼</i>
+            </button>
+            <div class="faq-answer">
+                <p>Réponse 2: Ceci est la deuxième réponse.</p>
+                <p>Avec plusieurs paragraphes pour tester.</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/main.js"></script>
+    <script>
+        document.getElementById('status').textContent = 'JavaScript chargé ✓';
+        document.getElementById('status').style.color = 'green';
+    </script>
+</body>
+</html>

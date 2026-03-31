@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>FAQ - Questions fréquentes | Lumina Electric</title>
+    <meta name="description" content="Réponses à vos questions sur la conformité RGIE, rénovations électriques, tableaux électriques, bornes de recharge et dépannage en Belgique.">
+    
+    <link rel="icon" type="image/png" href="images/logo-lumina-electric.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/mobile.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-bar-container">
+            <div class="top-bar-info">
+                <a href="tel:+32485166635" class="top-bar-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+32 485 16 66 35</span>
+                </a>
+                <a href="mailto:info@luminaelectric.be" class="top-bar-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>info@luminaelectric.be</span>
+                </a>
+            </div>
+            <div class="lang-switcher">
+                <button class="active">FR</button>
+                <button onclick="window.location.href='nl/faq.html'">NL</button>
+                <button onclick="window.location.href='en/faq.html'">EN</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo-lumina-electric.png" alt="Lumina Electric" style="height: 120px; width: auto;">
+            </a>
+
+            <nav class="nav">
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="realisations.html" class="nav-link">Réalisations</a></li>
+                    <li><a href="faq.html" class="nav-link active">FAQ</a></li>
+                    <li><a href="a-propos.html" class="nav-link">À propos</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="header-cta">
+                    <a href="tel:+32485166635" class="btn btn-outline btn-sm">
+                        <i class="fas fa-phone"></i> Appeler
+                    </a>
+                    <a href="contact.html" class="btn btn-primary btn-sm">
+                        <i class="fas fa-file-invoice"></i> Devis gratuit
+                    </a>
+                </div>
+            </nav>
+
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="page-header">
+        <div class="container" style="max-width: 800px; text-align: center;">
+            <span style="display: inline-block; padding: var(--space-xs) var(--space-lg); background: rgba(255,255,255,0.25); border-radius: var(--radius-full); font-size: var(--text-sm); font-weight: 600; letter-spacing: 1px; margin-bottom: var(--space-lg); color: white;">AIDE & SUPPORT</span>
+            <h1>Questions fréquentes</h1>
+            <p class="lead" style="color: rgba(255,255,255,0.95);">Toutes les réponses à vos questions sur nos services électriques, la conformité RGIE et vos projets.</p>
+        </div>
+    </section>
+
+    <!-- Quick Links -->
+    <section style="background: var(--neutral-50); padding: var(--space-2xl) 0;">
+        <div class="container" style="max-width: 1000px;">
+            <p style="text-align: center; margin-bottom: var(--space-lg); color: var(--neutral-600);">Accès rapide aux catégories</p>
+            <div style="display: flex; justify-content: center; gap: var(--space-md); flex-wrap: wrap;">
+                <a href="#conformite" class="category-link">
+                    <i class="fas fa-shield-check"></i>
+                    Conformité RGIE
+                </a>
+                <a href="#travaux" class="category-link">
+                    <i class="fas fa-tools"></i>
+                    Travaux & Rénovation
+                </a>
+                <a href="#tableaux" class="category-link">
+                    <i class="fas fa-project-diagram"></i>
+                    Tableaux électriques
+                </a>
+                <a href="#borne" class="category-link">
+                    <i class="fas fa-charging-station"></i>
+                    Borne de recharge
+                </a>
+                <a href="#depannage" class="category-link">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    Dépannage
+                </a>
+                <a href="#processus" class="category-link">
+                    <i class="fas fa-map-marked-alt"></i>
+                    Processus & Zones
+                </a>
+                <a href="#technique" class="category-link">
+                    <i class="fas fa-graduation-cap"></i>
+                    Questions techniques
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Content -->
+    <section style="padding: var(--space-3xl) 0;">
+        <div class="container" style="max-width: 900px;">
+
+            <!-- Conformité & RGIE -->
+            <div id="conformite" class="faq-category">
+                <div class="faq-category-header">
+                    <i class="fas fa-shield-check"></i>
+                    <h2>Conformité & RGIE / AREI</h2>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Quand la mise en conformité RGIE est-elle obligatoire ?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>La conformité RGIE est obligatoire dans trois situations principales :</p>
+                        <ul>
+                            <li><strong>Vente d'un bien immobilier</strong> : Un contrôle positif est nécessaire pour finaliser la transaction</li>
+                            <li><strong>Installation neuve</strong> : Toute nouvelle installation doit être validée par un organisme agréé</li>
+                            <li><strong>Modification importante</strong> : Lors de travaux majeurs (extension, rénovation lourde, nouveau tableau)</li>
+                        </ul>
+                        <p>Le contrôle est réalisé par un organisme agréé qui délivre un rapport de conformité valable 25 ans (en l'absence de modifications).</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Que se passe-t-il si mon installation n'est pas conforme ?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Une installation non conforme n'empêche pas la vente, mais entraîne plusieurs conséquences :</p>
+                        <ul>
+                            <li><strong>Négociation à la baisse</strong> : L'acheteur demande souvent une réduction du prix</li>
+                            <li><strong>Délai de mise en conformité</strong> : L'acheteur dispose d'un délai de 18 mois pour effectuer les travaux</li>
+                            <li><strong>Risque de sécurité</strong> : Une installation défectueuse présente des dangers réels</li>
+                        </ul>
+                        <p><strong>Notre recommandation :</strong> Effectuer la mise en conformité avant la vente. Cela sécurise la transaction, valorise le bien et évite les négociations difficiles.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Fournissez-vous les schémas obligatoires ?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Oui, absolument. Nous fournissons systématiquement :</p>
+                        <ul>
+                            <li><strong>Schéma unifilaire</strong> : Représentation simplifiée de l'installation électrique avec les protections</li>
+                            <li><strong>Schéma de position</strong> : Plan architectural avec l'emplacement précis des points électriques</li>
+                        </ul>
+                        <p>Ces documents sont indispensables pour le contrôle RGIE et vous sont remis en version papier et numérique.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Dois-je refaire toute mon installation pour être conforme ?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p><strong>Non, pas nécessairement.</strong> Notre approche est optimisée et stratégique :</p>
+                        <ul>
+                            <li>Nous réalisons un <strong>diagnostic précis</strong> pour identifier uniquement les non-conformités</li>
+                            <li>Nous priorisons les interventions selon leur <strong>impact sécuritaire et réglementaire</strong></li>
+                            <li>Nous adaptons <strong>uniquement les éléments défaillants</strong>, sans travaux superflus</li>
+                        </ul>
+                        <p>L'objectif : obtenir la conformité au meilleur coût, sans refaire ce qui fonctionne déjà correctement.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Travaux & Rénovation -->
+            <div id="travaux" class="faq-category">
+                <div class="faq-category-header">
+                    <i class="fas fa-tools"></i>
+                    <h2>Travaux & Rénovation</h2>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Proposez-vous des rénovations électriques complètes ?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Oui. Nous réalisons des rénovations électriques <strong>partielles ou complètes</strong> selon vos besoins :</p>
+                        <ul>
+                            <li><strong>Rénovation partielle</strong> : Remplacement du tableau, mise aux normes des circuits critiques</li>
+                            <li><strong>Rénovation complète</strong> : Recâblage total, nouveau tableau, éclairage moderne, domotique</li>
+                        </ul>
+                        <p>Chaque projet inclut : analyse technique, devis détaillé, respect du planning, conformité RGIE et documentation complète.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Travaillez-vous avec d'autres corps de métier ?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p><strong>Oui, nous coordonnons l'ensemble de votre projet.</strong></p>
+                        <p>Grâce à notre réseau de partenaires sélectionnés et fiables (plombiers, plafonneurs, peintres, menuisiers), nous proposons des <strong>rénovations globales clé en main</strong> :</p>
+                        <ul>
+                            <li>Un seul interlocuteur pour toute la gestion</li>
+                            <li>Coordination optimale entre corps de métier</li>
+                            <li>Planning maîtrisé et respect des délais</li>
+                            <li>Qualité garantie sur l'ensemble des prestations</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Combien de temps durent les travaux ?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>La durée dépend de l'ampleur du projet :</p>
+                        <ul>
+                            <li><strong>Remplacement tableau électrique</strong> : 1 à 2 jours</li>
+                            <li><strong>Mise en conformité ciblée</strong> : 2 à 5 jours</li>
+                            <li><strong>Rénovation partielle</strong> : 1 à 2 semaines</li>
+                            <li><strong>Rénovation complète</strong> : 3 à 6 semaines</li>
+                        </ul>
+                        <p>Après l'analyse technique initiale, nous fournissons un <strong>planning précis et structuré</strong> avec les étapes clés et les dates prévisionnelles.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Fournissez-vous un devis détaillé ?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p><strong>Oui, transparence totale.</strong> Chaque devis Lumina Electric est :</p>
+                        <ul>
+                            <li><strong>Détaillé</strong> : Chaque poste de travail est clairement identifié</li>
+                            <li><strong>Transparent</strong> : Prix unitaires, quantités, matériaux spécifiés</li>
+                            <li><strong>Sans surprise</strong> : Pas de frais cachés ni de suppléments imprévus</li>
+                            <li><strong>Structuré</strong> : Organisation logique par zones ou par phases</li>
+                        </ul>
+                        <p>Nous expliquons chaque ligne lors de la présentation du devis pour garantir votre compréhension totale.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tableaux électriques & Sécurité -->
+            <div id="tableaux" class="faq-category">
+                <div class="faq-category-header">
+                    <i class="fas fa-project-diagram"></i>
+                    <h2>Tableaux électriques & Sécurité</h2>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Quand faut-il remplacer un tableau électrique ?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Le remplacement s'impose dans plusieurs cas :</p>
+                        <ul>
+                            <li><strong>Tableau obsolète</strong> : Plus de 30 ans, fusibles à fil, absence de différentiels</li>
+                            <li><strong>Sous-dimensionnement</strong> : Disjoncteurs qui sautent régulièrement, manque de circuits</li>
+                            <li><strong>Non-conformité RGIE</strong> : Absence de protections obligatoires</li>
+                            <li><strong>Saturation</strong> : Plus d'emplacement pour ajouter des circuits (EV, domotique...)</li>
+                        </ul>
+                        <p>Un tableau moderne améliore la <strong>sécurité</strong>, la <strong>stabilité</strong> et la <strong>capacité d'évolution</strong> de votre installation.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Installez-vous les différentiels 30mA obligatoires ?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p><strong>Oui, systématiquement.</strong> Les différentiels 30mA sont obligatoires selon le RGIE pour protéger les personnes contre les chocs électriques.</p>
+                        <p>Nous installons :</p>
+                        <ul>
+                            <li><strong>Différentiels de type A</strong> : Pour circuits standards</li>
+                            <li><strong>Différentiels de type B</strong> : Pour bornes de recharge EV (obligatoire)</li>
+                            <li><strong>Sélectivité</strong> : Organisation intelligente pour limiter les déclenchements intempestifs</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Proposez-vous des systèmes d'alarme et de surveillance ?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Oui. Nous installons des <strong>systèmes de sécurité complets et intégrés</strong> :</p>
+                        <ul>
+                            <li><strong>Alarme anti-intrusion</strong> : Détecteurs de mouvement, contacts portes/fenêtres, centrale</li>
+                            <li><strong>Vidéosurveillance</strong> : Caméras IP avec accès à distance via smartphone</li>
+                            <li><strong>Intégration domotique</strong> : Liaison avec éclairage, volets, notifications</li>
+                        </ul>
+                        <p>Infrastructure sécurisée avec alimentation protégée et sauvegarde en cas de coupure réseau.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Borne de recharge -->
+            <div id="borne" class="faq-category">
+                <div class="faq-category-header">
+                    <i class="fas fa-charging-station"></i>
+                    <h2>Borne de recharge & Modernisation</h2>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Installez-vous des bornes de recharge pour véhicules électriques ?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p><strong>Oui, installation complète et conforme.</strong></p>
+                        <p>Notre prestation inclut :</p>
+                        <ul>
+                            <li><strong>Analyse de capacité</strong> : Vérification que votre installation supporte la charge</li>
+                            <li><strong>Circuit dédié sécurisé</strong> : Câblage renforcé, protection différentielle type B</li>
+                            <li><strong>Installation wallbox</strong> : 7kW (mono), 11kW ou 22kW (tri) selon votre véhicule</li>
+                            <li><strong>Certificats pour primes</strong> : Documentation complète pour demande de subsides</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Mon installation est-elle prête pour une borne EV ?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Cela dépend de plusieurs facteurs. Nous réalisons une <strong>analyse technique complète</strong> :</p>
+                        <ul>
+                            <li><strong>Puissance disponible</strong> : Capacité du compteur et du tableau</li>
+                            <li><strong>Section des câbles</strong> : Dimensionnement entre tableau et borne</li>
+                            <li><strong>Emplacement optimal</strong> : Distance, accessibilité, protection</li>
+                        </ul>
+                        <p>Si votre installation nécessite un renforcement, nous proposons les adaptations nécessaires (changement disjoncteur principal, extension tableau...).</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dépannage électrique -->
+            <div id="depannage" class="faq-category">
+                <div class="faq-category-header">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <h2>Dépannage électrique</h2>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Intervenez-vous en urgence 7j/7 ?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p><strong>Oui, nous sommes disponibles 7 jours sur 7 pour les urgences électriques.</strong></p>
+                        <p>Notre service dépannage d'urgence garantit :</p>
+                        <ul>
+                            <li><strong>Intervention rapide</strong> : Délai de 2 à 4h selon la zone</li>
+                            <li><strong>Diagnostic sur place</strong> : Identification immédiate de la panne</li>
+                            <li><strong>Réparation immédiate</strong> : Si possible avec le matériel disponible</li>
+                            <li><strong>Solution temporaire</strong> : Remise en service sécurisée en attendant réparation définitive si nécessaire</li>
+                        </ul>
+                        <p>Appelez le <strong>+32 485 16 66 35</strong> pour une urgence.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Que faire en cas de panne totale de courant ?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p><strong>Suivez ces étapes avant de nous appeler :</strong></p>
+                        <ol>
+                            <li><strong>Vérifiez votre tableau électrique</strong> : Un disjoncteur est-il déclenché ? Tentez de le réenclencher (une seule fois)</li>
+                            <li><strong>Vérifiez le compteur</strong> : Le disjoncteur principal est-il baissé ?</li>
+                            <li><strong>Comparez avec vos voisins</strong> : Ont-ils aussi une panne ? (coupure réseau)</li>
+                        </ol>
+                        <p><strong>Si le problème persiste :</strong></p>
+                        <ul>
+                            <li>Ne tentez pas de réenclencher plusieurs fois (risque d'aggravation)</li>
+                            <li>Débranchez les appareils sensibles (ordinateurs, électroménager)</li>
+                            <li>Contactez-nous immédiatement au +32 485 16 66 35</li>
+                        </ul>
+                        <p><em>Note : Si la coupure concerne tout le quartier, contactez votre gestionnaire de réseau (Sibelga, Fluvius...).</em></p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Quelles sont les pannes électriques les plus fréquentes ?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Les pannes que nous traitons le plus souvent :</p>
+                        <ul>
+                            <li><strong>Court-circuit</strong> : Disjoncteur qui saute immédiatement au réenclenchement (câble endommagé, appareil défectueux)</li>
+                            <li><strong>Surcharge</strong> : Disjoncteur qui saute après quelques minutes (trop d'appareils sur un circuit)</li>
+                            <li><strong>Prise ou interrupteur défectueux</strong> : Pas de courant sur une prise ou un éclairage</li>
+                            <li><strong>Tableau électrique défaillant</strong> : Disjoncteur ou différentiel hors service</li>
+                            <li><strong>Problème de terre</strong> : Différentiel qui déclenche sans raison apparente</li>
+                        </ul>
+                        <p>Notre diagnostic précis permet d'identifier rapidement l'origine de la panne et d'y remédier durablement.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Combien coûte un dépannage électrique ?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p><strong>Le coût varie selon plusieurs facteurs :</strong></p>
+                        <ul>
+                            <li><strong>Frais de déplacement</strong> : Variable selon la zone (inclus dans le devis)</li>
+                            <li><strong>Main d'œuvre</strong> : Tarif horaire électricien qualifié</li>
+                            <li><strong>Matériel</strong> : Pièces de remplacement nécessaires</li>
+                            <li><strong>Urgence</strong> : Supplément pour intervention soir/weekend (si applicable)</li>
+                        </ul>
+                        <p><strong>Transparence garantie :</strong></p>
+                        <ul>
+                            <li>Devis clair avant intervention (sauf danger immédiat)</li>
+                            <li>Pas de frais cachés</li>
+                            <li>Explication détaillée des travaux nécessaires</li>
+                        </ul>
+                        <p>Appelez-nous pour une estimation rapide : <strong>+32 485 16 66 35</strong></p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Mon différentiel saute sans cesse, que faire ?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p><strong>Un différentiel qui déclenche fréquemment indique un problème de fuite de courant.</strong></p>
+                        <p><strong>Causes possibles :</strong></p>
+                        <ul>
+                            <li><strong>Appareil défectueux</strong> : Machine à laver, frigo, four... (isolation défaillante)</li>
+                            <li><strong>Humidité</strong> : Infiltration d'eau dans une prise ou boîte de dérivation</li>
+                            <li><strong>Câble endommagé</strong> : Isolation percée (travaux, rongeurs...)</li>
+                            <li><strong>Différentiel trop sensible</strong> : 30mA inadapté à l'installation</li>
+                        </ul>
+                        <p><strong>Notre intervention :</strong></p>
+                        <ul>
+                            <li>Test systématique de chaque circuit</li>
+                            <li>Mesure de résistance d'isolement</li>
+                            <li>Localisation précise du défaut</li>
+                            <li>Réparation ou remplacement de l'élément défaillant</li>
+                        </ul>
+                        <p><em>Ne désactivez jamais le différentiel : il protège contre les électrocutions.</em></p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Puis-je faire moi-même de petites réparations électriques ?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p><strong>Pour votre sécurité, nous déconseillons toute intervention sur l'installation électrique si vous n'avez pas les compétences requises.</strong></p>
+                        <p><strong>Vous pouvez faire :</strong></p>
+                        <ul>
+                            <li>Changer une ampoule</li>
+                            <li>Réenclencher un disjoncteur (une seule fois)</li>
+                            <li>Débrancher un appareil défectueux</li>
+                        </ul>
+                        <p><strong>Faites appel à un professionnel pour :</strong></p>
+                        <ul>
+                            <li>Remplacer une prise ou un interrupteur</li>
+                            <li>Réparer un câble endommagé</li>
+                            <li>Intervenir dans le tableau électrique</li>
+                            <li>Toute intervention sur l'installation fixe</li>
+                        </ul>
+                        <p><strong>Risques encourus :</strong> électrocution, incendie, dégradation de l'installation, invalidation de l'assurance.</p>
+                        <p>En cas de doute, contactez-nous : <strong>+32 485 16 66 35</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Processus & Zones -->
+            <div id="processus" class="faq-category">
+                <div class="faq-category-header">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h2>Processus & Zones d'intervention</h2>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Intervenez-vous uniquement en cas d'urgence ?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p><strong>Non, nous intervenons pour tous types de projets :</strong></p>
+                        <ul>
+                            <li><strong>Projets planifiés</strong> : Rénovations, extensions, nouvelles installations</li>
+                            <li><strong>Mises en conformité</strong> : Préparation vente, contrôle périodique</li>
+                            <li><strong>Dépannages urgents</strong> : Intervention rapide 7j/7 en cas de panne</li>
+                            <li><strong>Modernisations</strong> : Domotique, éclairage LED, bornes EV</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Dans quelles régions intervenez-vous ?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Nos zones d'intervention prioritaires :</p>
+                        <ul>
+                            <li><strong>Bruxelles-Capitale</strong> : Toutes les communes</li>
+                            <li><strong>Brabant Flamand</strong> : Leuven, Vilvoorde, Dilbeek, Halle, Tervuren et environs</li>
+                            <li><strong>Brabant Wallon</strong> : Waterloo, Wavre, Nivelles, Braine-l'Alleud, Ottignies-LLN</li>
+                        </ul>
+                        <p>Pour les projets importants, nous étudions également les demandes dans d'autres régions.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Proposez-vous une solution clé en main ?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p><strong>Oui, gestion de projet complète.</strong></p>
+                        <p>Nous coordonnons l'ensemble du projet avec nos partenaires sélectionnés :</p>
+                        <ul>
+                            <li><strong>Interlocuteur unique</strong> : Vous ne gérez qu'un seul contact</li>
+                            <li><strong>Coordination globale</strong> : Planning, corps de métier, livraisons</li>
+                            <li><strong>Gestion fluide et structurée</strong> : Anticipation des contraintes</li>
+                            <li><strong>Garantie globale</strong> : Responsabilité sur l'ensemble de la prestation</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Pourquoi choisir Lumina Electric plutôt qu'un autre électricien ?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Notre différence : <strong>approche structurée et orientée valeur.</strong></p>
+                        <ul>
+                            <li><strong>Conformité sans compromis</strong> : Respect strict du RGIE et des normes de sécurité</li>
+                            <li><strong>Coordination globale</strong> : Gestion complète de votre projet avec partenaires fiables</li>
+                            <li><strong>Exécution soignée</strong> : Finitions professionnelles, chantiers propres</li>
+                            <li><strong>Valorisation durable</strong> : Installations évolutives, documentation complète</li>
+                            <li><strong>Transparence totale</strong> : Devis détaillés, communication continue, pas de surprise</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Comment démarrer un projet avec Lumina Electric ?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p><strong>C'est simple en 4 étapes :</strong></p>
+                        <ol style="padding-left: var(--space-lg);">
+                            <li><strong>Contact initial</strong> : Téléphone, email ou formulaire en ligne</li>
+                            <li><strong>Visite technique</strong> : Nous analysons votre installation et vos besoins</li>
+                            <li><strong>Proposition détaillée</strong> : Devis transparent avec solutions adaptées</li>
+                            <li><strong>Planification & exécution</strong> : Respect du planning, suivi régulier, livraison conforme</li>
+                        </ol>
+                        <p style="margin-top: var(--space-md);"><a href="contact.html" class="btn btn-primary">Démarrer mon projet</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Questions techniques -->
+            <div id="technique" class="faq-category">
+                <div class="faq-category-header">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h2>Questions techniques avancées</h2>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Comment dimensionnez-vous un tableau électrique lors d'une rénovation ?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Nous réalisons une <strong>analyse de charge complète et prospective</strong> :</p>
+                        <ul>
+                            <li><strong>Consommation actuelle</strong> : Calcul des charges existantes par circuit</li>
+                            <li><strong>Équipements futurs</strong> : Anticipation bornes EV, pompes à chaleur, domotique, climatisation</li>
+                            <li><strong>Marges de réserve</strong> : 20-30% de capacité supplémentaire pour évolutions</li>
+                            <li><strong>Répartition optimale</strong> : Organisation structurée des circuits par zone</li>
+                        </ul>
+                        <p>Objectif : concevoir un tableau <strong>évolutif, structuré et conforme RGIE</strong> qui répond à vos besoins actuels et futurs.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Comment optimisez-vous la sélectivité des protections ?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>La <strong>sélectivité</strong> permet de limiter l'impact d'un défaut sur l'ensemble de l'installation :</p>
+                        <ul>
+                            <li><strong>Répartition intelligente</strong> : Circuits distribués sur plusieurs différentiels</li>
+                            <li><strong>Calibrage adapté</strong> : Disjoncteurs dimensionnés selon les charges</li>
+                            <li><strong>Discrimination</strong> : Seule la protection du circuit défectueux déclenche</li>
+                            <li><strong>Circuits sensibles isolés</strong> : Congélateur, alarme, serveur sur protections dédiées</li>
+                        </ul>
+                        <p>Résultat : moins de déclenchements intempestifs, meilleure continuité de service.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Comment vérifiez-vous la qualité de la mise à la terre ?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>La mise à la terre est cruciale pour la sécurité des personnes. Nous contrôlons :</p>
+                        <ul>
+                            <li><strong>Continuité des conducteurs</strong> : Vérification de toutes les liaisons de protection</li>
+                            <li><strong>Résistance de la prise de terre</strong> : Mesure avec telluromètre (< 30Ω requis)</li>
+                            <li><strong>Liaisons équipotentielles</strong> : Connexion des masses métalliques (eau, gaz, chauffage)</li>
+                            <li><strong>Tests de déclenchement</strong> : Vérification que les différentiels réagissent correctement</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Intégrez-vous une réserve de capacité pour les évolutions futures ?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p><strong>Oui, systématiquement.</strong> Nous anticipons les besoins technologiques futurs :</p>
+                        <ul>
+                            <li><strong>Emplacements libres</strong> : 20-30% d'espace disponible dans le tableau</li>
+                            <li><strong>Capacité de puissance</strong> : Dimensionnement pour ajout borne EV, PAC, climatisation</li>
+                            <li><strong>Infrastructure réseau</strong> : Pré-câblage pour domotique, caméras, alarme</li>
+                            <li><strong>Préparation photovoltaïque</strong> : Circuits dédiés prêts pour panneaux solaires et batterie</li>
+                        </ul>
+                        <p>Votre installation reste <strong>évolutive sans refonte majeure</strong>.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Comment sécurisez-vous l'intégration d'un système d'alarme ?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>La fiabilité du système d'alarme repose sur une alimentation sécurisée :</p>
+                        <ul>
+                            <li><strong>Circuit dédié protégé</strong> : Alimentation sur protection séparée</li>
+                            <li><strong>Batterie de secours</strong> : Autonomie en cas de coupure secteur</li>
+                            <li><strong>Infrastructure réseau sécurisée</strong> : Câblage RJ45 CAT6 pour caméras IP</li>
+                            <li><strong>Protection contre les surtensions</strong> : Parafoudre sur circuits sensibles</li>
+                        </ul>
+                        <p>Garantie de <strong>continuité de service</strong> même en cas de problème électrique.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Comment déterminez-vous si une installation doit être monophasée ou triphasée ?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Le choix dépend de la <strong>puissance nécessaire et des équipements</strong> :</p>
+                        <ul>
+                            <li><strong>Monophasé (230V)</strong> : Suffisant jusqu'à 9-10 kVA, habitations standards</li>
+                            <li><strong>Triphasé (400V)</strong> : Recommandé au-delà de 10 kVA ou pour équipements puissants</li>
+                        </ul>
+                        <p><strong>Passage en triphasé recommandé si :</strong></p>
+                        <ul>
+                            <li>Borne EV 11kW ou 22kW</li>
+                            <li>Pompe à chaleur puissante</li>
+                            <li>Atelier avec machines-outils</li>
+                            <li>Grande surface à chauffer/climatiser</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Quels sont les avantages d'une installation triphasée ?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Le triphasé offre plusieurs avantages techniques :</p>
+                        <ul>
+                            <li><strong>Puissance disponible supérieure</strong> : Jusqu'à 3× la capacité du monophasé</li>
+                            <li><strong>Meilleure répartition des charges</strong> : Distribution équilibrée sur 3 phases</li>
+                            <li><strong>Sections de câbles réduites</strong> : Moins de courant par phase pour même puissance</li>
+                            <li><strong>Compatibilité équipements professionnels</strong> : Machines, bornes EV puissantes</li>
+                            <li><strong>Moins de déclenchements</strong> : Charge répartie, pics d'appel mieux absorbés</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Comment gérez-vous l'équilibrage des phases en triphasé ?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Un bon équilibrage est essentiel en triphasé :</p>
+                        <ul>
+                            <li><strong>Répartition stratégique</strong> : Distribution des circuits sur les 3 phases</li>
+                            <li><strong>Analyse des charges</strong> : Identification des gros consommateurs (four, sèche-linge, PAC...)</li>
+                            <li><strong>Équilibrage intelligent</strong> : Répartition pour éviter surcharge d'une phase</li>
+                            <li><strong>Mesure et optimisation</strong> : Contrôle des courants par phase lors de la mise en service</li>
+                        </ul>
+                        <p>Objectif : <strong>stabilité du réseau</strong>, pas de déclenchements intempestifs, longévité des équipements.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section style="background: var(--neutral-50); padding: var(--space-3xl) 0;">
+        <div class="container">
+            <div style="max-width: 800px; margin: 0 auto; text-align: center; padding: var(--space-3xl); background: linear-gradient(135deg, var(--primary-dark), var(--primary)); border-radius: var(--radius-xl); color: white;">
+                <i class="fas fa-lightbulb" style="font-size: 3rem; margin-bottom: var(--space-lg); opacity: 0.9;"></i>
+                <h2 style="font-size: var(--text-3xl); font-weight: 700; margin-bottom: var(--space-md); color: white;">Chaque projet est unique</h2>
+                <p style="font-size: var(--text-lg); margin-bottom: var(--space-xl); color: rgba(255,255,255,0.9); line-height: 1.6;">
+                    Nous privilégions une analyse technique rigoureuse afin de proposer une solution adaptée, conforme et durable.
+                </p>
+                <a href="contact.html" class="btn btn-primary btn-lg" style="background: white; color: var(--primary); border: none;">
+                    <i class="fas fa-calendar-check"></i> Demander une étude personnalisée
+                </a>
+                <p style="margin-top: var(--space-lg); font-size: var(--text-sm); color: rgba(255,255,255,0.7);">
+                    Réponse sous 24h • Devis gratuit • Sans engagement
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-main">
+                <div class="footer-about">
+                    <a href="index.html" class="footer-logo">
+                        <img src="images/logo-lumina-electric.png" alt="Lumina Electric" style="height: 160px; width: auto; margin-bottom: var(--space-lg);">
+                    </a>
+                    <p>Expert en électricité en Belgique. Intervention à Bruxelles-Capitale, Brabant Flamand et Brabant Wallon.</p>
+                    <p style="margin-top: var(--space-md); font-size: var(--text-sm);">
+                        <strong>N° TVA :</strong> BE1008470101
+                    </p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-title">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services/conformite-rgie.html">Conformité RGIE</a></li>
+                        <li><a href="services/renovation-electrique.html">Rénovation électrique</a></li>
+                        <li><a href="services/depannage.html">Dépannage</a></li>
+                        <li><a href="services/domotique.html">Domotique</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-title">Entreprise</h4>
+                    <ul class="footer-links">
+                        <li><a href="a-propos.html">À propos</a></li>
+                        <li><a href="realisations.html">Réalisations</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-title">Contact</h4>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <a href="tel:+32485166635">+32 485 16 66 35</a>
+                        </div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <a href="mailto:info@luminaelectric.be">info@luminaelectric.be</a>
+                        </div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            Bruxelles-Capitale, Brabant Flamand & Brabant Wallon
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Lumina Electric. Tous droits réservés.</p>
+                <div class="footer-legal">
+                    <a href="mentions-legales.html">Mentions légales</a>
+                    <a href="confidentialite.html">Confidentialité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+
+    <style>
+        .category-link {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-xs);
+            padding: var(--space-sm) var(--space-lg);
+            background: white;
+            border: 1px solid var(--neutral-300);
+            border-radius: var(--radius-full);
+            color: var(--neutral-700);
+            text-decoration: none;
+            font-size: var(--text-sm);
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .category-link:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        .category-link i {
+            font-size: 1rem;
+        }
+
+        .faq-category {
+            margin-bottom: var(--space-3xl);
+        }
+
+        .faq-category-header {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+            margin-bottom: var(--space-xl);
+            padding-bottom: var(--space-lg);
+            border-bottom: 2px solid var(--primary);
+        }
+
+        .faq-category-header i {
+            font-size: 2rem;
+            color: var(--primary);
+        }
+
+        .faq-category-header h2 {
+            font-size: var(--text-2xl);
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .faq-item {
+            background: white;
+            border: 1px solid var(--neutral-200);
+            border-radius: var(--radius-lg);
+            margin-bottom: var(--space-md);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            border-color: var(--primary);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .faq-question {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--space-lg);
+            background: none;
+            border: none;
+            text-align: left;
+            cursor: pointer;
+            font-size: var(--text-lg);
+            font-weight: 600;
+            color: var(--neutral-900);
+            transition: all 0.3s ease;
+        }
+
+        .faq-question:hover {
+            color: var(--primary);
+        }
+
+        .faq-question i {
+            transition: transform 0.3s ease;
+            color: var(--primary);
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+            padding: 0 var(--space-lg);
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 3000px;
+            padding: 0 var(--space-lg) var(--space-lg);
+        }
+
+        .faq-answer p {
+            color: var(--neutral-700);
+            line-height: 1.7;
+            margin-bottom: var(--space-md);
+        }
+
+        .faq-answer ul, .faq-answer ol {
+            color: var(--neutral-700);
+            line-height: 1.7;
+            margin-bottom: var(--space-md);
+        }
+
+        .faq-answer li {
+            margin-bottom: var(--space-sm);
+        }
+
+        .faq-answer strong {
+            color: var(--neutral-900);
+        }
+
+        @media (max-width: 768px) {
+            .faq-category-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .faq-question {
+                font-size: var(--text-md);
+                padding: var(--space-md);
+            }
+
+            .category-link {
+                font-size: var(--text-xs);
+                padding: var(--space-xs) var(--space-md);
+            }
+        }
+    </style>
+</body>
+</html>
