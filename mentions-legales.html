@@ -1,291 +1,186 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mentions Légales | Lumina Electric</title>
-    <meta name="description" content="Mentions légales de Lumina Electric - Électricien professionnel en Belgique">
-    <link rel="icon" type="image/png" href="images/logo-lumina-electric.png">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="css/variables.css">
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/pages.css">
-    <link rel="stylesheet" href="css/mobile.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mentions légales — Lumina Electric</title>
+  <meta name="description" content="Mentions légales de Lumina Electric — électricien certifié RGIE à Bruxelles et Brabant.">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Top Bar -->
-    <div class="top-bar">
-        <div class="top-bar-container">
-            <div class="top-bar-info">
-                <a href="tel:+32485166635" class="top-bar-item">
-                    <i class="fas fa-phone"></i>
-                    <span>+32 485 16 66 35</span>
-                </a>
-                <a href="mailto:info@luminaelectric.be" class="top-bar-item">
-                    <i class="fas fa-envelope"></i>
-                    <span>info@luminaelectric.be</span>
-                </a>
-            </div>
-            <div class="lang-switcher">
-                <button class="active">FR</button>
-                <button onclick="window.location.href='nl/juridisch.html'">NL</button>
-                <button onclick="window.location.href='en/legal.html'">EN</button>
-            </div>
+
+  <div class="urgence-banner">
+    <a href="tel:+32485166635">
+      <i class="fas fa-bolt"></i>
+      Urgence électrique 7j/7 — Intervention sous 2-4h &nbsp;·&nbsp; +32 485 16 66 35
+      <i class="fas fa-arrow-right"></i>
+    </a>
+  </div>
+
+  <nav class="nav nav--transparent" id="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__logo">
+          <img src="images/logo-white.svg" alt="Lumina Electric" class="nav__logo-white">
+          <img src="images/logo-color.svg" alt="Lumina Electric" class="nav__logo-color">
+        </a>
+        <ul class="nav__links">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="realisations.html">Réalisations</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="a-propos.html">À propos</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav__cta">
+          <div class="nav__lang">
+            <button class="active">FR</button>
+            <button onclick="location.href='nl/mentions-legales.html'">NL</button>
+            <button onclick="location.href='en/legal-notice.html'">EN</button>
+          </div>
+          <a href="tel:+32485166635" class="nav__phone"><i class="fas fa-phone"></i> Appeler</a>
+          <a href="contact.html" class="nav__devis">Devis gratuit</a>
         </div>
+        <button class="nav__toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
     </div>
+  </nav>
 
-    <!-- Header -->
-    <header class="header" id="header">
-        <div class="header-container">
-            <a href="index.html" class="logo">
-                <img src="images/logo-lumina-electric.png" alt="Lumina Electric" style="height: 120px; width: auto;">
-            </a>
-            <nav class="nav">
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="index.html" class="nav-link">Accueil</a></li>
-                    <li><a href="services.html" class="nav-link">Services</a></li>
-                    <li><a href="realisations.html" class="nav-link">Réalisations</a></li>
-                    <li><a href="faq.html" class="nav-link">FAQ</a></li>
-                    <li><a href="a-propos.html" class="nav-link">À propos</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
-                </ul>
-                <div class="header-cta">
-                    <a href="tel:+32485166635" class="btn btn-outline btn-sm">
-                        <i class="fas fa-phone"></i> Appeler
-                    </a>
-                    <a href="contact.html" class="btn btn-primary btn-sm">
-                        <i class="fas fa-file-invoice"></i> Devis gratuit
-                    </a>
-                </div>
-            </nav>
-            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menu">
-                <span></span><span></span><span></span>
-            </button>
+  <div class="nav__mobile" id="mobileMenu">
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="realisations.html">Réalisations</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="a-propos.html">À propos</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav__mobile-cta">
+      <a href="contact.html" class="btn btn-primary"><i class="fas fa-file-invoice"></i> Devis gratuit</a>
+      <a href="tel:+32485166635" class="btn btn-outline"><i class="fas fa-phone"></i> +32 485 16 66 35</a>
+    </div>
+  </div>
+
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-header__eyebrow fade-in">Informations légales</span>
+      <h1 class="fade-up">Mentions légales</h1>
+      <p class="fade-up">Conformément à la législation belge en vigueur.</p>
+    </div>
+  </section>
+
+  <section style="padding: var(--section-pad) 0;">
+    <div class="container-narrow">
+
+      <div style="background:#fff; border-radius:12px; padding:2.5rem; box-shadow:0 2px 12px rgba(0,0,0,.06); margin-bottom:2rem;">
+        <h2 style="font-size:1.3rem; margin-bottom:1.2rem; color:var(--dark);">1. Identification de l'entreprise</h2>
+        <table style="width:100%; border-collapse:collapse; font-size:.95rem; line-height:1.8;">
+          <tr><td style="width:180px; color:var(--gray-500); padding:.3rem 0;"><strong>Raison sociale</strong></td><td>Lumina Electric</td></tr>
+          <tr><td style="color:var(--gray-500); padding:.3rem 0;"><strong>Forme juridique</strong></td><td>Entreprise individuelle</td></tr>
+          <tr><td style="color:var(--gray-500); padding:.3rem 0;"><strong>Numéro de TVA</strong></td><td>BE1008470101</td></tr>
+          <tr><td style="color:var(--gray-500); padding:.3rem 0;"><strong>Siège social</strong></td><td>Bruxelles-Capitale, Belgique</td></tr>
+          <tr><td style="color:var(--gray-500); padding:.3rem 0;"><strong>Téléphone</strong></td><td><a href="tel:+32485166635">+32 485 16 66 35</a></td></tr>
+          <tr><td style="color:var(--gray-500); padding:.3rem 0;"><strong>E-mail</strong></td><td><a href="mailto:info@luminaelectric.be">info@luminaelectric.be</a></td></tr>
+          <tr><td style="color:var(--gray-500); padding:.3rem 0;"><strong>Responsable de publication</strong></td><td>Karim Boukhana</td></tr>
+        </table>
+      </div>
+
+      <div style="background:#fff; border-radius:12px; padding:2.5rem; box-shadow:0 2px 12px rgba(0,0,0,.06); margin-bottom:2rem;">
+        <h2 style="font-size:1.3rem; margin-bottom:1rem; color:var(--dark);">2. Propriété intellectuelle</h2>
+        <p style="color:var(--gray-600); line-height:1.8;">L'ensemble des éléments composant le site (textes, images, graphismes, logo, icônes, sons, logiciels, etc.) sont la propriété exclusive de Lumina Electric ou font l'objet d'une autorisation d'utilisation. Toute reproduction, représentation, modification, publication ou adaptation de tout ou partie des éléments du site, quel que soit le moyen ou le procédé utilisé, est interdite, sauf autorisation écrite préalable de Lumina Electric.</p>
+      </div>
+
+      <div style="background:#fff; border-radius:12px; padding:2.5rem; box-shadow:0 2px 12px rgba(0,0,0,.06); margin-bottom:2rem;">
+        <h2 style="font-size:1.3rem; margin-bottom:1rem; color:var(--dark);">3. Protection des données personnelles (RGPD)</h2>
+        <p style="color:var(--gray-600); line-height:1.8; margin-bottom:1rem;">Les données personnelles collectées via les formulaires de contact (nom, e-mail, téléphone, adresse postale optionnelle) sont utilisées exclusivement dans le cadre de demandes de devis, de la gestion des dossiers et d'informations sur nos services, avec le consentement de l'utilisateur.</p>
+        <p style="color:var(--gray-600); line-height:1.8; margin-bottom:.8rem;">Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez des droits suivants :</p>
+        <ul style="color:var(--gray-600); line-height:1.8; padding-left:1.5rem;">
+          <li>Droit d'accès à vos données</li>
+          <li>Droit de rectification</li>
+          <li>Droit à l'effacement (droit à l'oubli)</li>
+          <li>Droit d'opposition au traitement</li>
+          <li>Droit à la portabilité des données</li>
+        </ul>
+        <p style="color:var(--gray-600); line-height:1.8; margin-top:1rem;">Pour exercer ces droits, contactez-nous à <a href="mailto:info@luminaelectric.be" style="color:var(--accent-dark);">info@luminaelectric.be</a>.</p>
+      </div>
+
+      <div style="background:#fff; border-radius:12px; padding:2.5rem; box-shadow:0 2px 12px rgba(0,0,0,.06); margin-bottom:2rem;">
+        <h2 style="font-size:1.3rem; margin-bottom:1rem; color:var(--dark);">4. Cookies</h2>
+        <p style="color:var(--gray-600); line-height:1.8;">Le site utilise uniquement des cookies techniques nécessaires à son bon fonctionnement. Aucun cookie de traçage ou publicitaire n'est utilisé sans votre consentement préalable.</p>
+      </div>
+
+      <div style="background:#fff; border-radius:12px; padding:2.5rem; box-shadow:0 2px 12px rgba(0,0,0,.06); margin-bottom:2rem;">
+        <h2 style="font-size:1.3rem; margin-bottom:1rem; color:var(--dark);">5. Responsabilité</h2>
+        <p style="color:var(--gray-600); line-height:1.8;">Lumina Electric s'efforce de fournir des informations exactes et à jour sur ce site. Cependant, Lumina Electric ne peut garantir l'exactitude, la précision ou l'exhaustivité des informations mises à disposition sur le site et décline toute responsabilité pour les dommages résultant d'une intrusion frauduleuse d'un tiers ayant entraîné une modification des informations ou de l'utilisation du site.</p>
+      </div>
+
+      <div style="background:#fff; border-radius:12px; padding:2.5rem; box-shadow:0 2px 12px rgba(0,0,0,.06); margin-bottom:2rem;">
+        <h2 style="font-size:1.3rem; margin-bottom:1rem; color:var(--dark);">6. Liens externes</h2>
+        <p style="color:var(--gray-600); line-height:1.8;">Le site peut contenir des liens hypertextes vers d'autres sites internet. Lumina Electric n'assume aucune responsabilité quant au contenu de ces sites tiers ni à leurs pratiques en matière de protection des données.</p>
+      </div>
+
+      <div style="background:#fff; border-radius:12px; padding:2.5rem; box-shadow:0 2px 12px rgba(0,0,0,.06); margin-bottom:2rem;">
+        <h2 style="font-size:1.3rem; margin-bottom:1rem; color:var(--dark);">7. Droit applicable et juridiction compétente</h2>
+        <p style="color:var(--gray-600); line-height:1.8;">Le présent site et ses conditions d'utilisation sont soumis au droit belge. En cas de litige, les tribunaux de Bruxelles seront seuls compétents.</p>
+      </div>
+
+      <p style="color:var(--gray-400); font-size:.875rem; text-align:center; margin-top:2rem;">Dernière mise à jour : février 2026</p>
+
+    </div>
+  </section>
+
+  <footer style="background:var(--dark); color:#fff; padding:3rem 0 1.5rem;">
+    <div class="container">
+      <div class="footer__main">
+        <div class="footer__brand">
+          <img src="images/logo-white.svg" alt="Lumina Electric" class="nav__logo-white">
+          <p>Expert en électricité en Belgique. Conformité RGIE, rénovation, dépannage et installations smart home. Bruxelles-Capitale, Brabant Flamand &amp; Brabant Wallon.</p>
+          <p class="footer__tva">TVA : BE1008470101</p>
         </div>
-    </header>
-
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <h1>Mentions Légales</h1>
-            <p class="lead">Informations légales et conditions d'utilisation du site Lumina Electric</p>
+        <div class="footer__col">
+          <h4>Services</h4>
+          <ul class="footer__links">
+            <li><a href="services.html#conformite">Conformité RGIE</a></li>
+            <li><a href="services.html#renovation">Rénovation électrique</a></li>
+            <li><a href="services.html#depannage">Dépannage urgent</a></li>
+            <li><a href="services.html#domotique">Domotique</a></li>
+            <li><a href="services.html#borne">Borne EV</a></li>
+          </ul>
         </div>
-    </section>
-
-    <!-- Main Content -->
-    <main class="container" style="padding: var(--space-3xl) var(--space-lg); max-width: 1000px; margin: 0 auto;">
-        
-        <section style="margin-bottom: var(--space-3xl);">
-            <h2 style="color: var(--primary); margin-bottom: var(--space-lg);">1. Informations légales</h2>
-            
-            <div style="background: var(--neutral-50); padding: var(--space-xl); border-radius: var(--radius-lg); margin-bottom: var(--space-lg); border-left: 4px solid var(--primary);">
-                <h3 style="margin-bottom: var(--space-md);">Éditeur du site</h3>
-                <p><strong>Raison sociale :</strong> Lumina Electric</p>
-                <p><strong>Forme juridique :</strong> Entreprise individuelle</p>
-                <p><strong>Numéro de TVA :</strong> BE1008470101</p>
-                <p><strong>Adresse :</strong> Bruxelles-Capitale, Belgique</p>
-                <p><strong>Téléphone :</strong> <a href="tel:+32485166635" style="color: var(--primary);">+32 485 16 66 35</a></p>
-                <p><strong>Email :</strong> <a href="mailto:info@luminaelectric.be" style="color: var(--primary);">info@luminaelectric.be</a></p>
-                <p><strong>Responsable de la publication :</strong> Karim Boukhana</p>
-            </div>
-        </section>
-
-        <section style="margin-bottom: var(--space-3xl);">
-            <h2 style="color: var(--primary); margin-bottom: var(--space-lg);">2. Hébergement du site</h2>
-            <p style="line-height: 1.7; color: var(--neutral-700);">
-                Ce site web est hébergé par des services d'hébergement professionnels garantissant la disponibilité 
-                et la sécurité du site conformément aux normes en vigueur.
-            </p>
-        </section>
-
-        <section style="margin-bottom: var(--space-3xl);">
-            <h2 style="color: var(--primary); margin-bottom: var(--space-lg);">3. Propriété intellectuelle</h2>
-            <p style="line-height: 1.7; color: var(--neutral-700); margin-bottom: var(--space-md);">
-                L'ensemble des éléments composant le site (textes, graphismes, logotypes, images, vidéos, etc.) 
-                sont la propriété exclusive de Lumina Electric ou font l'objet d'une autorisation d'utilisation.
-            </p>
-            <p style="line-height: 1.7; color: var(--neutral-700);">
-                Toute reproduction, représentation, modification, publication, adaptation de tout ou partie des 
-                éléments du site, quel que soit le moyen ou le procédé utilisé, est interdite, sauf autorisation 
-                écrite préalable de Lumina Electric.
-            </p>
-        </section>
-
-        <section style="margin-bottom: var(--space-3xl);">
-            <h2 style="color: var(--primary); margin-bottom: var(--space-lg);">4. Protection des données personnelles (RGPD)</h2>
-            
-            <h3 style="margin-top: var(--space-lg); margin-bottom: var(--space-md);">4.1. Responsable du traitement</h3>
-            <p style="line-height: 1.7; color: var(--neutral-700); margin-bottom: var(--space-lg);">
-                Le responsable du traitement des données personnelles collectées sur ce site est Lumina Electric, 
-                représentée par Karim Boukhana. Contact : info@luminaelectric.be
-            </p>
-
-            <h3 style="margin-top: var(--space-lg); margin-bottom: var(--space-md);">4.2. Données collectées</h3>
-            <p style="line-height: 1.7; color: var(--neutral-700);">
-                Les données personnelles collectées via les formulaires de contact incluent :
-            </p>
-            <ul style="margin: var(--space-md) 0; padding-left: var(--space-xl); color: var(--neutral-700);">
-                <li>Nom et prénom</li>
-                <li>Adresse email</li>
-                <li>Numéro de téléphone</li>
-                <li>Adresse postale (optionnel)</li>
-                <li>Message et description du projet</li>
-            </ul>
-
-            <h3 style="margin-top: var(--space-lg); margin-bottom: var(--space-md);">4.3. Finalité du traitement</h3>
-            <p style="line-height: 1.7; color: var(--neutral-700);">
-                Les données collectées sont utilisées exclusivement pour :
-            </p>
-            <ul style="margin: var(--space-md) 0; padding-left: var(--space-xl); color: var(--neutral-700);">
-                <li>Répondre à vos demandes de devis</li>
-                <li>Assurer le suivi de votre dossier</li>
-                <li>Établir des documents administratifs et techniques</li>
-                <li>Vous informer de nos services (uniquement avec votre consentement)</li>
-            </ul>
-
-            <h3 style="margin-top: var(--space-lg); margin-bottom: var(--space-md);">4.4. Vos droits</h3>
-            <p style="line-height: 1.7; color: var(--neutral-700); margin-bottom: var(--space-md);">
-                Conformément au Règlement Général sur la Protection des Données (RGPD) et à la législation belge, 
-                vous disposez des droits suivants :
-            </p>
-            <ul style="margin: var(--space-md) 0; padding-left: var(--space-xl); color: var(--neutral-700);">
-                <li><strong>Droit d'accès :</strong> consulter vos données personnelles</li>
-                <li><strong>Droit de rectification :</strong> corriger des données inexactes</li>
-                <li><strong>Droit à l'effacement :</strong> demander la suppression de vos données</li>
-                <li><strong>Droit d'opposition :</strong> refuser le traitement de vos données</li>
-                <li><strong>Droit à la portabilité :</strong> récupérer vos données dans un format structuré</li>
-            </ul>
-            <p style="line-height: 1.7; color: var(--neutral-700); margin-top: var(--space-md);">
-                Pour exercer ces droits, contactez-nous à : <a href="mailto:info@luminaelectric.be" style="color: var(--primary); font-weight: 600;">info@luminaelectric.be</a>
-            </p>
-
-            <h3 style="margin-top: var(--space-lg); margin-bottom: var(--space-md);">4.5. Conservation des données</h3>
-            <p style="line-height: 1.7; color: var(--neutral-700);">
-                Vos données personnelles sont conservées uniquement le temps nécessaire aux finalités pour lesquelles 
-                elles ont été collectées, conformément aux obligations légales en matière de conservation de documents.
-            </p>
-        </section>
-
-        <section style="margin-bottom: var(--space-3xl);">
-            <h2 style="color: var(--primary); margin-bottom: var(--space-lg);">5. Cookies et technologies similaires</h2>
-            <p style="line-height: 1.7; color: var(--neutral-700); margin-bottom: var(--space-md);">
-                Ce site utilise des cookies techniques nécessaires au bon fonctionnement du site. 
-                Aucun cookie de tracking ou de publicité n'est utilisé sans votre consentement préalable.
-            </p>
-            <p style="line-height: 1.7; color: var(--neutral-700);">
-                Vous pouvez configurer votre navigateur pour refuser les cookies, mais cela peut affecter 
-                certaines fonctionnalités du site.
-            </p>
-        </section>
-
-        <section style="margin-bottom: var(--space-3xl);">
-            <h2 style="color: var(--primary); margin-bottom: var(--space-lg);">6. Limitation de responsabilité</h2>
-            <p style="line-height: 1.7; color: var(--neutral-700); margin-bottom: var(--space-md);">
-                Lumina Electric s'efforce de fournir des informations précises et à jour sur ce site. 
-                Toutefois, nous ne pouvons garantir l'exactitude, la précision ou l'exhaustivité des informations 
-                disponibles sur le site.
-            </p>
-            <p style="line-height: 1.7; color: var(--neutral-700);">
-                Lumina Electric ne saurait être tenue responsable des dommages directs ou indirects résultant 
-                de l'utilisation de ce site ou de l'impossibilité d'y accéder.
-            </p>
-        </section>
-
-        <section style="margin-bottom: var(--space-3xl);">
-            <h2 style="color: var(--primary); margin-bottom: var(--space-lg);">7. Liens hypertextes</h2>
-            <p style="line-height: 1.7; color: var(--neutral-700);">
-                Le site peut contenir des liens vers des sites externes. Lumina Electric n'exerce aucun contrôle 
-                sur ces sites et décline toute responsabilité quant à leur contenu, leur disponibilité ou leurs 
-                pratiques en matière de protection des données.
-            </p>
-        </section>
-
-        <section style="margin-bottom: var(--space-3xl);">
-            <h2 style="color: var(--primary); margin-bottom: var(--space-lg);">8. Droit applicable et juridiction</h2>
-            <p style="line-height: 1.7; color: var(--neutral-700);">
-                Les présentes mentions légales sont régies par le droit belge. En cas de litige, et à défaut 
-                d'accord amiable, les tribunaux de Bruxelles seront seuls compétents.
-            </p>
-        </section>
-
-        <section style="margin-bottom: var(--space-3xl);">
-            <h2 style="color: var(--primary); margin-bottom: var(--space-lg);">9. Modification des mentions légales</h2>
-            <p style="line-height: 1.7; color: var(--neutral-700);">
-                Lumina Electric se réserve le droit de modifier les présentes mentions légales à tout moment. 
-                La version en vigueur est celle publiée sur le site.
-            </p>
-            <p style="line-height: 1.7; color: var(--neutral-700); margin-top: var(--space-md);">
-                <strong>Dernière mise à jour :</strong> Février 2026
-            </p>
-        </section>
-
-        <div style="background: var(--primary-pale); padding: var(--space-xl); border-radius: var(--radius-lg); text-align: center; margin-top: var(--space-3xl);">
-            <h3 style="color: var(--primary); margin-bottom: var(--space-md);">Des questions ?</h3>
-            <p style="margin-bottom: var(--space-lg);">
-                Pour toute question concernant ces mentions légales ou vos données personnelles, contactez-nous :
-            </p>
-            <a href="contact.html" class="btn btn-primary btn-lg">
-                <i class="fas fa-envelope"></i> Nous contacter
-            </a>
+        <div class="footer__col">
+          <h4>Entreprise</h4>
+          <ul class="footer__links">
+            <li><a href="a-propos.html">À propos</a></li>
+            <li><a href="realisations.html">Réalisations</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="mentions-legales.html" class="active">Mentions légales</a></li>
+            <li><a href="confidentialite.html">Confidentialité</a></li>
+          </ul>
         </div>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-main">
-                <div class="footer-about">
-                    <a href="index.html" class="footer-logo">
-                        <img src="images/logo-lumina-electric.png" alt="Lumina Electric" style="height: 160px; width: auto; margin-bottom: var(--space-lg);">
-                    </a>
-                    <p>Expert en électricité en Belgique. Conformité RGIE, rénovation, dépannage et installations domotiques.</p>
-                    <p style="margin-top: var(--space-md); font-size: var(--text-sm); color: var(--neutral-600);">
-                        <strong>N° TVA :</strong> BE1008470101
-                    </p>
-                </div>
-                <div class="footer-col">
-                    <h4 class="footer-title">Liens rapides</h4>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Accueil</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="a-propos.html">À propos</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4 class="footer-title">Services</h4>
-                    <ul class="footer-links">
-                        <li><a href="services/conformite-rgie.html">Conformité RGIE</a></li>
-                        <li><a href="services/renovation-electrique.html">Rénovation électrique</a></li>
-                        <li><a href="services/depannage.html">Dépannage</a></li>
-                        <li><a href="services.html">Tous les services</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4 class="footer-title">Contact</h4>
-                    <div class="footer-contact-item">
-                        <i class="fas fa-phone"></i>
-                        <div><a href="tel:+32485166635">+32 485 16 66 35</a></div>
-                    </div>
-                    <div class="footer-contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div><a href="mailto:info@luminaelectric.be">info@luminaelectric.be</a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Lumina Electric. Tous droits réservés.</p>
-                <div class="footer-legal">
-                    <a href="mentions-legales.html">Mentions légales</a>
-                    <a href="confidentialite.html">Confidentialité</a>
-                </div>
-            </div>
+        <div class="footer__col">
+          <h4>Contact</h4>
+          <div class="footer__contact-item"><i class="fas fa-phone"></i><a href="tel:+32485166635">+32 485 16 66 35</a></div>
+          <div class="footer__contact-item"><i class="fas fa-envelope"></i><a href="mailto:info@luminaelectric.be">info@luminaelectric.be</a></div>
+          <div class="footer__contact-item"><i class="fab fa-whatsapp"></i><a href="https://wa.me/32485166635" target="_blank" rel="noopener">WhatsApp</a></div>
+          <div class="footer__contact-item"><i class="fas fa-clock"></i><span>Lun-Ven : 8h-18h · Sam : 9h-13h</span></div>
         </div>
-    </footer>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 Lumina Electric. Tous droits réservés.</p>
+        <div class="footer__legal">
+          <a href="mentions-legales.html">Mentions légales</a>
+          <a href="confidentialite.html">Confidentialité</a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-    <script src="js/main.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,11 @@
+<!DOCTYPE html><html><body style="margin:0;background:#111;">
+<img id="img" src="https://images.unsplash.com/photo-1545671913-b89ac1b4ac10?auto=format&fit=crop&w=900&q=80"
+  style="width:100%;max-height:100vh;object-fit:cover;display:block;">
+<p id="status" style="color:white;font:14px sans-serif;padding:8px;margin:0;"></p>
+<script>
+  const img = document.getElementById('img');
+  const st = document.getElementById('status');
+  img.onload = () => { st.textContent = '✅ Loaded — ' + img.naturalWidth + 'x' + img.naturalHeight; };
+  img.onerror = () => { st.textContent = '❌ Failed to load'; st.style.color='red'; };
+</script>
+</body></html>

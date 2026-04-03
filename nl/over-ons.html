@@ -1,312 +1,210 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Over Lumina Electric | Karim Boukhana - Elektricien België</title>
-    <meta name="description" content="Opgericht door Karim Boukhana, Lumina Electric begeleidt particulieren en professionals in België voor veilige en AREI-conforme elektrische installaties.">
-    
-    <link rel="icon" type="image/png" href="../images/logo-lumina-electric.png">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
-    <link rel="stylesheet" href="../css/variables.css">
-    <link rel="stylesheet" href="../css/components.css">
-    <link rel="stylesheet" href="../css/layout.css">
-    <link rel="stylesheet" href="../css/pages.css">
-    <link rel="stylesheet" href="../css/mobile.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Over Lumina Electric | Karim Boukhana — Elektricien België</title>
+  <meta name="description" content="Opgericht door Karim Boukhana begeleidt Lumina Electric particulieren en professionals in België voor veilige en AREI-conforme elektrische installaties.">
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <div class="top-bar">
-        <div class="top-bar-container">
-            <div class="top-bar-info">
-                <a href="tel:+32485166635" class="top-bar-item">
-                    <i class="fas fa-phone"></i>
-                    <span>+32 485 16 66 35</span>
-                </a>
-                <a href="mailto:info@luminaelectric.be" class="top-bar-item">
-                    <i class="fas fa-envelope"></i>
-                    <span>info@luminaelectric.be</span>
-                </a>
-            </div>
-            <div class="lang-switcher">
-                <button onclick="window.location.href='../a-propos.html'">FR</button>
-                <button class="active">NL</button>
-                <button onclick="window.location.href='../en/about.html'">EN</button>
-            </div>
+  <div class="urgence-banner">
+    <a href="tel:+32485166635"><i class="fas fa-bolt"></i> Elektrisch noodgeval 7d/7 — Interventie binnen 2-4u &nbsp;·&nbsp; +32 485 16 66 35 <i class="fas fa-arrow-right"></i></a>
+  </div>
+  <nav class="nav nav--transparent" id="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__logo">
+          <img src="../images/logo-white.svg" alt="Lumina Electric" class="nav__logo-white">
+          <img src="../images/logo-color.svg" alt="Lumina Electric" class="nav__logo-color">
+        </a>
+        <ul class="nav__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="diensten.html">Diensten</a></li>
+          <li><a href="realisaties.html">Realisaties</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="over-ons.html" class="active">Over ons</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav__cta">
+          <div class="nav__lang">
+            <button onclick="location.href='../a-propos.html'">FR</button>
+            <button class="active">NL</button>
+            <button onclick="location.href='../en/about.html'">EN</button>
+          </div>
+          <a href="tel:+32485166635" class="nav__phone"><i class="fas fa-phone"></i> Bellen</a>
+          <a href="contact.html" class="nav__devis">Gratis offerte</a>
         </div>
+        <button class="nav__toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
     </div>
+  </nav>
+  <div class="nav__mobile" id="mobileMenu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="diensten.html">Diensten</a></li>
+      <li><a href="realisaties.html">Realisaties</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="over-ons.html" class="active">Over ons</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav__mobile-cta">
+      <a href="contact.html" class="btn btn-primary"><i class="fas fa-file-invoice"></i> Gratis offerte</a>
+      <a href="tel:+32485166635" class="btn btn-outline"><i class="fas fa-phone"></i> +32 485 16 66 35</a>
+    </div>
+  </div>
 
-    <header class="header" id="header">
-        <div class="header-container">
-            <a href="index.html" class="logo">
-                <img src="../images/logo-lumina-electric.png" alt="Lumina Electric" style="height: 120px; width: auto;">
-            </a>
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-header__eyebrow fade-in">Ons bedrijf</span>
+      <h1 class="fade-up">Over Lumina Electric</h1>
+      <p class="fade-up">Uw vertrouwde partner voor al uw elektrische werken in België.</p>
+    </div>
+  </section>
 
-            <nav class="nav">
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="diensten.html" class="nav-link">Diensten</a></li>
-                    <li><a href="realisaties.html" class="nav-link">Realisaties</a></li>
-                    <li><a href="faq.html" class="nav-link">FAQ</a></li>
-                    <li><a href="over-ons.html" class="nav-link active">Over ons</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
-                </ul>
-                
-                <div class="header-cta">
-                    <a href="tel:+32485166635" class="btn btn-outline btn-sm">
-                        <i class="fas fa-phone"></i>
-                        Bellen
-                    </a>
-                    <a href="contact.html" class="btn btn-primary btn-sm">
-                        <i class="fas fa-file-invoice"></i>
-                        Gratis offerte
-                    </a>
-                </div>
-            </nav>
-
-            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+  <section>
+    <div class="container">
+      <div class="about-story fade-up">
+        <div class="about-image">
+          <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=900&q=80" alt="Lumina Electric — elektrische expertise">
         </div>
-    </header>
-
-    <section class="page-header">
-        <div class="container">
-            <h1>Over Lumina Electric</h1>
-            <p class="lead">Uw betrouwbare partner voor alle elektrische werken in België</p>
+        <div class="about-text">
+          <p class="eyebrow">Ons verhaal</p>
+          <h2>De normen van elektriciteit in België verhogen.</h2>
+          <p>Lumina Electric werd opgericht met een duidelijke ambitie: <strong>de kwaliteitsnormen in elektrische projecten en renovaties in België verhogen</strong>.</p>
+          <p>Elke interventie wordt beschouwd als een strategische investering. Een elektrische installatie moet niet alleen functioneren; ze moet <strong>onberispelijk, AREI/RGIE-conform, schaalbaar en waardeverhogend</strong> zijn voor uw eigendom.</p>
+          <p>Naast elektriciteit coördineert Lumina Electric ook <strong>algemene sleutel-op-de-deur renovaties</strong> via een netwerk van geselecteerde partners.</p>
+          <ul class="about-checks">
+            <li><i class="fas fa-check-circle"></i> Grondige technische analyse vóór elk project</li>
+            <li><i class="fas fa-check-circle"></i> Duurzame en gestructureerde oplossingen</li>
+            <li><i class="fas fa-check-circle"></i> Conformiteit zonder compromis</li>
+            <li><i class="fas fa-check-circle"></i> Uitvoering tot in de kleinste details</li>
+          </ul>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section style="padding: var(--space-3xl) 0;">
-        <div class="container">
-            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: var(--space-3xl); align-items: center; margin-bottom: var(--space-4xl);">
-                <div>
-                    <h2 class="mb-lg">Ons verhaal</h2>
-                    <p style="font-size: var(--text-lg); line-height: 1.8; margin-bottom: var(--space-lg);">
-                        Lumina Electric werd opgericht met een duidelijke ambitie: <strong>de kwaliteitsnormen in elektrische projecten en renovaties in België verhogen</strong>.
-                    </p>
-                    <p style="font-size: var(--text-lg); line-height: 1.8; margin-bottom: var(--space-lg);">
-                        Elke interventie wordt beschouwd als een strategische investering. Een elektrische installatie moet niet alleen werken; ze moet <strong>onberispelijk, conform het AREI, evolutief en waardevol</strong> zijn voor uw eigendom.
-                    </p>
-                    <p style="font-size: var(--text-lg); line-height: 1.8; margin-bottom: var(--space-lg);">
-                        Wij hanteren een globale en veeleisende aanpak:
-                    </p>
-                    <ul style="font-size: var(--text-lg); line-height: 1.8; margin-bottom: var(--space-lg); list-style: none; padding-left: 0;">
-                        <li style="padding-left: 1.5rem; position: relative; margin-bottom: var(--space-sm);">
-                            <i class="fas fa-check-circle" style="position: absolute; left: 0; top: 0.25rem; color: var(--primary);"></i>
-                            Diepgaande technische analyse
-                        </li>
-                        <li style="padding-left: 1.5rem; position: relative; margin-bottom: var(--space-sm);">
-                            <i class="fas fa-check-circle" style="position: absolute; left: 0; top: 0.25rem; color: var(--primary);"></i>
-                            Duurzame en gestructureerde oplossingen
-                        </li>
-                        <li style="padding-left: 1.5rem; position: relative; margin-bottom: var(--space-sm);">
-                            <i class="fas fa-check-circle" style="position: absolute; left: 0; top: 0.25rem; color: var(--primary);"></i>
-                            Conformiteit zonder compromissen
-                        </li>
-                        <li style="padding-left: 1.5rem; position: relative;">
-                            <i class="fas fa-check-circle" style="position: absolute; left: 0; top: 0.25rem; color: var(--primary);"></i>
-                            Beheerste uitvoering tot in de kleinste details
-                        </li>
-                    </ul>
-                    <p style="font-size: var(--text-lg); line-height: 1.8; margin-bottom: var(--space-lg);">
-                        Naast elektriciteit, <strong>stuurt Lumina Electric ook algemene sleutel-op-de-deur renovaties</strong> aan dankzij een netwerk van partners geselecteerd voor hun excellentie.
-                    </p>
-                    <p style="font-size: var(--text-lg); line-height: 1.8; margin-bottom: var(--space-lg);">
-                        <strong>Eén aanspreekpunt. Rigoreuze coördinatie. Een coherente visie.</strong>
-                    </p>
-                    <p style="font-size: var(--text-lg); line-height: 1.8;">
-                        Onze toewijding is duidelijk: <strong>uw werkzaamheden transformeren in een echte meerwaarde voor uw eigendom</strong>, terwijl wij u totale gemoedsrust bieden.
-                    </p>
-                </div>
-                
-                <div>
-                    <div style="background: var(--primary-pale); border-radius: var(--radius-xl); padding: var(--space-3xl); text-align: center; border: 3px solid var(--primary-light);">
-                        <div style="width: 160px; height: 160px; border-radius: var(--radius-full); margin: 0 auto var(--space-xl); overflow: hidden; box-shadow: var(--shadow-xl); border: 4px solid var(--primary);">
-                            <img src="https://www.genspark.ai/api/files/s/JKmg91Mq" alt="Karim Boukhana - Oprichter Lumina Electric" style="width: 100%; height: 100%; object-fit: cover;">
-                        </div>
-                        <h3 style="font-size: var(--text-2xl); margin-bottom: var(--space-sm);">Karim Boukhana</h3>
-                        <p style="font-size: var(--text-lg); color: var(--primary); font-weight: var(--font-semibold); margin-bottom: var(--space-md);">Oprichter</p>
-                        <p style="font-size: var(--text-base); color: var(--neutral-700);">
-                            Expert in AREI-conformiteit, elektrische renovatie en domotica-oplossingen
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Nos valeurs -->
-            <div style="background: var(--neutral-100); padding: var(--space-3xl); border-radius: var(--radius-xl); margin-bottom: var(--space-3xl);">
-                <h2 class="text-center mb-2xl">Onze prioriteit:</h2>
-                <div class="grid grid-3">
-                    <div style="text-align: center;">
-                        <div style="width: 80px; height: 80px; background: white; border-radius: var(--radius-full); margin: 0 auto var(--space-lg); display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-md);">
-                            <i class="fas fa-award" style="font-size: 2rem; color: var(--primary);"></i>
-                        </div>
-                        <h3 style="font-size: var(--text-xl); margin-bottom: var(--space-md);">Kwaliteit</h3>
-                        <p style="color: var(--neutral-700);">
-                            Hoogwaardig materiaal, zorgvuldig werk en duurzame installatie
-                        </p>
-                    </div>
-                    <div style="text-align: center;">
-                        <div style="width: 80px; height: 80px; background: white; border-radius: var(--radius-full); margin: 0 auto var(--space-lg); display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-md);">
-                            <i class="fas fa-clipboard-check" style="font-size: 2rem; color: var(--primary);"></i>
-                        </div>
-                        <h3 style="font-size: var(--text-xl); margin-bottom: var(--space-md);">Conformiteit</h3>
-                        <p style="color: var(--neutral-700);">
-                            Strikte naleving van AREI en begeleiding tot de keuring
-                        </p>
-                    </div>
-                    <div style="text-align: center;">
-                        <div style="width: 80px; height: 80px; background: white; border-radius: var(--radius-full); margin: 0 auto var(--space-lg); display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-md);">
-                            <i class="fas fa-handshake" style="font-size: 2rem; color: var(--primary);"></i>
-                        </div>
-                        <h3 style="font-size: var(--text-xl); margin-bottom: var(--space-md);">Transparantie</h3>
-                        <p style="color: var(--neutral-700);">
-                            Duidelijke offertes, eerlijke communicatie en geen verrassingen
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Zones d'intervention -->
-            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: var(--space-3xl); align-items: center; margin-bottom: var(--space-3xl);">
-                <div>
-                    <div style="background: var(--primary); color: white; padding: var(--space-2xl); border-radius: var(--radius-lg); height: 100%;">
-                        <h2 style="color: white; margin-bottom: var(--space-lg);">
-                            <i class="fas fa-map-marked-alt"></i>
-                            Interventiezones
-                        </h2>
-                        <ul style="list-style: none; font-size: var(--text-lg); line-height: 2;">
-                            <li><i class="fas fa-check-circle" style="color: var(--secondary-light);"></i> Brussels Hoofdstedelijk Gewest (alle gemeenten)</li>
-                            <li><i class="fas fa-check-circle" style="color: var(--secondary-light);"></i> Vlaams-Brabant (Leuven, Vilvoorde, Dilbeek, Halle, Tervuren...)</li>
-                            <li><i class="fas fa-check-circle" style="color: var(--secondary-light);"></i> Waals-Brabant (Waterloo, Waver, Nijvel, Eigenbrakel...)</li>
-                        </ul>
-                    </div>
-                </div>
-                <div>
-                    <h2 class="mb-lg">Onze toezeggingen</h2>
-                    <div style="display: flex; flex-direction: column; gap: var(--space-md);">
-                        <div style="display: flex; align-items: flex-start; gap: var(--space-md); padding: var(--space-md); background: var(--neutral-100); border-radius: var(--radius-md);">
-                            <i class="fas fa-clock" style="font-size: 1.5rem; color: var(--primary); margin-top: 0.25rem;"></i>
-                            <div>
-                                <strong style="display: block; margin-bottom: var(--space-xs);">Reactiviteit</strong>
-                                <p style="margin: 0; font-size: var(--text-sm); color: var(--neutral-700);">Snelle reactie op uw verzoeken en interventie binnen de afgesproken termijnen</p>
-                            </div>
-                        </div>
-                        <div style="display: flex; align-items: flex-start; gap: var(--space-md); padding: var(--space-md); background: var(--neutral-100); border-radius: var(--radius-md);">
-                            <i class="fas fa-broom" style="font-size: 1.5rem; color: var(--primary); margin-top: 0.25rem;"></i>
-                            <div>
-                                <strong style="display: block; margin-bottom: var(--space-xs);">Netheid</strong>
-                                <p style="margin: 0; font-size: var(--text-sm); color: var(--neutral-700);">Nette werf en schoongemaakt na de interventie</p>
-                            </div>
-                        </div>
-                        <div style="display: flex; align-items: flex-start; gap: var(--space-md); padding: var(--space-md); background: var(--neutral-100); border-radius: var(--radius-md);">
-                            <i class="fas fa-file-contract" style="font-size: 1.5rem; color: var(--primary); margin-top: 0.25rem;"></i>
-                            <div>
-                                <strong style="display: block; margin-bottom: var(--space-xs);">Documentatie</strong>
-                                <p style="margin: 0; font-size: var(--text-sm); color: var(--neutral-700);">Alle nodige documenten geleverd (schema's, certificaten)</p>
-                            </div>
-                        </div>
-                        <div style="display: flex; align-items: flex-start; gap: var(--space-md); padding: var(--space-md); background: var(--neutral-100); border-radius: var(--radius-md);">
-                            <i class="fas fa-headset" style="font-size: 1.5rem; color: var(--primary); margin-top: 0.25rem;"></i>
-                            <div>
-                                <strong style="display: block; margin-bottom: var(--space-xs);">Begeleiding</strong>
-                                <p style="margin: 0; font-size: var(--text-sm); color: var(--neutral-700);">Advies en opvolging tot de definitieve validatie van uw installatie</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Certifications -->
-            <div style="background: var(--primary-pale); padding: var(--space-2xl); border-radius: var(--radius-lg); text-align: center; margin-bottom: var(--space-3xl);">
-                <h2 class="mb-xl">Certificeringen & Erkenningen</h2>
-                <div class="grid grid-4" style="max-width: 800px; margin: 0 auto;">
-                    <div>
-                        <i class="fas fa-certificate" style="font-size: 3rem; color: var(--primary); margin-bottom: var(--space-md);"></i>
-                        <p style="font-weight: var(--font-semibold); margin: 0;">AREI gecertificeerd elektricien</p>
-                    </div>
-                    <div>
-                        <i class="fas fa-shield-check" style="font-size: 3rem; color: var(--primary); margin-bottom: var(--space-md);"></i>
-                        <p style="font-weight: var(--font-semibold); margin: 0;">Professionele BA verzekering</p>
-                    </div>
-                    <div>
-                        <i class="fas fa-building" style="font-size: 3rem; color: var(--primary); margin-bottom: var(--space-md);"></i>
-                        <p style="font-weight: var(--font-semibold); margin: 0;">Tienjarige verzekering</p>
-                    </div>
-                    <div>
-                        <i class="fas fa-file-invoice" style="font-size: 3rem; color: var(--primary); margin-bottom: var(--space-md);"></i>
-                        <p style="font-weight: var(--font-semibold); margin: 0;">BTW BE1008470101</p>
-                    </div>
-                </div>
-            </div>
+  <section style="background:var(--gray-50);padding:var(--section-pad) 0;">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-header__eyebrow">De oprichter</span>
+        <h2>Achter Lumina Electric</h2>
+      </div>
+      <div class="founder-card fade-up">
+        <img src="https://www.genspark.ai/api/files/s/JKmg91Mq" alt="Karim Boukhana — Oprichter Lumina Electric" class="founder-avatar" onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80'">
+        <div class="founder-info">
+          <h3>Karim Boukhana</h3>
+          <span class="title">Oprichter & AREI-gecertificeerde elektricien</span>
+          <p>Expert in AREI-conformiteit, elektrische renovatie en domotica-oplossingen. Zijn engagement: <strong>uw werken omzetten in een echte meerwaarde voor uw eigendom</strong>, met totale gemoedsrust.</p>
+          <p style="margin-top:12px;"><strong>Één aanspreekpunt. Rigoureuze coördinatie. Coherente visie.</strong></p>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-main">
-                <div class="footer-about">
-                    <a href="index.html" class="footer-logo">
-                        <img src="../images/logo-lumina-electric.png" alt="Lumina Electric" style="height: 160px; width: auto; margin-bottom: var(--space-lg);">
-                    </a>
-                    <p>Uw betrouwbare partner voor alle elektrische werken in België. AREI gecertificeerd en erkend elektricien.</p>
-                </div>
-                
-                <div class="footer-column">
-                    <h3 class="footer-title">Snelle Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="diensten.html">Diensten</a></li>
-                        <li><a href="realisaties.html">Realisaties</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
-                        <li><a href="over-ons.html">Over ons</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h3 class="footer-title">Diensten</h3>
-                    <ul class="footer-links">
-                        <li><a href="diensten/arei-conformiteit.html">AREI Conformiteit</a></li>
-                        <li><a href="diensten/elektrische-renovatie.html">Renovatie</a></li>
-                        <li><a href="diensten/panne.html">Panne</a></li>
-                        <li><a href="diensten/laadpaal.html">Laadpaal EV</a></li>
-                        <li><a href="diensten/domotica.html">Domotica</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h3 class="footer-title">Contact</h3>
-                    <div class="footer-contact-item">
-                        <i class="fas fa-phone"></i>
-                        <a href="tel:+32485166635">+32 485 16 66 35</a>
-                    </div>
-                    <div class="footer-contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <a href="mailto:info@luminaelectric.be">info@luminaelectric.be</a>
-                    </div>
-                    <div class="footer-contact-item">
-                        <i class="fab fa-whatsapp"></i>
-                        <a href="https://wa.me/32485166635" target="_blank">WhatsApp</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2026 Lumina Electric. Alle rechten voorbehouden.</p>
-                <div class="footer-legal">
-                    <a href="privacy.html">Privacy</a>
-                    <a href="juridisch.html">Juridische vermeldingen</a>
-                </div>
-            </div>
+  <section>
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-header__eyebrow">Wat ons definieert</span>
+        <h2>Onze kernwaarden</h2>
+        <p>Elk project wordt gestuurd door drie essentiële pijlers.</p>
+      </div>
+      <div class="values-grid stagger">
+        <div class="value-card fade-up">
+          <div class="value-card__icon"><i class="fas fa-award"></i></div>
+          <h3>Kwaliteit</h3>
+          <p>Eersteklas materiaal, zorgvuldig werk en een installatie ontworpen om lang mee te gaan. Wij doen geen concessies op de uitvoeringskwaliteit.</p>
         </div>
-    </footer>
+        <div class="value-card fade-up">
+          <div class="value-card__icon"><i class="fas fa-clipboard-check"></i></div>
+          <h3>Conformiteit</h3>
+          <p>Strikte naleving van het AREI/RGIE bij elke stap. Wij begeleiden u tot de officiële keuring en leveren alle nodige documenten.</p>
+        </div>
+        <div class="value-card fade-up">
+          <div class="value-card__icon"><i class="fas fa-handshake"></i></div>
+          <h3>Transparantie</h3>
+          <p>Duidelijke en gedetailleerde offertes, eerlijke communicatie gedurende het hele project. Geen onaangename verrassingen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script src="../js/main.js"></script>
+  <section style="background:var(--gray-50);padding:var(--section-pad) 0;">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-header__eyebrow">Erkenningen & certificaten</span>
+        <h2>Erkende expertise</h2>
+        <p>Lumina Electric werkt binnen het Belgische wettelijk kader met alle vereiste certificeringen.</p>
+      </div>
+      <div class="certs-grid stagger">
+        <div class="cert-item fade-up"><i class="fas fa-certificate"></i><p>AREI/RGIE gecertificeerde elektricien</p></div>
+        <div class="cert-item fade-up"><i class="fas fa-shield-alt"></i><p>Beroepsaansprakelijkheidsverzekering</p></div>
+        <div class="cert-item fade-up"><i class="fas fa-building"></i><p>Tienjarige aansprakelijkheid</p></div>
+        <div class="cert-item fade-up"><i class="fas fa-file-invoice"></i><p>BTW BE1008470101</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-inner fade-up">
+        <h2>Laten we over uw project praten</h2>
+        <p>Een betrouwbare elektricien nodig? Neem contact op voor een gratis offerte binnen 24u.</p>
+        <div class="cta-buttons">
+          <a href="contact.html" class="btn btn-primary btn-lg"><i class="fas fa-file-invoice"></i> Offerte aanvragen</a>
+          <a href="tel:+32485166635" class="btn btn-outline-white btn-lg"><i class="fas fa-phone"></i> Bel ons</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__main">
+        <div class="footer__brand">
+          <img src="../images/logo-white.svg" alt="Lumina Electric">
+          <p>Expert in elektriciteit in België. AREI-conformiteit, renovatie, herstellingen en smart home installaties.</p>
+          <p class="footer__tva">BTW: BE1008470101</p>
+        </div>
+        <div class="footer__col">
+          <h4>Diensten</h4>
+          <ul class="footer__links">
+            <li><a href="diensten.html#conformite">AREI-conformiteit</a></li>
+            <li><a href="diensten.html#renovation">Elektrische renovatie</a></li>
+            <li><a href="diensten.html#depannage">Spoedservice</a></li>
+            <li><a href="diensten.html#domotique">Domotica</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Bedrijf</h4>
+          <ul class="footer__links">
+            <li><a href="over-ons.html">Over ons</a></li>
+            <li><a href="realisaties.html">Realisaties</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Contact</h4>
+          <div class="footer__contact-item"><i class="fas fa-phone"></i><a href="tel:+32485166635">+32 485 16 66 35</a></div>
+          <div class="footer__contact-item"><i class="fas fa-envelope"></i><a href="mailto:info@luminaelectric.be">info@luminaelectric.be</a></div>
+          <div class="footer__contact-item"><i class="fab fa-whatsapp"></i><a href="https://wa.me/32485166635" target="_blank" rel="noopener">WhatsApp</a></div>
+          <div class="footer__contact-item"><i class="fas fa-clock"></i><span>Ma-Vr: 8u-18u · Za: 9u-13u</span></div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 Lumina Electric. Alle rechten voorbehouden.</p>
+        <div class="footer__legal">
+          <a href="../mentions-legales.html">Juridische vermeldingen</a>
+          <a href="../confidentialite.html">Privacybeleid</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="../js/main.js"></script>
 </body>
 </html>

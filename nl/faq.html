@@ -1,981 +1,220 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>FAQ - Veelgestelde vragen | Lumina Electric</title>
-    <meta name="description" content="Antwoorden op uw vragen over AREI-conformiteit, elektrische renovaties, elektrische borden, laadpalen en storingen in België.">
-    
-    <link rel="icon" type="image/png" href="../images/logo-lumina-electric.png">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
-    <link rel="stylesheet" href="../css/variables.css">
-    <link rel="stylesheet" href="../css/components.css">
-    <link rel="stylesheet" href="../css/layout.css">
-    <link rel="stylesheet" href="../css/pages.css">
-    <link rel="stylesheet" href="../css/mobile.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ Elektriciteit België | Veelgestelde vragen — Lumina Electric</title>
+  <meta name="description" content="Alle antwoorden op uw vragen over elektriciteit, AREI, offertes en onze diensten. Gecertificeerde elektricien in Brussel en Brabant.">
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <!-- Top Bar -->
-    <div class="top-bar">
-        <div class="top-bar-container">
-            <div class="top-bar-info">
-                <a href="tel:+32485166635" class="top-bar-item">
-                    <i class="fas fa-phone"></i>
-                    <span>+32 485 16 66 35</span>
-                </a>
-                <a href="mailto:info@luminaelectric.be" class="top-bar-item">
-                    <i class="fas fa-envelope"></i>
-                    <span>info@luminaelectric.be</span>
-                </a>
-            </div>
-            <div class="lang-switcher">
-                <button onclick="window.location.href='../faq.html'">FR</button>
-                <button class="active">NL</button>
-                <button onclick="window.location.href='../en/faq.html'">EN</button>
-            </div>
+  <div class="urgence-banner">
+    <a href="tel:+32485166635"><i class="fas fa-bolt"></i> Elektrisch noodgeval 7d/7 — Interventie binnen 2-4u &nbsp;·&nbsp; +32 485 16 66 35 <i class="fas fa-arrow-right"></i></a>
+  </div>
+  <nav class="nav nav--transparent" id="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__logo">
+          <img src="../images/logo-white.svg" alt="Lumina Electric" class="nav__logo-white">
+          <img src="../images/logo-color.svg" alt="Lumina Electric" class="nav__logo-color">
+        </a>
+        <ul class="nav__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="diensten.html">Diensten</a></li>
+          <li><a href="realisaties.html">Realisaties</a></li>
+          <li><a href="faq.html" class="active">FAQ</a></li>
+          <li><a href="over-ons.html">Over ons</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav__cta">
+          <div class="nav__lang">
+            <button onclick="location.href='../faq.html'">FR</button>
+            <button class="active">NL</button>
+            <button onclick="location.href='../en/faq.html'">EN</button>
+          </div>
+          <a href="tel:+32485166635" class="nav__phone"><i class="fas fa-phone"></i> Bellen</a>
+          <a href="contact.html" class="nav__devis">Gratis offerte</a>
         </div>
+        <button class="nav__toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
     </div>
+  </nav>
+  <div class="nav__mobile" id="mobileMenu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="diensten.html">Diensten</a></li>
+      <li><a href="realisaties.html">Realisaties</a></li>
+      <li><a href="faq.html" class="active">FAQ</a></li>
+      <li><a href="over-ons.html">Over ons</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav__mobile-cta">
+      <a href="contact.html" class="btn btn-primary"><i class="fas fa-file-invoice"></i> Gratis offerte</a>
+      <a href="tel:+32485166635" class="btn btn-outline"><i class="fas fa-phone"></i> +32 485 16 66 35</a>
+    </div>
+  </div>
 
-    <!-- Header -->
-    <header class="header" id="header">
-        <div class="header-container">
-            <a href="index.html" class="logo">
-                <img src="../images/logo-lumina-electric.png" alt="Lumina Electric" style="height: 120px; width: auto;">
-            </a>
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-header__eyebrow fade-in">Veelgestelde vragen</span>
+      <h1 class="fade-up">Heeft u vragen?</h1>
+      <p class="fade-up">Alle antwoorden op de meest gestelde vragen van onze klanten over elektriciteit, AREI en onze diensten.</p>
+    </div>
+  </section>
 
-            <nav class="nav">
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="diensten.html" class="nav-link">Diensten</a></li>
-                    <li><a href="realisaties.html" class="nav-link">Realisaties</a></li>
-                    <li><a href="faq.html" class="nav-link active">FAQ</a></li>
-                    <li><a href="over-ons.html" class="nav-link">Over ons</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
-                </ul>
-                <div class="header-cta">
-                    <a href="tel:+32485166635" class="btn btn-outline btn-sm">
-                        <i class="fas fa-phone"></i> Bellen
-                    </a>
-                    <a href="contact.html" class="btn btn-primary btn-sm">
-                        <i class="fas fa-file-invoice"></i> Gratis offerte
-                    </a>
-                </div>
-            </nav>
+  <section style="padding:var(--section-pad) 0;">
+    <div class="container-narrow">
 
-            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+      <div class="fade-up" style="margin-bottom:64px;">
+        <div style="display:flex;align-items:center;gap:14px;margin-bottom:32px;">
+          <div style="width:44px;height:44px;background:linear-gradient(135deg,var(--accent),var(--accent-dark));border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <i class="fas fa-clipboard-check" style="color:var(--gray-900);font-size:1.1rem;"></i>
+          </div>
+          <h2 style="font-size:1.75rem;margin:0;">AREI-conformiteit</h2>
         </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="page-header">
-        <div class="container" style="max-width: 800px; text-align: center;">
-            <span style="display: inline-block; padding: var(--space-xs) var(--space-lg); background: rgba(255,255,255,0.25); border-radius: var(--radius-full); font-size: var(--text-sm); font-weight: 600; letter-spacing: 1px; margin-bottom: var(--space-lg); color: white;">HULP & ONDERSTEUNING</span>
-            <h1>Veelgestelde vragen</h1>
-            <p class="lead" style="color: rgba(255,255,255,0.95);">Alle antwoorden op uw vragen over onze elektrische diensten, AREI-conformiteit en uw projecten.</p>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question"><span>Wat is het AREI en wanneer is het verplicht?</span><i class="fas fa-chevron-down"></i></button>
+            <div class="faq-answer"><p>Het AREI (Algemeen Reglement op de Elektrische Installaties) is de Belgische norm voor de veiligheid van elektrische installaties. Een keuring is <strong>verplicht</strong> bij: verkoop of verhuur van een onroerend goed, nieuwe installatie of zware renovatie, belangrijke wijziging van de installatie, en periodieke controle om de 25 jaar.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question"><span>Hoeveel kost een AREI-conformiteitscontrole?</span><i class="fas fa-chevron-down"></i></button>
+            <div class="faq-answer"><p>De kosten variëren naargelang het oppervlak en het type installatie, doorgaans tussen <strong>€150 en €350</strong> voor een standaard woning. Bij vastgestelde niet-conformiteiten bedragen de herstelwerkzaamheden tussen <strong>€500 en €3.000</strong>.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question"><span>Levert u het eénlijnschema en de AREI-documenten?</span><i class="fas fa-chevron-down"></i></button>
+            <div class="faq-answer"><p>Absoluut. Na elke interventie bezorgen wij u alle <strong>reglementaire documenten</strong>: eénlijnschema, positieschema, conformiteitscertificaat, keuringsverslag en garanties.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question"><span>Mijn woning is meer dan 25 jaar oud. Moet ik verplicht in orde worden gesteld?</span><i class="fas fa-chevron-down"></i></button>
+            <div class="faq-answer"><p>Niet onmiddellijk verplicht — tenzij u uw eigendom verkoopt, verhuurt of grote elektrische werken uitvoert. Een installatie van meer dan 25 jaar houdt echter vaak <strong>reële veiligheidsrisico's</strong> in. Wij raden een preventief diagnose aan.</p></div>
+          </div>
         </div>
-    </section>
+      </div>
 
-    <!-- Quick Links -->
-    <section style="background: var(--neutral-50); padding: var(--space-2xl) 0;">
-        <div class="container" style="max-width: 1000px;">
-            <p style="text-align: center; margin-bottom: var(--space-lg); color: var(--neutral-600);">Snelle toegang tot categorieën</p>
-            <div style="display: flex; justify-content: center; gap: var(--space-md); flex-wrap: wrap;">
-                <a href="#conformiteit" class="category-link">
-                    <i class="fas fa-shield-check"></i>
-                    AREI Conformiteit
-                </a>
-                <a href="#werken" class="category-link">
-                    <i class="fas fa-tools"></i>
-                    Werken & Renovatie
-                </a>
-                <a href="#borden" class="category-link">
-                    <i class="fas fa-project-diagram"></i>
-                    Elektrische borden
-                </a>
-                <a href="#laadpaal" class="category-link">
-                    <i class="fas fa-charging-station"></i>
-                    Laadpaal
-                </a>
-                <a href="#storing" class="category-link">
-                    <i class="fas fa-exclamation-triangle"></i>
-                    Storing
-                </a>
-                <a href="#proces" class="category-link">
-                    <i class="fas fa-map-marked-alt"></i>
-                    Proces & Zones
-                </a>
-                <a href="#technisch" class="category-link">
-                    <i class="fas fa-graduation-cap"></i>
-                    Technische vragen
-                </a>
-            </div>
+      <div class="fade-up" style="margin-bottom:64px;">
+        <div style="display:flex;align-items:center;gap:14px;margin-bottom:32px;">
+          <div style="width:44px;height:44px;background:linear-gradient(135deg,var(--accent),var(--accent-dark));border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <i class="fas fa-file-invoice-dollar" style="color:var(--gray-900);font-size:1.1rem;"></i>
+          </div>
+          <h2 style="font-size:1.75rem;margin:0;">Offerte & Tarieven</h2>
         </div>
-    </section>
-
-    <!-- FAQ Content -->
-    <section style="padding: var(--space-3xl) 0;">
-        <div class="container" style="max-width: 900px;">
-
-            <!-- AREI Conformiteit -->
-            <div id="conformiteit" class="faq-category">
-                <div class="faq-category-header">
-                    <i class="fas fa-shield-check"></i>
-                    <h2>Conformiteit & AREI</h2>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Wanneer is AREI-conformiteit verplicht?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>AREI-conformiteit is verplicht in drie hoofdsituaties:</p>
-                        <ul>
-                            <li><strong>Verkoop van vastgoed</strong>: Een positieve keuring is nodig om de transactie af te ronden</li>
-                            <li><strong>Nieuwe installatie</strong>: Elke nieuwe installatie moet door een erkend organisme worden goedgekeurd</li>
-                            <li><strong>Belangrijke wijziging</strong>: Bij grote werken (uitbreiding, grondige renovatie, nieuw bord)</li>
-                        </ul>
-                        <p>De keuring wordt uitgevoerd door een erkend keuringsorganisme dat een conformiteitsrapport aflevert, geldig voor 25 jaar (bij geen wijzigingen).</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Wat gebeurt er als mijn installatie niet conform is?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Een niet-conforme installatie verhindert de verkoop niet, maar heeft wel gevolgen:</p>
-                        <ul>
-                            <li><strong>Prijsonderhandeling</strong>: De koper vraagt vaak een korting</li>
-                            <li><strong>Conformeringstermijn</strong>: De koper krijgt 18 maanden om de werken uit te voeren</li>
-                            <li><strong>Veiligheidsrisico</strong>: Een defecte installatie brengt echte gevaren met zich mee</li>
-                        </ul>
-                        <p><strong>Onze aanbeveling:</strong> Conformering vóór verkoop. Dit beveiligt de transactie, waardeert het goed op en vermijdt moeilijke onderhandelingen.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Leveren jullie de verplichte schema's?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Ja, absoluut. We leveren systematisch:</p>
-                        <ul>
-                            <li><strong>Eendraadschema</strong>: Vereenvoudigde weergave van de elektrische installatie met beveiligingen</li>
-                            <li><strong>Situatieschema</strong>: Architecturaal plan met precieze locatie van elektrische punten</li>
-                        </ul>
-                        <p>Deze documenten zijn onmisbaar voor de AREI-keuring en worden u in papieren en digitale versie overhandigd.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Moet ik mijn hele installatie vernieuwen om conform te zijn?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p><strong>Nee, niet noodzakelijk.</strong> Onze aanpak is geoptimaliseerd en strategisch:</p>
-                        <ul>
-                            <li>We voeren een <strong>nauwkeurige diagnose</strong> uit om alleen de non-conformiteiten te identificeren</li>
-                            <li>We prioriteren de interventies volgens hun <strong>veiligheids- en regelgevingsimpact</strong></li>
-                            <li>We passen <strong>alleen de defecte elementen</strong> aan, zonder onnodige werken</li>
-                        </ul>
-                        <p>Doel: conformiteit behalen tegen de beste prijs, zonder te vernieuwen wat al goed werkt.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Werken & Renovatie -->
-            <div id="werken" class="faq-category">
-                <div class="faq-category-header">
-                    <i class="fas fa-tools"></i>
-                    <h2>Werken & Renovatie</h2>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Doen jullie volledige elektrische renovaties?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Ja. We voeren <strong>gedeeltelijke of volledige</strong> elektrische renovaties uit volgens uw behoeften:</p>
-                        <ul>
-                            <li><strong>Gedeeltelijke renovatie</strong>: Vervanging van het bord, normalisatie van kritieke circuits</li>
-                            <li><strong>Volledige renovatie</strong>: Totale herbedrading, nieuw bord, moderne verlichting, domotica</li>
-                        </ul>
-                        <p>Elk project omvat: technische analyse, gedetailleerde offerte, respect voor planning, AREI-conformiteit en volledige documentatie.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Werken jullie samen met andere aannemers?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p><strong>Ja, we coördineren uw volledige project.</strong></p>
-                        <p>Dankzij ons netwerk van geselecteerde en betrouwbare partners (loodgieters, stukadoors, schilders, schrijnwerkers), bieden we <strong>turn-key globale renovaties</strong>:</p>
-                        <ul>
-                            <li>Eén aanspreekpunt voor het hele beheer</li>
-                            <li>Optimale coördinatie tussen aannemers</li>
-                            <li>Beheerste planning en respect voor deadlines</li>
-                            <li>Gegarandeerde kwaliteit op alle prestaties</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Hoe lang duren de werken?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>De duur hangt af van de omvang van het project:</p>
-                        <ul>
-                            <li><strong>Vervanging elektrisch bord</strong>: 1 tot 2 dagen</li>
-                            <li><strong>Gerichte conformering</strong>: 2 tot 5 dagen</li>
-                            <li><strong>Gedeeltelijke renovatie</strong>: 1 tot 2 weken</li>
-                            <li><strong>Volledige renovatie</strong>: 3 tot 6 weken</li>
-                        </ul>
-                        <p>Na de initiële technische analyse leveren we een <strong>nauwkeurige en gestructureerde planning</strong> met de belangrijkste stappen en voorziene data.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Leveren jullie een gedetailleerde offerte?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p><strong>Ja, volledige transparantie.</strong> Elke Lumina Electric offerte is:</p>
-                        <ul>
-                            <li><strong>Gedetailleerd</strong>: Elke werkpost is duidelijk geïdentificeerd</li>
-                            <li><strong>Transparant</strong>: Eenheidsprijzen, hoeveelheden, materialen gespecificeerd</li>
-                            <li><strong>Zonder verrassingen</strong>: Geen verborgen kosten of onvoorziene toeslagen</li>
-                            <li><strong>Gestructureerd</strong>: Logische organisatie per zone of per fase</li>
-                        </ul>
-                        <p>We leggen elke regel uit tijdens de presentatie van de offerte om uw volledige begrip te garanderen.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Elektrische borden -->
-            <div id="borden" class="faq-category">
-                <div class="faq-category-header">
-                    <i class="fas fa-project-diagram"></i>
-                    <h2>Elektrische borden & Veiligheid</h2>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Wanneer moet een elektrisch bord vervangen worden?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Vervanging is nodig in verschillende gevallen:</p>
-                        <ul>
-                            <li><strong>Verouderd bord</strong>: Meer dan 30 jaar, draadziekeringen, geen differentiëlen</li>
-                            <li><strong>Onderdimensionering</strong>: Automaten die regelmatig uitschakelen, gebrek aan circuits</li>
-                            <li><strong>AREI-non-conformiteit</strong>: Ontbreken van verplichte beveiligingen</li>
-                            <li><strong>Verzadiging</strong>: Geen plaats meer om circuits toe te voegen (EV, domotica...)</li>
-                        </ul>
-                        <p>Een modern bord verbetert de <strong>veiligheid</strong>, <strong>stabiliteit</strong> en <strong>evolutiecapaciteit</strong> van uw installatie.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Installeren jullie de verplichte 30mA differentiëlen?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p><strong>Ja, systematisch.</strong> 30mA differentiëlen zijn verplicht volgens het AREI om personen te beschermen tegen elektrische schokken.</p>
-                        <p>We installeren:</p>
-                        <ul>
-                            <li><strong>Type A differentiëlen</strong>: Voor standaard circuits</li>
-                            <li><strong>Type B differentiëlen</strong>: Voor EV-laadpalen (verplicht)</li>
-                            <li><strong>Selectiviteit</strong>: Intelligente organisatie om ongewenste uitschakelingen te beperken</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Bieden jullie alarm- en bewakingssystemen aan?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Ja. We installeren <strong>complete en geïntegreerde beveiligingssystemen</strong>:</p>
-                        <ul>
-                            <li><strong>Anti-inbraak alarm</strong>: Bewegingsdetectoren, deur-/raamcontacten, centrale</li>
-                            <li><strong>Videobewaking</strong>: IP-camera's met toegang op afstand via smartphone</li>
-                            <li><strong>Domotica-integratie</strong>: Koppeling met verlichting, rolluiken, notificaties</li>
-                        </ul>
-                        <p>Beveiligde infrastructuur met beschermde voeding en back-up bij netwerkuitval.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Laadpaal -->
-            <div id="laadpaal" class="faq-category">
-                <div class="faq-category-header">
-                    <i class="fas fa-charging-station"></i>
-                    <h2>Laadpaal & Modernisering</h2>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Installeren jullie laadpalen voor elektrische voertuigen?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p><strong>Ja, volledige en conforme installatie.</strong></p>
-                        <p>Onze prestatie omvat:</p>
-                        <ul>
-                            <li><strong>Capaciteitsanalyse</strong>: Verificatie dat uw installatie de lading ondersteunt</li>
-                            <li><strong>Beveiligd toegewijd circuit</strong>: Versterkte bekabeling, type B differentieelbeveiliging</li>
-                            <li><strong>Wallbox installatie</strong>: 7kW (mono), 11kW of 22kW (tri) volgens uw voertuig</li>
-                            <li><strong>Certificaten voor premies</strong>: Volledige documentatie voor aanvraag subsidies</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Is mijn installatie klaar voor een EV-laadpaal?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Dat hangt af van verschillende factoren. We voeren een <strong>volledige technische analyse</strong> uit:</p>
-                        <ul>
-                            <li><strong>Beschikbaar vermogen</strong>: Capaciteit van de meter en het bord</li>
-                            <li><strong>Kabeldoorsnede</strong>: Dimensionering tussen bord en laadpaal</li>
-                            <li><strong>Optimale locatie</strong>: Afstand, toegankelijkheid, bescherming</li>
-                        </ul>
-                        <p>Als uw installatie versterking nodig heeft, stellen we de nodige aanpassingen voor (wijziging hoofdautomaat, borduitbreiding...).</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Elektrische storing -->
-            <div id="storing" class="faq-category">
-                <div class="faq-category-header">
-                    <i class="fas fa-exclamation-triangle"></i>
-                    <h2>Elektrische storing</h2>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Komen jullie in noodgevallen 7/7 langs?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p><strong>Ja, wij zijn 7 dagen per week beschikbaar voor elektrische noodgevallen.</strong></p>
-                        <p>Onze spoedreparatiedienst garandeert:</p>
-                        <ul>
-                            <li><strong>Snelle interventie</strong>: Termijn van 2 tot 4 uur afhankelijk van de zone</li>
-                            <li><strong>Diagnose ter plaatse</strong>: Onmiddellijke identificatie van de storing</li>
-                            <li><strong>Directe reparatie</strong>: Indien mogelijk met beschikbaar materiaal</li>
-                            <li><strong>Tijdelijke oplossing</strong>: Veilige herinbedrijfstelling in afwachting van definitieve reparatie indien nodig</li>
-                        </ul>
-                        <p>Bel <strong>+32 485 16 66 35</strong> voor een noodgeval.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Wat te doen bij een totale stroomstoring?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p><strong>Volg deze stappen voordat u ons belt:</strong></p>
-                        <ol>
-                            <li><strong>Controleer uw elektrisch bord</strong>: Is een stroomonderbreker uitgeschakeld? Probeer deze opnieuw in te schakelen (slechts één keer)</li>
-                            <li><strong>Controleer de meter</strong>: Is de hoofdschakelaar omlaag?</li>
-                            <li><strong>Vergelijk met uw buren</strong>: Hebben zij ook een storing? (netwerkuitval)</li>
-                        </ol>
-                        <p><strong>Als het probleem aanhoudt:</strong></p>
-                        <ul>
-                            <li>Probeer niet meerdere keren opnieuw in te schakelen (risico op verergering)</li>
-                            <li>Koppel gevoelige apparaten los (computers, huishoudelijke apparaten)</li>
-                            <li>Neem onmiddellijk contact met ons op via +32 485 16 66 35</li>
-                        </ul>
-                        <p><em>Opmerking: Als de storing de hele buurt treft, neem dan contact op met uw netwerkbeheerder (Sibelga, Fluvius...).</em></p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Wat zijn de meest voorkomende elektrische storingen?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>De storingen die wij het vaakst behandelen:</p>
-                        <ul>
-                            <li><strong>Kortsluiting</strong>: Stroomonderbreker die onmiddellijk uitschakelt bij het opnieuw inschakelen (beschadigde kabel, defect apparaat)</li>
-                            <li><strong>Overbelasting</strong>: Stroomonderbreker die na enkele minuten uitschakelt (te veel apparaten op één circuit)</li>
-                            <li><strong>Defect stopcontact of schakelaar</strong>: Geen stroom op een stopcontact of verlichting</li>
-                            <li><strong>Defect elektrisch bord</strong>: Stroomonderbreker of aardlekschakelaar buiten gebruik</li>
-                            <li><strong>Aardingsprobleem</strong>: Aardlekschakelaar die zonder duidelijke reden uitschakelt</li>
-                        </ul>
-                        <p>Onze nauwkeurige diagnose maakt het mogelijk om snel de oorzaak van de storing te identificeren en deze duurzaam te verhelpen.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Hoeveel kost een elektrische storing oplossen?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p><strong>De kosten variëren afhankelijk van verschillende factoren:</strong></p>
-                        <ul>
-                            <li><strong>Verplaatsingskosten</strong>: Variabel afhankelijk van de zone (inbegrepen in offerte)</li>
-                            <li><strong>Arbeid</strong>: Uurtarief gekwalificeerde elektricien</li>
-                            <li><strong>Materiaal</strong>: Benodigde vervangende onderdelen</li>
-                            <li><strong>Spoed</strong>: Toeslag voor interventie 's avonds/weekend (indien van toepassing)</li>
-                        </ul>
-                        <p><strong>Gegarandeerde transparantie:</strong></p>
-                        <ul>
-                            <li>Duidelijke offerte vóór interventie (behalve bij direct gevaar)</li>
-                            <li>Geen verborgen kosten</li>
-                            <li>Gedetailleerde uitleg van de noodzakelijke werkzaamheden</li>
-                        </ul>
-                        <p>Bel ons voor een snelle schatting: <strong>+32 485 16 66 35</strong></p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Mijn aardlekschakelaar schakelt voortdurend uit, wat te doen?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p><strong>Een aardlekschakelaar die vaak uitschakelt wijst op een stroomlekkage.</strong></p>
-                        <p><strong>Mogelijke oorzaken:</strong></p>
-                        <ul>
-                            <li><strong>Defect apparaat</strong>: Wasmachine, koelkast, oven... (defecte isolatie)</li>
-                            <li><strong>Vocht</strong>: Waterinfiltratie in een stopcontact of verdeeldoos</li>
-                            <li><strong>Beschadigde kabel</strong>: Geperforeerde isolatie (werkzaamheden, knaagdieren...)</li>
-                            <li><strong>Te gevoelige aardlekschakelaar</strong>: 30mA ongeschikt voor de installatie</li>
-                        </ul>
-                        <p><strong>Onze interventie:</strong></p>
-                        <ul>
-                            <li>Systematische test van elk circuit</li>
-                            <li>Meting van isolatieweerstand</li>
-                            <li>Nauwkeurige lokalisatie van het defect</li>
-                            <li>Reparatie of vervanging van het defecte element</li>
-                        </ul>
-                        <p><em>Schakel de aardlekschakelaar nooit uit: deze beschermt tegen elektrocutie.</em></p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Kan ik zelf kleine elektrische reparaties uitvoeren?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p><strong>Voor uw veiligheid raden wij elke interventie aan de elektrische installatie af als u niet over de vereiste competenties beschikt.</strong></p>
-                        <p><strong>U kunt zelf:</strong></p>
-                        <ul>
-                            <li>Een lamp vervangen</li>
-                            <li>Een stroomonderbreker opnieuw inschakelen (slechts één keer)</li>
-                            <li>Een defect apparaat loskoppelen</li>
-                        </ul>
-                        <p><strong>Doe een beroep op een professional voor:</strong></p>
-                        <ul>
-                            <li>Een stopcontact of schakelaar vervangen</li>
-                            <li>Een beschadigde kabel repareren</li>
-                            <li>Interventie in het elektrisch bord</li>
-                            <li>Elke interventie aan de vaste installatie</li>
-                        </ul>
-                        <p><strong>Risico's:</strong> elektrocutie, brand, beschadiging van de installatie, ongeldigverklaring van de verzekering.</p>
-                        <p>Bij twijfel, neem contact met ons op: <strong>+32 485 16 66 35</strong></p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Proces & Zones -->
-            <div id="proces" class="faq-category">
-                <div class="faq-category-header">
-                    <i class="fas fa-map-marked-alt"></i>
-                    <h2>Proces & Interventiezones</h2>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Komen jullie alleen bij noodgevallen?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p><strong>Nee, we werken aan alle types projecten:</strong></p>
-                        <ul>
-                            <li><strong>Geplande projecten</strong>: Renovaties, uitbreidingen, nieuwe installaties</li>
-                            <li><strong>Conformeringen</strong>: Voorbereiding verkoop, periodieke controle</li>
-                            <li><strong>Spoedstoringen</strong>: Snelle interventie 7/7 bij panne</li>
-                            <li><strong>Moderniseringen</strong>: Domotica, LED-verlichting, EV-laadpalen</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>In welke regio's werken jullie?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Onze prioritaire interventiezones:</p>
-                        <ul>
-                            <li><strong>Brussels Hoofdstedelijk Gewest</strong>: Alle gemeenten</li>
-                            <li><strong>Vlaams-Brabant</strong>: Leuven, Vilvoorde, Dilbeek, Halle, Tervuren en omgeving</li>
-                            <li><strong>Waals-Brabant</strong>: Waterloo, Waver, Nijvel, Eigenbrakel, Ottignies-LLN</li>
-                        </ul>
-                        <p>Voor grote projecten onderzoeken we ook aanvragen in andere regio's.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Bieden jullie een turn-key oplossing?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p><strong>Ja, volledig projectbeheer.</strong></p>
-                        <p>We coördineren het hele project met onze geselecteerde partners:</p>
-                        <ul>
-                            <li><strong>Enig aanspreekpunt</strong>: U beheert slechts één contact</li>
-                            <li><strong>Globale coördinatie</strong>: Planning, aannemers, leveringen</li>
-                            <li><strong>Vlot en gestructureerd beheer</strong>: Anticipatie van beperkingen</li>
-                            <li><strong>Globale garantie</strong>: Verantwoordelijkheid op de hele prestatie</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Waarom kiezen voor Lumina Electric?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Ons verschil: <strong>gestructureerde en waardegedreven aanpak.</strong></p>
-                        <ul>
-                            <li><strong>Conformiteit zonder compromissen</strong>: Strikte naleving van AREI en veiligheidsnormen</li>
-                            <li><strong>Globale coördinatie</strong>: Volledig beheer van uw project met betrouwbare partners</li>
-                            <li><strong>Zorgvuldige uitvoering</strong>: Professionele afwerking, propere werven</li>
-                            <li><strong>Duurzame waardecreatie</strong>: Evolutieve installaties, volledige documentatie</li>
-                            <li><strong>Totale transparantie</strong>: Gedetailleerde offertes, continue communicatie, geen verrassingen</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Hoe start ik een project met Lumina Electric?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p><strong>Eenvoudig in 4 stappen:</strong></p>
-                        <ol style="padding-left: var(--space-lg);">
-                            <li><strong>Eerste contact</strong>: Telefoon, e-mail of online formulier</li>
-                            <li><strong>Technisch bezoek</strong>: We analyseren uw installatie en behoeften</li>
-                            <li><strong>Gedetailleerd voorstel</strong>: Transparante offerte met aangepaste oplossingen</li>
-                            <li><strong>Planning & uitvoering</strong>: Respect voor planning, regelmatige opvolging, conforme levering</li>
-                        </ol>
-                        <p style="margin-top: var(--space-md);"><a href="contact.html" class="btn btn-primary">Start mijn project</a></p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Technische vragen -->
-            <div id="technisch" class="faq-category">
-                <div class="faq-category-header">
-                    <i class="fas fa-graduation-cap"></i>
-                    <h2>Geavanceerde technische vragen</h2>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Hoe dimensioneren jullie een elektrisch bord bij renovatie?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>We voeren een <strong>volledige en prospectieve lastanalyse</strong> uit:</p>
-                        <ul>
-                            <li><strong>Huidig verbruik</strong>: Berekening van bestaande lasten per circuit</li>
-                            <li><strong>Toekomstige apparatuur</strong>: Anticipatie EV-laadpalen, warmtepompen, domotica, airconditioning</li>
-                            <li><strong>Reservemarges</strong>: 20-30% extra capaciteit voor evoluties</li>
-                            <li><strong>Optimale verdeling</strong>: Gestructureerde organisatie van circuits per zone</li>
-                        </ul>
-                        <p>Doel: een <strong>evolutief, gestructureerd en AREI-conform</strong> bord ontwerpen dat voldoet aan uw huidige en toekomstige behoeften.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Hoe optimaliseren jullie de selectiviteit van beveiligingen?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p><strong>Selectiviteit</strong> beperkt de impact van een defect op de hele installatie:</p>
-                        <ul>
-                            <li><strong>Intelligente verdeling</strong>: Circuits verdeeld over meerdere differentiëlen</li>
-                            <li><strong>Aangepaste kalibrering</strong>: Automaten gedimensioneerd volgens de lasten</li>
-                            <li><strong>Discriminatie</strong>: Alleen de beveiliging van het defecte circuit schakelt uit</li>
-                            <li><strong>Gevoelige circuits geïsoleerd</strong>: Vriezer, alarm, server op toegewijde beveiligingen</li>
-                        </ul>
-                        <p>Resultaat: minder ongewenste uitschakelingen, betere continuïteit van dienst.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Hoe controleren jullie de kwaliteit van de aarding?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Aarding is cruciaal voor de veiligheid van personen. We controleren:</p>
-                        <ul>
-                            <li><strong>Continuïteit van de geleiders</strong>: Verificatie van alle beschermingsverbindingen</li>
-                            <li><strong>Weerstand van de aardpen</strong>: Meting met aardingsmeter (< 30Ω vereist)</li>
-                            <li><strong>Equipotentiale verbindingen</strong>: Aansluiting van metalen massa's (water, gas, verwarming)</li>
-                            <li><strong>Uitschakeltests</strong>: Verificatie dat differentiëlen correct reageren</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Voorzien jullie reservecapaciteit voor toekomstige evoluties?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p><strong>Ja, systematisch.</strong> We anticiperen toekomstige technologische behoeften:</p>
-                        <ul>
-                            <li><strong>Vrije plaatsen</strong>: 20-30% beschikbare ruimte in het bord</li>
-                            <li><strong>Vermogenscapaciteit</strong>: Dimensionering voor toevoeging EV-laadpaal, warmtepomp, airco</li>
-                            <li><strong>Netwerkinfrastructuur</strong>: Pre-bekabeling voor domotica, camera's, alarm</li>
-                            <li><strong>Fotovoltaïsche voorbereiding</strong>: Toegewijde circuits klaar voor zonnepanelen en batterij</li>
-                        </ul>
-                        <p>Uw installatie blijft <strong>evolutief zonder grote verbouwing</strong>.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Hoe beveiligen jullie de integratie van een alarmsysteem?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>De betrouwbaarheid van het alarmsysteem is gebaseerd op een beveiligde voeding:</p>
-                        <ul>
-                            <li><strong>Beschermd toegewijd circuit</strong>: Voeding op afzonderlijke beveiliging</li>
-                            <li><strong>Back-up batterij</strong>: Autonomie bij stroomuitval</li>
-                            <li><strong>Beveiligde netwerkinfrastructuur</strong>: RJ45 CAT6 bekabeling voor IP-camera's</li>
-                            <li><strong>Bescherming tegen overspanningen</strong>: Overspanningsbeveiliging op gevoelige circuits</li>
-                        </ul>
-                        <p>Garantie van <strong>continuïteit van dienst</strong> zelfs bij elektrisch probleem.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Hoe bepalen jullie of een installatie mono- of trifasig moet zijn?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>De keuze hangt af van het <strong>nodige vermogen en de apparatuur</strong>:</p>
-                        <ul>
-                            <li><strong>Monofasig (230V)</strong>: Voldoende tot 9-10 kVA, standaard woningen</li>
-                            <li><strong>Trifasig (400V)</strong>: Aanbevolen boven 10 kVA of voor krachtige apparatuur</li>
-                        </ul>
-                        <p><strong>Overgang naar trifasig aanbevolen als:</strong></p>
-                        <ul>
-                            <li>EV-laadpaal 11kW of 22kW</li>
-                            <li>Krachtige warmtepomp</li>
-                            <li>Werkplaats met machines</li>
-                            <li>Groot oppervlak te verwarmen/koelen</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Wat zijn de voordelen van een trifasige installatie?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Trifasig biedt verschillende technische voordelen:</p>
-                        <ul>
-                            <li><strong>Hoger beschikbaar vermogen</strong>: Tot 3× de capaciteit van monofasig</li>
-                            <li><strong>Betere lastverdeling</strong>: Evenwichtige verdeling over 3 fasen</li>
-                            <li><strong>Kleinere kabeldoorsneden</strong>: Minder stroom per fase voor zelfde vermogen</li>
-                            <li><strong>Compatibiliteit professionele apparatuur</strong>: Machines, krachtige EV-laadpalen</li>
-                            <li><strong>Minder uitschakelingen</strong>: Verspreide last, beter geabsorbeerde pieken</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Hoe beheren jullie het evenwicht van fasen in trifasig?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Een goed evenwicht is essentieel in trifasig:</p>
-                        <ul>
-                            <li><strong>Strategische verdeling</strong>: Verdeling van circuits over de 3 fasen</li>
-                            <li><strong>Lastanalyse</strong>: Identificatie van grote verbruikers (oven, droogtrommel, warmtepomp...)</li>
-                            <li><strong>Intelligent evenwicht</strong>: Verdeling om overbelasting van één fase te vermijden</li>
-                            <li><strong>Meting en optimalisatie</strong>: Controle van stromen per fase bij inbedrijfstelling</li>
-                        </ul>
-                        <p>Doel: <strong>netwerkstabiliteit</strong>, geen ongewenste uitschakelingen, lange levensduur van apparatuur.</p>
-                    </div>
-                </div>
-            </div>
-
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question"><span>Hoe snel ontvangt u een offerte?</span><i class="fas fa-chevron-down"></i></button>
+            <div class="faq-answer"><p>Wij reageren binnen de <strong>24 uur</strong> na uw aanvraag. Voor kleine werken is een schatting telefonisch mogelijk. Voor grotere projecten plannen wij een technisch bezoek binnen 2-3 dagen en bezorgen u een gedetailleerde offerte binnen de 48u daarna.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question"><span>Is de offerte echt gratis en zonder verbintenis?</span><i class="fas fa-chevron-down"></i></button>
+            <div class="faq-answer"><p>Ja, volledig. Onze offerte is <strong>100% gratis</strong> en zonder enige verbintenis van uw kant. Ze omvat het detail van de werken, de gebruikte materialen, de uitvoeringstermijn en de prijs inclusief btw. Geen verrassingen achteraf.</p></div>
+          </div>
         </div>
-    </section>
+      </div>
 
-    <!-- CTA Section -->
-    <section style="background: var(--neutral-50); padding: var(--space-3xl) 0;">
-        <div class="container">
-            <div style="max-width: 800px; margin: 0 auto; text-align: center; padding: var(--space-3xl); background: linear-gradient(135deg, var(--primary-dark), var(--primary)); border-radius: var(--radius-xl); color: white;">
-                <i class="fas fa-lightbulb" style="font-size: 3rem; margin-bottom: var(--space-lg); opacity: 0.9;"></i>
-                <h2 style="font-size: var(--text-3xl); font-weight: 700; margin-bottom: var(--space-md); color: white;">Elk project is uniek</h2>
-                <p style="font-size: var(--text-lg); margin-bottom: var(--space-xl); color: rgba(255,255,255,0.9); line-height: 1.6;">
-                    We geven voorrang aan rigoureuze technische analyse om een aangepaste, conforme en duurzame oplossing voor te stellen.
-                </p>
-                <a href="contact.html" class="btn btn-primary btn-lg" style="background: white; color: var(--primary); border: none;">
-                    <i class="fas fa-calendar-check"></i> Vraag een studie op maat
-                </a>
-                <p style="margin-top: var(--space-lg); font-size: var(--text-sm); color: rgba(255,255,255,0.7);">
-                    Antwoord binnen 24u • Gratis offerte • Zonder verplichting
-                </p>
-            </div>
+      <div class="fade-up" style="margin-bottom:64px;">
+        <div style="display:flex;align-items:center;gap:14px;margin-bottom:32px;">
+          <div style="width:44px;height:44px;background:linear-gradient(135deg,var(--accent),var(--accent-dark));border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <i class="fas fa-tools" style="color:var(--gray-900);font-size:1.1rem;"></i>
+          </div>
+          <h2 style="font-size:1.75rem;margin:0;">Herstelling & Noodgevallen</h2>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-main">
-                <div class="footer-about">
-                    <a href="index.html" class="footer-logo">
-                        <img src="../images/logo-lumina-electric.png" alt="Lumina Electric" style="height: 160px; width: auto; margin-bottom: var(--space-lg);">
-                    </a>
-                    <p>Expert elektriciteit in België. Service in Brussels Hoofdstedelijk Gewest, Vlaams-Brabant en Waals-Brabant.</p>
-                    <p style="margin-top: var(--space-md); font-size: var(--text-sm);">
-                        <strong>BTW-nr:</strong> BE1008470101
-                    </p>
-                </div>
-                
-                <div class="footer-col">
-                    <h4 class="footer-title">Diensten</h4>
-                    <ul class="footer-links">
-                        <li><a href="diensten/arei-conformiteit.html">AREI Conformiteit</a></li>
-                        <li><a href="diensten/elektrische-renovatie.html">Elektrische renovatie</a></li>
-                        <li><a href="diensten/storing.html">Storing</a></li>
-                        <li><a href="diensten/domotica.html">Domotica</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-col">
-                    <h4 class="footer-title">Bedrijf</h4>
-                    <ul class="footer-links">
-                        <li><a href="over-ons.html">Over ons</a></li>
-                        <li><a href="realisaties.html">Realisaties</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-col">
-                    <h4 class="footer-title">Contact</h4>
-                    <div class="footer-contact-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <a href="tel:+32485166635">+32 485 16 66 35</a>
-                        </div>
-                    </div>
-                    <div class="footer-contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <a href="mailto:info@luminaelectric.be">info@luminaelectric.be</a>
-                        </div>
-                    </div>
-                    <div class="footer-contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            Brussels Hoofdstedelijk Gewest, Vlaams-Brabant & Waals-Brabant
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2024 Lumina Electric. Alle rechten voorbehouden.</p>
-                <div class="footer-legal">
-                    <a href="juridisch.html">Juridisch</a>
-                    <a href="privacy.html">Privacy</a>
-                </div>
-            </div>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question"><span>Interveniëren jullie in noodgevallen in het weekend?</span><i class="fas fa-chevron-down"></i></button>
+            <div class="faq-answer"><p>Ja, wij bieden een <strong>7d/7 spoeddienst</strong>. Bij ernstige elektrische pannes interveniëren wij binnen de <strong>2 tot 4 uur</strong>, ook in het weekend en op feestdagen. Een toeslag voor spoedinterventie kan van toepassing zijn buiten kantooruren.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question"><span>Mijn zekering valt constant uit. Wat te doen?</span><i class="fas fa-chevron-down"></i></button>
+            <div class="faq-answer"><p>Een zekering die regelmatig uitvalt wijst op een <strong>ernstig probleem</strong>: overbelasting, kortsluiting, isolatiedefect of defect toestel. Probeer de zekering niet te forceren. Bel ons — wij voeren een nauwkeurige en veilige diagnose uit.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question"><span>Ik ruik iets verbrands in mijn woning. Is dat ernstig?</span><i class="fas fa-chevron-down"></i></button>
+            <div class="faq-answer"><p>Ja, een brandgeur is een <strong>ernstig alarmsignaal</strong>. Schakel onmiddellijk de hoofdschakelaar uit en verlaat het gebouw als u rook ziet. Bel ons dringend op <a href="tel:+32485166635" style="color:var(--accent-dark);font-weight:600;">+32 485 16 66 35</a> — oververhitting kan leiden tot brand.</p></div>
+          </div>
         </div>
-    </footer>
+      </div>
 
-    <script src="../js/main.js"></script>
+      <div class="fade-up">
+        <div style="display:flex;align-items:center;gap:14px;margin-bottom:32px;">
+          <div style="width:44px;height:44px;background:linear-gradient(135deg,var(--accent),var(--accent-dark));border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <i class="fas fa-info-circle" style="color:var(--gray-900);font-size:1.1rem;"></i>
+          </div>
+          <h2 style="font-size:1.75rem;margin:0;">Algemeen</h2>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question"><span>In welke zones intervenieert u?</span><i class="fas fa-chevron-down"></i></button>
+            <div class="faq-answer"><p>Wij interveniëren in heel <strong>centraal België</strong>: Brussels Hoofdstedelijk Gewest (alle 19 gemeenten), Vlaams-Brabant (Leuven, Vilvoorde, Dilbeek, Halle, Tervuren...) en Waals-Brabant (Waterloo, Waver, Nijvel, Eigenbrakel, Ottignies-LLN...).</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question"><span>Werken jullie ook voor professionals en bedrijven?</span><i class="fas fa-chevron-down"></i></button>
+            <div class="faq-answer"><p>Ja, wij interveniëren zowel voor <strong>particulieren</strong> als voor <strong>professionals</strong>: kmo's, kantoren, handelszaken, restaurants, mede-eigendommen. Neem contact op om uw specifieke behoeften te bespreken.</p></div>
+          </div>
+        </div>
+      </div>
 
-    <style>
-        .category-link {
-            display: inline-flex;
-            align-items: center;
-            gap: var(--space-xs);
-            padding: var(--space-sm) var(--space-lg);
-            background: white;
-            border: 1px solid var(--neutral-300);
-            border-radius: var(--radius-full);
-            color: var(--neutral-700);
-            text-decoration: none;
-            font-size: var(--text-sm);
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
+    </div>
+  </section>
 
-        .category-link:hover {
-            background: var(--primary);
-            color: white;
-            border-color: var(--primary);
-            transform: translateY(-2px);
-        }
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-inner fade-up">
+        <h2>Vindt u uw antwoord niet?</h2>
+        <p>Neem rechtstreeks contact op — wij beantwoorden al uw vragen binnen 24u.</p>
+        <div class="cta-buttons">
+          <a href="contact.html" class="btn btn-primary btn-lg"><i class="fas fa-envelope"></i> Stuur een bericht</a>
+          <a href="tel:+32485166635" class="btn btn-outline-white btn-lg"><i class="fas fa-phone"></i> Bel rechtstreeks</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        .category-link i {
-            font-size: 1rem;
-        }
-
-        .faq-category {
-            margin-bottom: var(--space-3xl);
-        }
-
-        .faq-category-header {
-            display: flex;
-            align-items: center;
-            gap: var(--space-md);
-            margin-bottom: var(--space-xl);
-            padding-bottom: var(--space-lg);
-            border-bottom: 2px solid var(--primary);
-        }
-
-        .faq-category-header i {
-            font-size: 2rem;
-            color: var(--primary);
-        }
-
-        .faq-category-header h2 {
-            font-size: var(--text-2xl);
-            font-weight: 700;
-            margin: 0;
-        }
-
-        .faq-item {
-            background: white;
-            border: 1px solid var(--neutral-200);
-            border-radius: var(--radius-lg);
-            margin-bottom: var(--space-md);
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-
-        .faq-item:hover {
-            border-color: var(--primary);
-            box-shadow: var(--shadow-sm);
-        }
-
-        .faq-question {
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: var(--space-lg);
-            background: none;
-            border: none;
-            text-align: left;
-            cursor: pointer;
-            font-size: var(--text-lg);
-            font-weight: 600;
-            color: var(--neutral-900);
-            transition: all 0.3s ease;
-        }
-
-        .faq-question:hover {
-            color: var(--primary);
-        }
-
-        .faq-question i {
-            transition: transform 0.3s ease;
-            color: var(--primary);
-        }
-
-        .faq-item.active .faq-question i {
-            transform: rotate(180deg);
-        }
-
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s ease, padding 0.4s ease;
-            padding: 0 var(--space-lg);
-        }
-
-        .faq-item.active .faq-answer {
-            max-height: 3000px;
-            padding: 0 var(--space-lg) var(--space-lg);
-        }
-
-        .faq-answer p {
-            color: var(--neutral-700);
-            line-height: 1.7;
-            margin-bottom: var(--space-md);
-        }
-
-        .faq-answer ul, .faq-answer ol {
-            color: var(--neutral-700);
-            line-height: 1.7;
-            margin-bottom: var(--space-md);
-        }
-
-        .faq-answer li {
-            margin-bottom: var(--space-sm);
-        }
-
-        .faq-answer strong {
-            color: var(--neutral-900);
-        }
-
-        @media (max-width: 768px) {
-            .faq-category-header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .faq-question {
-                font-size: var(--text-md);
-                padding: var(--space-md);
-            }
-
-            .category-link {
-                font-size: var(--text-xs);
-                padding: var(--space-xs) var(--space-md);
-            }
-        }
-    </style>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__main">
+        <div class="footer__brand">
+          <img src="../images/logo-white.svg" alt="Lumina Electric">
+          <p>Expert in elektriciteit in België. AREI-conformiteit, renovatie, herstellingen en smart home installaties.</p>
+          <p class="footer__tva">BTW: BE1008470101</p>
+        </div>
+        <div class="footer__col">
+          <h4>Diensten</h4>
+          <ul class="footer__links">
+            <li><a href="diensten.html#conformite">AREI-conformiteit</a></li>
+            <li><a href="diensten.html#renovation">Elektrische renovatie</a></li>
+            <li><a href="diensten.html#depannage">Spoedservice</a></li>
+            <li><a href="diensten.html#domotique">Domotica</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Bedrijf</h4>
+          <ul class="footer__links">
+            <li><a href="over-ons.html">Over ons</a></li>
+            <li><a href="realisaties.html">Realisaties</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Contact</h4>
+          <div class="footer__contact-item"><i class="fas fa-phone"></i><a href="tel:+32485166635">+32 485 16 66 35</a></div>
+          <div class="footer__contact-item"><i class="fas fa-envelope"></i><a href="mailto:info@luminaelectric.be">info@luminaelectric.be</a></div>
+          <div class="footer__contact-item"><i class="fab fa-whatsapp"></i><a href="https://wa.me/32485166635" target="_blank" rel="noopener">WhatsApp</a></div>
+          <div class="footer__contact-item"><i class="fas fa-clock"></i><span>Ma-Vr: 8u-18u · Za: 9u-13u</span></div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 Lumina Electric. Alle rechten voorbehouden.</p>
+        <div class="footer__legal">
+          <a href="../mentions-legales.html">Juridische vermeldingen</a>
+          <a href="../confidentialite.html">Privacybeleid</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="../js/main.js"></script>
 </body>
 </html>

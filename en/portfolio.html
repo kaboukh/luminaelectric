@@ -1,182 +1,403 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Our Portfolio | Electrical Projects - Lumina Electric</title>
-    <meta name="description" content="Discover our electrical projects in Brussels and Brabant. Complete installations, home automation, RGIE compliance.">
-    
-    <link rel="icon" type="image/png" href="../images/logo-lumina-electric.png">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
-    <link rel="stylesheet" href="../css/variables.css">
-    <link rel="stylesheet" href="../css/components.css">
-    <link rel="stylesheet" href="../css/layout.css">
-    <link rel="stylesheet" href="../css/pages.css">
-    <link rel="stylesheet" href="../css/mobile.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Electrical Projects Belgium | Portfolio — Lumina Electric</title>
+  <meta name="description" content="Discover our completed electrical projects: RGIE compliance, renovations, smart home, EV chargers and solar installations in Brussels and Brabant.">
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .filter-bar {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 56px;
+    }
+    .filter-btn {
+      font-size: 0.875rem;
+      font-weight: 600;
+      padding: 9px 20px;
+      border-radius: 980px;
+      border: 1.5px solid var(--gray-200);
+      background: white;
+      color: var(--gray-600);
+      cursor: pointer;
+      transition: all var(--dur-fast) var(--ease);
+    }
+    .filter-btn:hover { border-color: var(--accent); color: var(--accent-dark); }
+    .filter-btn.active { background: var(--accent); border-color: var(--accent); color: var(--gray-900); }
+    .stats-band {
+      background: var(--near-black);
+      padding: 64px 0;
+    }
+    .stats-band__grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      text-align: center;
+    }
+    .stat-block__number {
+      font-size: 3.5rem;
+      font-weight: 800;
+      color: white;
+      letter-spacing: -0.04em;
+      line-height: 1;
+    }
+    .stat-block__number span { color: var(--accent); }
+    .stat-block__label {
+      font-size: 0.875rem;
+      color: rgba(255,255,255,0.5);
+      margin-top: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    @media (max-width: 768px) { .stats-band__grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 480px) {
+      .stats-band__grid { grid-template-columns: 1fr 1fr; gap: 20px; }
+      .stat-block__number { font-size: 2.5rem; }
+    }
+  </style>
 </head>
 <body>
-    <!-- Top Bar -->
-    <div class="top-bar">
-        <div class="top-bar-container">
-            <div class="top-bar-info">
-                <a href="tel:+32485166635" class="top-bar-item">
-                    <i class="fas fa-phone"></i>
-                    <span>+32 485 16 66 35</span>
-                </a>
-                <a href="mailto:info@luminaelectric.be" class="top-bar-item">
-                    <i class="fas fa-envelope"></i>
-                    <span>info@luminaelectric.be</span>
-                </a>
-            </div>
-            <div class="lang-switcher">
-                <button onclick="window.location.href='../realisations.html'">FR</button>
-                <button onclick="window.location.href='../nl/realisaties.html'">NL</button>
-                <button class="active">EN</button>
-            </div>
+  <div class="urgence-banner">
+    <a href="tel:+32485166635"><i class="fas fa-bolt"></i> Electrical emergency 7d/7 — Response within 2-4h &nbsp;·&nbsp; +32 485 16 66 35 <i class="fas fa-arrow-right"></i></a>
+  </div>
+  <nav class="nav nav--transparent" id="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__logo">
+          <img src="../images/logo-white.svg" alt="Lumina Electric" class="nav__logo-white">
+          <img src="../images/logo-color.svg" alt="Lumina Electric" class="nav__logo-color">
+        </a>
+        <ul class="nav__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html" class="active">Portfolio</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav__cta">
+          <div class="nav__lang">
+            <button onclick="location.href='../realisations.html'">FR</button>
+            <button onclick="location.href='../nl/realisaties.html'">NL</button>
+            <button class="active">EN</button>
+          </div>
+          <a href="tel:+32485166635" class="nav__phone"><i class="fas fa-phone"></i> Call</a>
+          <a href="contact.html" class="nav__devis">Free quote</a>
         </div>
+        <button class="nav__toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
     </div>
+  </nav>
+  <div class="nav__mobile" id="mobileMenu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html" class="active">Portfolio</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav__mobile-cta">
+      <a href="contact.html" class="btn btn-primary"><i class="fas fa-file-invoice"></i> Free quote</a>
+      <a href="tel:+32485166635" class="btn btn-outline"><i class="fas fa-phone"></i> +32 485 16 66 35</a>
+    </div>
+  </div>
 
-    <!-- Header -->
-    <header class="header" id="header">
-        <div class="header-container">
-            <a href="index.html" class="logo">
-                <img src="../images/logo-lumina-electric.png" alt="Lumina Electric - cherish your energy" style="height: 120px; width: auto;">
-            </a>
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-header__eyebrow fade-in">Our portfolio</span>
+      <h1 class="fade-up">Our Projects</h1>
+      <p class="fade-up">Over 50 projects completed across Belgium. Discover some of our recent work.</p>
+    </div>
+  </section>
 
-            <nav class="nav">
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="services.html" class="nav-link">Services</a></li>
-                    <li><a href="portfolio.html" class="nav-link active">Portfolio</a></li>
-                    <li><a href="faq.html" class="nav-link">FAQ</a></li>
-                    <li><a href="about.html" class="nav-link">About us</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
-                </ul>
-                <div class="header-cta">
-                    <a href="tel:+32485166635" class="btn btn-outline btn-sm">
-                        <i class="fas fa-phone"></i> Call
-                    </a>
-                    <a href="contact.html" class="btn btn-primary btn-sm">
-                        <i class="fas fa-file-invoice"></i> Free quote
-                    </a>
-                </div>
-            </nav>
-
-            <!-- Language switcher for mobile -->
-            <div class="lang-switcher">
-                <button onclick="window.location.href='../realisations.html'">FR</button>
-                <button onclick="window.location.href='../nl/realisaties.html'">NL</button>
-                <button class="active">EN</button>
-            </div>
-
-            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+  <div class="stats-band">
+    <div class="container">
+      <div class="stats-band__grid fade-up stagger">
+        <div class="stat-block">
+          <div class="stat-block__number"><span data-counter data-target="50" data-suffix="+">50+</span></div>
+          <div class="stat-block__label">Projects completed</div>
         </div>
-    </header>
-
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <h1>Our Portfolio</h1>
-            <p class="lead">Discover our high-quality electrical projects in Brussels and Brabant.</p>
+        <div class="stat-block">
+          <div class="stat-block__number"><span data-counter data-target="3">3</span></div>
+          <div class="stat-block__label">Regions covered</div>
         </div>
-    </section>
-
-    <!-- Projects Section - READY FOR YOUR CONTENT -->
-    <section style="padding: var(--space-3xl) 0;">
-        <div class="container" style="max-width: 1200px;">
-            
-            <div style="text-align: center; padding: var(--space-4xl) 0;">
-                <i class="fas fa-hard-hat" style="font-size: 4rem; color: var(--primary); margin-bottom: var(--space-xl); opacity: 0.5;"></i>
-                <h2 style="font-size: var(--text-2xl); color: var(--neutral-700); margin-bottom: var(--space-md);">Section ready for your projects</h2>
-                <p style="color: var(--neutral-600); max-width: 600px; margin: 0 auto;">
-                    This section is ready to receive your new structured projects.
-                </p>
-            </div>
-
-            <!-- YOUR CONTENT HERE -->
-            
+        <div class="stat-block">
+          <div class="stat-block__number"><span data-counter data-target="100" data-suffix="%">100%</span></div>
+          <div class="stat-block__label">RGIE compliant</div>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <div class="footer-logo">
-                        <img src="../images/logo-lumina-electric.png" alt="Lumina Electric" style="height: 60px; width: auto; margin-bottom: 1rem;">
-                    </div>
-                    <p style="color: var(--neutral-400); margin-bottom: 1rem;">Professional electrician in Belgium. RGIE compliance, renovation, troubleshooting and smart installations.</p>
-                    <div class="footer-social">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    </div>
-                </div>
-
-                <div class="footer-column">
-                    <h4 class="footer-title">Services</h4>
-                    <ul class="footer-links">
-                        <li><a href="services.html">RGIE Compliance</a></li>
-                        <li><a href="services.html">Electrical renovation</a></li>
-                        <li><a href="services.html">Emergency troubleshooting</a></li>
-                        <li><a href="services.html">Electrical panel</a></li>
-                        <li><a href="services.html">Home automation</a></li>
-                        <li><a href="services.html">EV charging station</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-column">
-                    <h4 class="footer-title">Company</h4>
-                    <ul class="footer-links">
-                        <li><a href="about.html">About us</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="legal.html">Legal notice</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-column">
-                    <h4 class="footer-title">Contact</h4>
-                    <ul class="footer-contact">
-                        <li>
-                            <i class="fas fa-phone"></i>
-                            <a href="tel:+32485166635">+32 485 16 66 35</a>
-                        </li>
-                        <li>
-                            <i class="fas fa-envelope"></i>
-                            <a href="mailto:info@luminaelectric.be">info@luminaelectric.be</a>
-                        </li>
-                        <li>
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Brussels-Capital, Flemish Brabant, Walloon Brabant</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-id-card"></i>
-                            <strong>VAT No:</strong> BE1008470101
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2026 Lumina Electric. All rights reserved.</p>
-                <div class="footer-bottom-links">
-                    <a href="legal.html">Legal notice</a>
-                    <a href="legal.html#privacy">Privacy policy</a>
-                </div>
-            </div>
+        <div class="stat-block">
+          <div class="stat-block__number"><span data-counter data-target="24" data-suffix="h">24h</span></div>
+          <div class="stat-block__label">Quote turnaround</div>
         </div>
-    </footer>
+      </div>
+    </div>
+  </div>
 
-    <script src="../js/main.js"></script>
+  <section>
+    <div class="container">
+
+      <div class="filter-bar fade-up">
+        <button class="filter-btn active" data-filter="all">All projects</button>
+        <button class="filter-btn" data-filter="rgie">RGIE Compliance</button>
+        <button class="filter-btn" data-filter="renovation">Renovation</button>
+        <button class="filter-btn" data-filter="tableau">Breaker panel</button>
+        <button class="filter-btn" data-filter="domotique">Smart home</button>
+        <button class="filter-btn" data-filter="borne">EV charger</button>
+        <button class="filter-btn" data-filter="solaire">Solar</button>
+      </div>
+
+      <div class="portfolio-grid" id="portfolioGrid">
+
+        <div class="portfolio-item fade-up" data-category="rgie">
+          <div class="portfolio-item__img">
+            <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=700&q=80" alt="RGIE compliance — Ixelles">
+          </div>
+          <div class="portfolio-item__body">
+            <span class="portfolio-item__tag">RGIE Compliance</span>
+            <h3>Full compliance upgrade</h3>
+            <p>1960s villa in Ixelles — panel replacement, earthing, 30mA RCDs and all diagrams provided.</p>
+          </div>
+        </div>
+
+        <div class="portfolio-item fade-up" data-category="renovation">
+          <div class="portfolio-item__img">
+            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=700&q=80" alt="Full electrical renovation — Brussels">
+          </div>
+          <div class="portfolio-item__body">
+            <span class="portfolio-item__tag">Renovation</span>
+            <h3>Complete electrical rewiring</h3>
+            <p>120m² apartment in Schaerbeek — full recabling, new panel, LED lighting and 32 outlets.</p>
+          </div>
+        </div>
+
+        <div class="portfolio-item fade-up" data-category="borne">
+          <div class="portfolio-item__img">
+            <img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=700&q=80" alt="EV charging station — Waterloo">
+          </div>
+          <div class="portfolio-item__body">
+            <span class="portfolio-item__tag">EV Charger</span>
+            <h3>22kW Wallbox installation</h3>
+            <p>Detached house in Waterloo — 22kW three-phase wallbox, dedicated protection and buried cable to garage.</p>
+          </div>
+        </div>
+
+        <div class="portfolio-item fade-up" data-category="domotique">
+          <div class="portfolio-item__img">
+            <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=700&q=80" alt="Smart home automation — Uccle">
+          </div>
+          <div class="portfolio-item__body">
+            <span class="portfolio-item__tag">Smart Home</span>
+            <h3>Smart Home management</h3>
+            <p>Villa in Uccle — Philips Hue connected lighting, automated blinds, Nest thermostat and app control.</p>
+          </div>
+        </div>
+
+        <div class="portfolio-item fade-up" data-category="solaire">
+          <div class="portfolio-item__img">
+            <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=700&q=80" alt="Solar panels connection — Leuven">
+          </div>
+          <div class="portfolio-item__body">
+            <span class="portfolio-item__tag">Solar</span>
+            <h3>Photovoltaic connection</h3>
+            <p>House in Leuven — 8kW inverter connection, AC/DC protections, bidirectional meter and commissioning.</p>
+          </div>
+        </div>
+
+        <div class="portfolio-item fade-up" data-category="tableau">
+          <div class="portfolio-item__img">
+            <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=700&q=80" alt="New breaker panel — Anderlecht">
+          </div>
+          <div class="portfolio-item__body">
+            <span class="portfolio-item__tag">Breaker panel</span>
+            <h3>Full panel replacement</h3>
+            <p>House in Anderlecht — new 24-module enclosure, type A RCDs, surge protector and circuit-by-circuit labelling.</p>
+          </div>
+        </div>
+
+        <div class="portfolio-item fade-up" data-category="rgie">
+          <div class="portfolio-item__img">
+            <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=700&q=80" alt="RGIE compliance before sale — Wavre">
+          </div>
+          <div class="portfolio-item__body">
+            <span class="portfolio-item__tag">RGIE Compliance</span>
+            <h3>Pre-sale compliance</h3>
+            <p>Apartment in Wavre — full diagnosis, correction of 9 non-conformities, certificate obtained in 5 days.</p>
+          </div>
+        </div>
+
+        <div class="portfolio-item fade-up" data-category="renovation">
+          <div class="portfolio-item__img">
+            <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=700&q=80" alt="Kitchen renovation — Braine-l'Alleud">
+          </div>
+          <div class="portfolio-item__body">
+            <span class="portfolio-item__tag">Renovation</span>
+            <h3>Kitchen & bathroom renovation</h3>
+            <p>House in Braine-l'Alleud — dedicated kitchen circuits, waterproof bathroom outlets, recessed LED lighting.</p>
+          </div>
+        </div>
+
+        <div class="portfolio-item fade-up" data-category="domotique">
+          <div class="portfolio-item__img">
+            <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=700&q=80" alt="Architectural LED lighting — Etterbeek">
+          </div>
+          <div class="portfolio-item__body">
+            <span class="portfolio-item__tag">LED Lighting</span>
+            <h3>Architectural LED lighting</h3>
+            <p>Loft in Etterbeek — dimmable recessed spots, indirect LED strip, programmable lighting scenes.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="feature-fullbleed" style="margin-top:80px;">
+    <div class="feature-fullbleed__bg" style="background-image:url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=1920&q=80');"></div>
+    <div class="feature-fullbleed__content">
+      <div class="container">
+        <div class="feature-fullbleed__inner fade-up">
+          <p class="feature-fullbleed__eyebrow">Your project, our next case study</p>
+          <h2>Every installation is unique.</h2>
+          <p>Whether it's RGIE compliance, a full renovation or a bespoke smart home — we bring the same level of excellence to every project.</p>
+          <a href="contact.html" class="btn btn-primary btn-lg">
+            <i class="fas fa-file-invoice"></i> Start my project
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--gray-50);padding:var(--section-pad) 0;">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-header__eyebrow">Testimonials</span>
+        <h2>What our clients say</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;" class="stagger">
+        <div class="fade-up" style="background:white;border-radius:var(--radius);padding:32px;border:1px solid var(--gray-100);box-shadow:var(--shadow-sm);">
+          <div style="display:flex;gap:4px;margin-bottom:16px;color:var(--accent);">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p style="font-size:1rem;line-height:1.7;color:var(--gray-700);margin-bottom:20px;font-style:italic;">"Compliance work done in 2 days. Karim is very professional, explains each step clearly and leaves the site immaculate. The RGIE inspection was a success."</p>
+          <div style="display:flex;align-items:center;gap:12px;">
+            <div style="width:44px;height:44px;border-radius:50%;background:var(--accent-glow);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent-dark);">S</div>
+            <div>
+              <p style="font-weight:700;color:var(--gray-900);margin:0;font-size:0.9375rem;">Sophie M.</p>
+              <p style="font-size:0.8125rem;color:var(--gray-400);margin:0;">Ixelles, Brussels</p>
+            </div>
+          </div>
+        </div>
+        <div class="fade-up" style="background:white;border-radius:var(--radius);padding:32px;border:1px solid var(--gray-100);box-shadow:var(--shadow-sm);">
+          <div style="display:flex;gap:4px;margin-bottom:16px;color:var(--accent);">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p style="font-size:1rem;line-height:1.7;color:var(--gray-700);margin-bottom:20px;font-style:italic;">"My EV charger was installed in a single morning. Excellent advice on available grants in the Brussels region. Highly recommended."</p>
+          <div style="display:flex;align-items:center;gap:12px;">
+            <div style="width:44px;height:44px;border-radius:50%;background:var(--accent-glow);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent-dark);">T</div>
+            <div>
+              <p style="font-weight:700;color:var(--gray-900);margin:0;font-size:0.9375rem;">Thomas V.</p>
+              <p style="font-size:0.8125rem;color:var(--gray-400);margin:0;">Waterloo, Walloon Brabant</p>
+            </div>
+          </div>
+        </div>
+        <div class="fade-up" style="background:white;border-radius:var(--radius);padding:32px;border:1px solid var(--gray-100);box-shadow:var(--shadow-sm);">
+          <div style="display:flex;gap:4px;margin-bottom:16px;color:var(--accent);">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p style="font-size:1rem;line-height:1.7;color:var(--gray-700);margin-bottom:20px;font-style:italic;">"Full electrical renovation of our house in Leuven. Neat work, quote honoured to the euro, and a truly clean installation. Very happy with the result."</p>
+          <div style="display:flex;align-items:center;gap:12px;">
+            <div style="width:44px;height:44px;border-radius:50%;background:var(--accent-glow);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent-dark);">J</div>
+            <div>
+              <p style="font-weight:700;color:var(--gray-900);margin:0;font-size:0.9375rem;">Jan D.</p>
+              <p style="font-size:0.8125rem;color:var(--gray-400);margin:0;">Leuven, Flemish Brabant</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-inner fade-up">
+        <h2>Your project will be our next case study.</h2>
+        <p>Free quote within 24h. No commitment.</p>
+        <div class="cta-buttons">
+          <a href="contact.html" class="btn btn-primary btn-lg"><i class="fas fa-file-invoice"></i> Request a quote</a>
+          <a href="tel:+32485166635" class="btn btn-outline-white btn-lg"><i class="fas fa-phone"></i> Call us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__main">
+        <div class="footer__brand">
+          <img src="../images/logo-white.svg" alt="Lumina Electric">
+          <p>Electrical expert in Belgium. RGIE compliance, renovation, emergency repairs and smart home installations.</p>
+          <p class="footer__tva">VAT: BE1008470101</p>
+        </div>
+        <div class="footer__col">
+          <h4>Services</h4>
+          <ul class="footer__links">
+            <li><a href="services.html#compliance">RGIE Compliance</a></li>
+            <li><a href="services.html#renovation">Electrical renovation</a></li>
+            <li><a href="services.html#emergency">Emergency repairs</a></li>
+            <li><a href="services.html#smarthome">Smart home</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Company</h4>
+          <ul class="footer__links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Contact</h4>
+          <div class="footer__contact-item"><i class="fas fa-phone"></i><a href="tel:+32485166635">+32 485 16 66 35</a></div>
+          <div class="footer__contact-item"><i class="fas fa-envelope"></i><a href="mailto:info@luminaelectric.be">info@luminaelectric.be</a></div>
+          <div class="footer__contact-item"><i class="fab fa-whatsapp"></i><a href="https://wa.me/32485166635" target="_blank" rel="noopener">WhatsApp</a></div>
+          <div class="footer__contact-item"><i class="fas fa-clock"></i><span>Mon-Fri: 8am-6pm · Sat: 9am-1pm</span></div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 Lumina Electric. All rights reserved.</p>
+        <div class="footer__legal">
+          <a href="../mentions-legales.html">Legal notice</a>
+          <a href="../confidentialite.html">Privacy policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="../js/main.js"></script>
+  <script>
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        portfolioItems.forEach(item => {
+          if (filter === 'all' || item.dataset.category === filter) {
+            item.style.display = '';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>

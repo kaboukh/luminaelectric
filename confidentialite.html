@@ -1,308 +1,247 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Politique de Confidentialité | Lumina Electric</title>
-    <meta name="description" content="Politique de confidentialité et protection des données personnelles - Lumina Electric">
-    <link rel="icon" type="image/png" href="images/logo-lumina-electric.png">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="css/variables.css">
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/pages.css">
-    <link rel="stylesheet" href="css/mobile.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Politique de confidentialité — Lumina Electric</title>
+  <meta name="description" content="Politique de confidentialité et protection des données personnelles de Lumina Electric.">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Top Bar -->
-    <div class="top-bar">
-        <div class="top-bar-container">
-            <div class="top-bar-info">
-                <a href="tel:+32485166635" class="top-bar-item">
-                    <i class="fas fa-phone"></i>
-                    <span>+32 485 16 66 35</span>
-                </a>
-                <a href="mailto:info@luminaelectric.be" class="top-bar-item">
-                    <i class="fas fa-envelope"></i>
-                    <span>info@luminaelectric.be</span>
-                </a>
-            </div>
-            <div class="lang-switcher">
-                <button class="active">FR</button>
-                <button onclick="window.location.href='nl/privacy.html'">NL</button>
-                <button onclick="window.location.href='en/privacy.html'">EN</button>
-            </div>
+
+  <div class="urgence-banner">
+    <a href="tel:+32485166635">
+      <i class="fas fa-bolt"></i>
+      Urgence électrique 7j/7 — Intervention sous 2-4h &nbsp;·&nbsp; +32 485 16 66 35
+      <i class="fas fa-arrow-right"></i>
+    </a>
+  </div>
+
+  <nav class="nav nav--transparent" id="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__logo">
+          <img src="images/logo-white.svg" alt="Lumina Electric" class="nav__logo-white">
+          <img src="images/logo-color.svg" alt="Lumina Electric" class="nav__logo-color">
+        </a>
+        <ul class="nav__links">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="realisations.html">Réalisations</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="a-propos.html">À propos</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav__cta">
+          <div class="nav__lang">
+            <button class="active">FR</button>
+            <button onclick="location.href='nl/confidentialite.html'">NL</button>
+            <button onclick="location.href='en/privacy-policy.html'">EN</button>
+          </div>
+          <a href="tel:+32485166635" class="nav__phone"><i class="fas fa-phone"></i> Appeler</a>
+          <a href="contact.html" class="nav__devis">Devis gratuit</a>
         </div>
+        <button class="nav__toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
     </div>
+  </nav>
 
-    <!-- Header -->
-    <header class="header" id="header">
-        <div class="header-container">
-            <a href="index.html" class="logo">
-                <img src="images/logo-lumina-electric.png" alt="Lumina Electric" style="height: 120px; width: auto;">
-            </a>
-            <nav class="nav">
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="index.html" class="nav-link">Accueil</a></li>
-                    <li><a href="services.html" class="nav-link">Services</a></li>
-                    <li><a href="realisations.html" class="nav-link">Réalisations</a></li>
-                    <li><a href="faq.html" class="nav-link">FAQ</a></li>
-                    <li><a href="a-propos.html" class="nav-link">À propos</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
-                </ul>
-                <div class="header-cta">
-                    <a href="tel:+32485166635" class="btn btn-outline btn-sm">
-                        <i class="fas fa-phone"></i> Appeler
-                    </a>
-                    <a href="contact.html" class="btn btn-primary btn-sm">
-                        <i class="fas fa-file-invoice"></i> Devis gratuit
-                    </a>
-                </div>
-            </nav>
-            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menu">
-                <span></span><span></span><span></span>
-            </button>
+  <div class="nav__mobile" id="mobileMenu">
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="realisations.html">Réalisations</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="a-propos.html">À propos</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav__mobile-cta">
+      <a href="contact.html" class="btn btn-primary"><i class="fas fa-file-invoice"></i> Devis gratuit</a>
+      <a href="tel:+32485166635" class="btn btn-outline"><i class="fas fa-phone"></i> +32 485 16 66 35</a>
+    </div>
+  </div>
+
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-header__eyebrow fade-in">Vos données personnelles</span>
+      <h1 class="fade-up">Politique de confidentialité</h1>
+      <p class="fade-up">Protection de vos données personnelles — transparence et conformité RGPD.</p>
+    </div>
+  </section>
+
+  <section style="padding: var(--section-pad) 0;">
+    <div class="container-narrow">
+
+      <div style="background:#fff; border-radius:12px; padding:2.5rem; box-shadow:0 2px 12px rgba(0,0,0,.06); margin-bottom:2rem;">
+        <h2 style="font-size:1.3rem; margin-bottom:1rem; color:var(--dark);">1. Responsable du traitement</h2>
+        <p style="color:var(--gray-600); line-height:1.8;"><strong>Lumina Electric</strong><br>
+        TVA : BE1008470101<br>
+        Bruxelles-Capitale, Belgique<br>
+        <a href="mailto:info@luminaelectric.be" style="color:var(--accent-dark);">info@luminaelectric.be</a> · <a href="tel:+32485166635" style="color:var(--accent-dark);">+32 485 16 66 35</a></p>
+      </div>
+
+      <div style="background:#fff; border-radius:12px; padding:2.5rem; box-shadow:0 2px 12px rgba(0,0,0,.06); margin-bottom:2rem;">
+        <h2 style="font-size:1.3rem; margin-bottom:1rem; color:var(--dark);">2. Données collectées</h2>
+        <p style="color:var(--gray-600); line-height:1.8; margin-bottom:.8rem;">Nous collectons les informations suivantes :</p>
+        <ul style="color:var(--gray-600); line-height:1.8; padding-left:1.5rem;">
+          <li>Nom et prénom</li>
+          <li>Adresse e-mail et numéro de téléphone</li>
+          <li>Description du projet et type de service demandé</li>
+          <li>Adresse postale (optionnelle)</li>
+          <li>Données techniques : adresses IP et types de navigateurs (cookies techniques uniquement)</li>
+        </ul>
+      </div>
+
+      <div style="background:#fff; border-radius:12px; padding:2.5rem; box-shadow:0 2px 12px rgba(0,0,0,.06); margin-bottom:2rem;">
+        <h2 style="font-size:1.3rem; margin-bottom:1rem; color:var(--dark);">3. Finalités du traitement</h2>
+        <p style="color:var(--gray-600); line-height:1.8; margin-bottom:.8rem;">Vos données sont utilisées pour :</p>
+        <ul style="color:var(--gray-600); line-height:1.8; padding-left:1.5rem;">
+          <li>Répondre à vos demandes de devis</li>
+          <li>Gérer la relation client</li>
+          <li>Établir les documents techniques et administratifs</li>
+          <li>Améliorer nos services</li>
+          <li>Vous adresser des informations sur nos services (avec votre consentement explicite)</li>
+        </ul>
+      </div>
+
+      <div style="background:#fff; border-radius:12px; padding:2.5rem; box-shadow:0 2px 12px rgba(0,0,0,.06); margin-bottom:2rem;">
+        <h2 style="font-size:1.3rem; margin-bottom:1rem; color:var(--dark);">4. Base légale du traitement</h2>
+        <p style="color:var(--gray-600); line-height:1.8; margin-bottom:.8rem;">Le traitement de vos données repose sur :</p>
+        <ul style="color:var(--gray-600); line-height:1.8; padding-left:1.5rem;">
+          <li>Votre consentement exprimé via les formulaires</li>
+          <li>L'exécution d'un contrat</li>
+          <li>Des obligations légales (facturation, conformité électrique)</li>
+          <li>Nos intérêts légitimes dans l'amélioration de nos services</li>
+        </ul>
+      </div>
+
+      <div style="background:#fff; border-radius:12px; padding:2.5rem; box-shadow:0 2px 12px rgba(0,0,0,.06); margin-bottom:2rem;">
+        <h2 style="font-size:1.3rem; margin-bottom:1rem; color:var(--dark);">5. Durée de conservation</h2>
+        <table style="width:100%; border-collapse:collapse; font-size:.95rem;">
+          <thead>
+            <tr style="border-bottom:2px solid var(--gray-100);">
+              <th style="text-align:left; padding:.6rem .4rem; color:var(--dark);">Catégorie</th>
+              <th style="text-align:left; padding:.6rem .4rem; color:var(--dark);">Durée</th>
+            </tr>
+          </thead>
+          <tbody style="color:var(--gray-600); line-height:1.8;">
+            <tr style="border-bottom:1px solid var(--gray-100);">
+              <td style="padding:.6rem .4rem;">Prospects (sans contrat)</td>
+              <td style="padding:.6rem .4rem;">3 ans après le dernier contact</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--gray-100);">
+              <td style="padding:.6rem .4rem;">Clients</td>
+              <td style="padding:.6rem .4rem;">10 ans après la fin de la relation</td>
+            </tr>
+            <tr>
+              <td style="padding:.6rem .4rem;">Documents de conformité électrique</td>
+              <td style="padding:.6rem .4rem;">25 ans (obligation légale)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="background:#fff; border-radius:12px; padding:2.5rem; box-shadow:0 2px 12px rgba(0,0,0,.06); margin-bottom:2rem;">
+        <h2 style="font-size:1.3rem; margin-bottom:1rem; color:var(--dark);">6. Partage des données</h2>
+        <p style="color:var(--gray-600); line-height:1.8; margin-bottom:.8rem;">Vos données ne sont jamais vendues. Elles peuvent être partagées uniquement avec :</p>
+        <ul style="color:var(--gray-600); line-height:1.8; padding-left:1.5rem;">
+          <li>Nos sous-traitants techniques soumis à des obligations strictes de confidentialité</li>
+          <li>Les organismes de contrôle lors d'inspections réglementaires</li>
+          <li>Les autorités compétentes lorsque la loi l'exige</li>
+        </ul>
+      </div>
+
+      <div style="background:#fff; border-radius:12px; padding:2.5rem; box-shadow:0 2px 12px rgba(0,0,0,.06); margin-bottom:2rem;">
+        <h2 style="font-size:1.3rem; margin-bottom:1rem; color:var(--dark);">7. Vos droits</h2>
+        <p style="color:var(--gray-600); line-height:1.8; margin-bottom:.8rem;">Conformément au RGPD, vous disposez des droits suivants :</p>
+        <ul style="color:var(--gray-600); line-height:1.8; padding-left:1.5rem;">
+          <li><strong>Accès</strong> : obtenir une copie de vos données</li>
+          <li><strong>Rectification</strong> : corriger des données inexactes</li>
+          <li><strong>Effacement</strong> : demander la suppression de vos données</li>
+          <li><strong>Opposition</strong> : vous opposer à un traitement</li>
+          <li><strong>Portabilité</strong> : recevoir vos données dans un format structuré</li>
+          <li><strong>Limitation</strong> : restreindre le traitement dans certains cas</li>
+        </ul>
+        <p style="color:var(--gray-600); line-height:1.8; margin-top:1rem;">Pour exercer ces droits : <a href="mailto:info@luminaelectric.be" style="color:var(--accent-dark);">info@luminaelectric.be</a></p>
+      </div>
+
+      <div style="background:#fff; border-radius:12px; padding:2.5rem; box-shadow:0 2px 12px rgba(0,0,0,.06); margin-bottom:2rem;">
+        <h2 style="font-size:1.3rem; margin-bottom:1rem; color:var(--dark);">8. Sécurité des données</h2>
+        <p style="color:var(--gray-600); line-height:1.8;">Des mesures techniques et organisationnelles appropriées sont mises en place pour protéger vos données contre tout accès non autorisé, perte accidentelle ou utilisation illicite.</p>
+      </div>
+
+      <div style="background:#fff; border-radius:12px; padding:2.5rem; box-shadow:0 2px 12px rgba(0,0,0,.06); margin-bottom:2rem;">
+        <h2 style="font-size:1.3rem; margin-bottom:1rem; color:var(--dark);">9. Cookies</h2>
+        <p style="color:var(--gray-600); line-height:1.8;">Le site utilise uniquement des cookies techniques nécessaires à son bon fonctionnement. Aucun cookie publicitaire ou de traçage n'est utilisé.</p>
+      </div>
+
+      <div style="background:#fff; border-radius:12px; padding:2.5rem; box-shadow:0 2px 12px rgba(0,0,0,.06); margin-bottom:2rem;">
+        <h2 style="font-size:1.3rem; margin-bottom:1rem; color:var(--dark);">10. Réclamations</h2>
+        <p style="color:var(--gray-600); line-height:1.8;">Vous avez le droit d'introduire une réclamation auprès de l'Autorité de Protection des Données (APD) :</p>
+        <p style="color:var(--gray-600); line-height:1.8; margin-top:.8rem;">
+          <strong>Autorité de Protection des Données</strong><br>
+          Rue de la Presse 35, 1000 Bruxelles<br>
+          <a href="mailto:contact@apd-gba.be" style="color:var(--accent-dark);">contact@apd-gba.be</a>
+        </p>
+      </div>
+
+      <p style="color:var(--gray-400); font-size:.875rem; text-align:center; margin-top:2rem;">Dernière mise à jour : février 2026</p>
+
+    </div>
+  </section>
+
+  <footer style="background:var(--dark); color:#fff; padding:3rem 0 1.5rem;">
+    <div class="container">
+      <div class="footer__main">
+        <div class="footer__brand">
+          <img src="images/logo-white.svg" alt="Lumina Electric" class="nav__logo-white">
+          <p>Expert en électricité en Belgique. Conformité RGIE, rénovation, dépannage et installations smart home. Bruxelles-Capitale, Brabant Flamand &amp; Brabant Wallon.</p>
+          <p class="footer__tva">TVA : BE1008470101</p>
         </div>
-    </header>
-
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <h1>Politique de Confidentialité</h1>
-            <p class="lead">Protection de vos données personnelles</p>
+        <div class="footer__col">
+          <h4>Services</h4>
+          <ul class="footer__links">
+            <li><a href="services.html#conformite">Conformité RGIE</a></li>
+            <li><a href="services.html#renovation">Rénovation électrique</a></li>
+            <li><a href="services.html#depannage">Dépannage urgent</a></li>
+            <li><a href="services.html#domotique">Domotique</a></li>
+            <li><a href="services.html#borne">Borne EV</a></li>
+          </ul>
         </div>
-    </section>
-
-    <!-- Main Content -->
-    <main class="container" style="padding: var(--space-3xl) var(--space-lg); max-width: 1000px; margin: 0 auto;">
-        
-        <section style="margin-bottom: var(--space-3xl);">
-            <p style="line-height: 1.7; color: var(--neutral-700); font-size: var(--text-lg);">
-                Lumina Electric accorde une grande importance à la protection de votre vie privée et de vos données personnelles. 
-                Cette politique de confidentialité explique comment nous collectons, utilisons et protégeons vos informations.
-            </p>
-        </section>
-
-        <section style="margin-bottom: var(--space-3xl);">
-            <h2 style="color: var(--primary); margin-bottom: var(--space-lg);">1. Responsable du traitement</h2>
-            <div style="background: var(--neutral-50); padding: var(--space-xl); border-radius: var(--radius-lg); border-left: 4px solid var(--primary);">
-                <p><strong>Lumina Electric</strong></p>
-                <p>N° TVA : BE1008470101</p>
-                <p>Email : info@luminaelectric.be</p>
-                <p>Téléphone : +32 485 16 66 35</p>
-            </div>
-        </section>
-
-        <section style="margin-bottom: var(--space-3xl);">
-            <h2 style="color: var(--primary); margin-bottom: var(--space-lg);">2. Données collectées</h2>
-            <p style="line-height: 1.7; color: var(--neutral-700); margin-bottom: var(--space-md);">
-                Nous collectons uniquement les données nécessaires pour répondre à vos demandes :
-            </p>
-            <ul style="margin: var(--space-md) 0; padding-left: var(--space-xl); color: var(--neutral-700); line-height: 1.8;">
-                <li><strong>Données d'identification :</strong> nom, prénom</li>
-                <li><strong>Coordonnées :</strong> adresse email, numéro de téléphone, adresse postale (optionnel)</li>
-                <li><strong>Informations de projet :</strong> description de votre demande, type de service souhaité</li>
-                <li><strong>Données techniques :</strong> adresse IP, type de navigateur (cookies techniques uniquement)</li>
-            </ul>
-        </section>
-
-        <section style="margin-bottom: var(--space-3xl);">
-            <h2 style="color: var(--primary); margin-bottom: var(--space-lg);">3. Finalités du traitement</h2>
-            <p style="line-height: 1.7; color: var(--neutral-700);">Vos données sont utilisées pour :</p>
-            <ul style="margin: var(--space-md) 0; padding-left: var(--space-xl); color: var(--neutral-700); line-height: 1.8;">
-                <li>Répondre à vos demandes de devis et d'informations</li>
-                <li>Gérer la relation client et le suivi des dossiers</li>
-                <li>Établir des documents techniques et administratifs (factures, rapports de conformité)</li>
-                <li>Améliorer nos services</li>
-                <li>Vous informer de nos actualités (uniquement avec votre consentement explicite)</li>
-            </ul>
-        </section>
-
-        <section style="margin-bottom: var(--space-3xl);">
-            <h2 style="color: var(--primary); margin-bottom: var(--space-lg);">4. Base légale du traitement</h2>
-            <p style="line-height: 1.7; color: var(--neutral-700);">Le traitement de vos données repose sur :</p>
-            <ul style="margin: var(--space-md) 0; padding-left: var(--space-xl); color: var(--neutral-700); line-height: 1.8;">
-                <li><strong>Votre consentement</strong> lors de la soumission d'un formulaire</li>
-                <li><strong>L'exécution d'un contrat</strong> ou de mesures précontractuelles</li>
-                <li><strong>Nos obligations légales</strong> (facturation, conformité RGIE)</li>
-                <li><strong>Notre intérêt légitime</strong> à améliorer nos services</li>
-            </ul>
-        </section>
-
-        <section style="margin-bottom: var(--space-3xl);">
-            <h2 style="color: var(--primary); margin-bottom: var(--space-lg);">5. Durée de conservation</h2>
-            <p style="line-height: 1.7; color: var(--neutral-700);">
-                Vos données sont conservées pendant :
-            </p>
-            <ul style="margin: var(--space-md) 0; padding-left: var(--space-xl); color: var(--neutral-700); line-height: 1.8;">
-                <li><strong>Prospects :</strong> 3 ans après le dernier contact</li>
-                <li><strong>Clients :</strong> 10 ans après la fin de la relation (obligations comptables et fiscales)</li>
-                <li><strong>Documents techniques RGIE :</strong> 25 ans (obligation légale)</li>
-            </ul>
-        </section>
-
-        <section style="margin-bottom: var(--space-3xl);">
-            <h2 style="color: var(--primary); margin-bottom: var(--space-lg);">6. Partage des données</h2>
-            <p style="line-height: 1.7; color: var(--neutral-700); margin-bottom: var(--space-md);">
-                Vos données ne sont jamais vendues. Elles peuvent être partagées uniquement avec :
-            </p>
-            <ul style="margin: var(--space-md) 0; padding-left: var(--space-xl); color: var(--neutral-700); line-height: 1.8;">
-                <li>Nos sous-traitants techniques (hébergement web, outils de gestion)</li>
-                <li>Les organismes de contrôle (lors d'inspections RGIE)</li>
-                <li>Les autorités compétentes (en cas d'obligation légale)</li>
-            </ul>
-            <p style="line-height: 1.7; color: var(--neutral-700); margin-top: var(--space-md);">
-                Tous nos prestataires sont soumis à des obligations strictes de confidentialité et de sécurité.
-            </p>
-        </section>
-
-        <section style="margin-bottom: var(--space-3xl);">
-            <h2 style="color: var(--primary); margin-bottom: var(--space-lg);">7. Vos droits</h2>
-            <p style="line-height: 1.7; color: var(--neutral-700); margin-bottom: var(--space-md);">
-                Conformément au RGPD, vous disposez des droits suivants :
-            </p>
-            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: var(--space-lg); margin: var(--space-lg) 0;">
-                <div style="background: var(--primary-pale); padding: var(--space-lg); border-radius: var(--radius-md);">
-                    <h3 style="color: var(--primary); margin-bottom: var(--space-sm);"><i class="fas fa-eye"></i> Droit d'accès</h3>
-                    <p style="font-size: var(--text-sm); color: var(--neutral-700);">Consulter vos données personnelles</p>
-                </div>
-                <div style="background: var(--primary-pale); padding: var(--space-lg); border-radius: var(--radius-md);">
-                    <h3 style="color: var(--primary); margin-bottom: var(--space-sm);"><i class="fas fa-pen"></i> Droit de rectification</h3>
-                    <p style="font-size: var(--text-sm); color: var(--neutral-700);">Corriger des informations inexactes</p>
-                </div>
-                <div style="background: var(--primary-pale); padding: var(--space-lg); border-radius: var(--radius-md);">
-                    <h3 style="color: var(--primary); margin-bottom: var(--space-sm);"><i class="fas fa-trash"></i> Droit à l'effacement</h3>
-                    <p style="font-size: var(--text-sm); color: var(--neutral-700);">Demander la suppression de vos données</p>
-                </div>
-                <div style="background: var(--primary-pale); padding: var(--space-lg); border-radius: var(--radius-md);">
-                    <h3 style="color: var(--primary); margin-bottom: var(--space-sm);"><i class="fas fa-ban"></i> Droit d'opposition</h3>
-                    <p style="font-size: var(--text-sm); color: var(--neutral-700);">Refuser le traitement de vos données</p>
-                </div>
-                <div style="background: var(--primary-pale); padding: var(--space-lg); border-radius: var(--radius-md);">
-                    <h3 style="color: var(--primary); margin-bottom: var(--space-sm);"><i class="fas fa-download"></i> Droit à la portabilité</h3>
-                    <p style="font-size: var(--text-sm); color: var(--neutral-700);">Récupérer vos données</p>
-                </div>
-                <div style="background: var(--primary-pale); padding: var(--space-lg); border-radius: var(--radius-md);">
-                    <h3 style="color: var(--primary); margin-bottom: var(--space-sm);"><i class="fas fa-pause"></i> Droit à la limitation</h3>
-                    <p style="font-size: var(--text-sm); color: var(--neutral-700);">Limiter le traitement temporairement</p>
-                </div>
-            </div>
-            <p style="line-height: 1.7; color: var(--neutral-700); margin-top: var(--space-lg);">
-                Pour exercer ces droits : <a href="mailto:info@luminaelectric.be" style="color: var(--primary); font-weight: 600;">info@luminaelectric.be</a>
-            </p>
-        </section>
-
-        <section style="margin-bottom: var(--space-3xl);">
-            <h2 style="color: var(--primary); margin-bottom: var(--space-lg);">8. Sécurité des données</h2>
-            <p style="line-height: 1.7; color: var(--neutral-700);">
-                Nous mettons en œuvre des mesures techniques et organisationnelles appropriées pour protéger vos données contre :
-            </p>
-            <ul style="margin: var(--space-md) 0; padding-left: var(--space-xl); color: var(--neutral-700); line-height: 1.8;">
-                <li>L'accès non autorisé</li>
-                <li>La perte ou la destruction accidentelle</li>
-                <li>L'utilisation illicite ou la divulgation</li>
-            </ul>
-        </section>
-
-        <section style="margin-bottom: var(--space-3xl);">
-            <h2 style="color: var(--primary); margin-bottom: var(--space-lg);">9. Cookies</h2>
-            <p style="line-height: 1.7; color: var(--neutral-700); margin-bottom: var(--space-md);">
-                Nous utilisons uniquement des cookies techniques nécessaires au fonctionnement du site. 
-                Aucun cookie publicitaire ou de tracking n'est utilisé.
-            </p>
-        </section>
-
-        <section style="margin-bottom: var(--space-3xl);">
-            <h2 style="color: var(--primary); margin-bottom: var(--space-lg);">10. Réclamation</h2>
-            <p style="line-height: 1.7; color: var(--neutral-700);">
-                Si vous estimez que vos droits ne sont pas respectés, vous pouvez introduire une réclamation auprès de 
-                l'Autorité de Protection des Données (APD) en Belgique :
-            </p>
-            <div style="background: var(--neutral-50); padding: var(--space-lg); border-radius: var(--radius-md); margin-top: var(--space-md);">
-                <p><strong>Autorité de Protection des Données</strong></p>
-                <p>Rue de la Presse 35, 1000 Bruxelles</p>
-                <p>Email : contact@apd-gba.be</p>
-                <p>Site : <a href="https://www.autoriteprotectiondonnees.be" target="_blank" style="color: var(--primary);">www.autoriteprotectiondonnees.be</a></p>
-            </div>
-        </section>
-
-        <section style="margin-bottom: var(--space-3xl);">
-            <h2 style="color: var(--primary); margin-bottom: var(--space-lg);">11. Modifications</h2>
-            <p style="line-height: 1.7; color: var(--neutral-700);">
-                Cette politique peut être modifiée pour rester conforme à la législation. 
-                La version en vigueur est celle publiée sur notre site.
-            </p>
-            <p style="line-height: 1.7; color: var(--neutral-700); margin-top: var(--space-md);">
-                <strong>Dernière mise à jour :</strong> Février 2026
-            </p>
-        </section>
-
-        <div style="background: var(--primary-pale); padding: var(--space-xl); border-radius: var(--radius-lg); text-align: center; margin-top: var(--space-3xl);">
-            <h3 style="color: var(--primary); margin-bottom: var(--space-md);">Questions sur vos données ?</h3>
-            <p style="margin-bottom: var(--space-lg);">
-                Contactez-nous pour toute question concernant le traitement de vos données personnelles.
-            </p>
-            <a href="contact.html" class="btn btn-primary btn-lg">
-                <i class="fas fa-envelope"></i> Nous contacter
-            </a>
+        <div class="footer__col">
+          <h4>Entreprise</h4>
+          <ul class="footer__links">
+            <li><a href="a-propos.html">À propos</a></li>
+            <li><a href="realisations.html">Réalisations</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="mentions-legales.html">Mentions légales</a></li>
+            <li><a href="confidentialite.html" class="active">Confidentialité</a></li>
+          </ul>
         </div>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-main">
-                <div class="footer-about">
-                    <a href="index.html" class="footer-logo">
-                        <img src="images/logo-lumina-electric.png" alt="Lumina Electric" style="height: 160px; width: auto; margin-bottom: var(--space-lg);">
-                    </a>
-                    <p>Expert en électricité en Belgique. Conformité RGIE, rénovation, dépannage et installations smart home.</p>
-                    <p style="margin-top: var(--space-md); font-size: var(--text-sm); color: var(--neutral-600);">
-                        <strong>N° TVA :</strong> BE1008470101
-                    </p>
-                </div>
-                <div class="footer-col">
-                    <h4 class="footer-title">Liens rapides</h4>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Accueil</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="a-propos.html">À propos</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4 class="footer-title">Services</h4>
-                    <ul class="footer-links">
-                        <li><a href="services/conformite-rgie.html">Conformité RGIE</a></li>
-                        <li><a href="services/renovation-electrique.html">Rénovation électrique</a></li>
-                        <li><a href="services/depannage.html">Dépannage</a></li>
-                        <li><a href="services.html">Tous les services</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4 class="footer-title">Contact</h4>
-                    <div class="footer-contact-item">
-                        <i class="fas fa-phone"></i>
-                        <div><a href="tel:+32485166635">+32 485 16 66 35</a></div>
-                    </div>
-                    <div class="footer-contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div><a href="mailto:info@luminaelectric.be">info@luminaelectric.be</a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Lumina Electric. Tous droits réservés.</p>
-                <div class="footer-legal">
-                    <a href="mentions-legales.html">Mentions légales</a>
-                    <a href="confidentialite.html">Confidentialité</a>
-                </div>
-            </div>
+        <div class="footer__col">
+          <h4>Contact</h4>
+          <div class="footer__contact-item"><i class="fas fa-phone"></i><a href="tel:+32485166635">+32 485 16 66 35</a></div>
+          <div class="footer__contact-item"><i class="fas fa-envelope"></i><a href="mailto:info@luminaelectric.be">info@luminaelectric.be</a></div>
+          <div class="footer__contact-item"><i class="fab fa-whatsapp"></i><a href="https://wa.me/32485166635" target="_blank" rel="noopener">WhatsApp</a></div>
+          <div class="footer__contact-item"><i class="fas fa-clock"></i><span>Lun-Ven : 8h-18h · Sam : 9h-13h</span></div>
         </div>
-    </footer>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 Lumina Electric. Tous droits réservés.</p>
+        <div class="footer__legal">
+          <a href="mentions-legales.html">Mentions légales</a>
+          <a href="confidentialite.html">Confidentialité</a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-    <script src="js/main.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

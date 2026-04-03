@@ -1,347 +1,323 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Elektriciteitsservices België | Lumina Electric - AREI, Renovatie, Panne</title>
-    <meta name="description" content="Al onze elektriciteitsservices in België: AREI-conformiteit, elektrische renovatie, panne, schakelborden, domotica, laadpalen. Gratis offerte.">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="../images/logo-lumina-electric.png">
-    <link rel="apple-touch-icon" href="../images/logo-lumina-electric.png">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
-    <link rel="stylesheet" href="../css/variables.css">
-    <link rel="stylesheet" href="../css/components.css">
-    <link rel="stylesheet" href="../css/layout.css">
-    <link rel="stylesheet" href="../css/pages.css">
-    <link rel="stylesheet" href="../css/mobile.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elektrische Diensten België | Lumina Electric — AREI, Renovatie, Herstelling</title>
+  <meta name="description" content="Al onze elektrische diensten in België: AREI-conformiteit, elektrische renovatie, herstellingen, schakelkasten, domotica, laadpalen. Gratis offerte.">
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .service-detail { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; padding:80px 0; border-bottom:1px solid var(--gray-100); }
+    .service-detail:last-child { border-bottom:none; }
+    .service-detail--reverse .service-detail__img { order:2; }
+    .service-detail--reverse .service-detail__text { order:1; }
+    .service-detail__img { border-radius:var(--radius-lg); overflow:hidden; box-shadow:var(--shadow-xl); }
+    .service-detail__img img { width:100%; height:400px; object-fit:cover; display:block; transition:transform var(--dur) var(--ease); }
+    .service-detail__img:hover img { transform:scale(1.04); }
+    .service-detail__text .eyebrow { font-size:0.875rem; font-weight:600; color:var(--accent-dark); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:14px; }
+    .service-detail__text h2 { margin-bottom:16px; }
+    .service-detail__text p { font-size:1.0625rem; color:var(--gray-600); line-height:1.8; margin-bottom:16px; }
+    .service-detail__features { list-style:none; margin:24px 0 32px; display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+    .service-detail__features li { display:flex; align-items:center; gap:8px; font-size:0.9375rem; color:var(--gray-700); }
+    .service-detail__features li i { color:var(--accent-dark); font-size:0.875rem; flex-shrink:0; }
+    @media (max-width:900px) { .service-detail { grid-template-columns:1fr; gap:40px; } .service-detail--reverse .service-detail__img,.service-detail--reverse .service-detail__text { order:unset; } .service-detail__features { grid-template-columns:1fr; } }
+  </style>
 </head>
 <body>
-    <!-- Top Bar -->
-    <div class="top-bar">
-        <div class="top-bar-container">
-            <div class="top-bar-info">
-                <a href="tel:+32485166635" class="top-bar-item">
-                    <i class="fas fa-phone"></i>
-                    <span>+32 485 16 66 35</span>
-                </a>
-                <a href="mailto:info@luminaelectric.be" class="top-bar-item">
-                    <i class="fas fa-envelope"></i>
-                    <span>info@luminaelectric.be</span>
-                </a>
-            </div>
-            <div class="lang-switcher">
-                <button onclick="window.location.href='../services.html'">FR</button>
-                <button class="active">NL</button>
-                <button onclick="window.location.href='../en/services.html'">EN</button>
-            </div>
+  <div class="urgence-banner">
+    <a href="tel:+32485166635"><i class="fas fa-bolt"></i> Elektrisch noodgeval 7d/7 — Interventie binnen 2-4u &nbsp;·&nbsp; +32 485 16 66 35 <i class="fas fa-arrow-right"></i></a>
+  </div>
+  <nav class="nav nav--transparent" id="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__logo">
+          <img src="../images/logo-white.svg" alt="Lumina Electric" class="nav__logo-white">
+          <img src="../images/logo-color.svg" alt="Lumina Electric" class="nav__logo-color">
+        </a>
+        <ul class="nav__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="diensten.html" class="active">Diensten</a></li>
+          <li><a href="realisaties.html">Realisaties</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="over-ons.html">Over ons</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav__cta">
+          <div class="nav__lang">
+            <button onclick="location.href='../services.html'">FR</button>
+            <button class="active">NL</button>
+            <button onclick="location.href='../en/services.html'">EN</button>
+          </div>
+          <a href="tel:+32485166635" class="nav__phone"><i class="fas fa-phone"></i> Bellen</a>
+          <a href="contact.html" class="nav__devis">Gratis offerte</a>
         </div>
+        <button class="nav__toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
     </div>
+  </nav>
+  <div class="nav__mobile" id="mobileMenu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="diensten.html" class="active">Diensten</a></li>
+      <li><a href="realisaties.html">Realisaties</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="over-ons.html">Over ons</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav__mobile-cta">
+      <a href="contact.html" class="btn btn-primary"><i class="fas fa-file-invoice"></i> Gratis offerte</a>
+      <a href="tel:+32485166635" class="btn btn-outline"><i class="fas fa-phone"></i> +32 485 16 66 35</a>
+    </div>
+  </div>
 
-    <!-- Header -->
-    <header class="header" id="header">
-        <div class="header-container">
-            <a href="index.html" class="logo">
-                <img src="../images/logo-lumina-electric.png" alt="Lumina Electric - cherish your energy" style="height: 120px; width: auto;">
-            </a>
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-header__eyebrow fade-in">Onze expertise</span>
+      <h1 class="fade-up">Onze Elektrische Diensten</h1>
+      <p class="fade-up">Volledige oplossingen voor al uw elektrische behoeften in België.</p>
+    </div>
+  </section>
 
-            <nav class="nav">
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="diensten.html" class="nav-link active">Diensten</a></li>
-                    <li><a href="realisaties.html" class="nav-link">Realisaties</a></li>
-                    <li><a href="faq.html" class="nav-link">FAQ</a></li>
-                    <li><a href="over-ons.html" class="nav-link">Over ons</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
-                </ul>
-                
-                <div class="header-cta">
-                    <a href="tel:+32485166635" class="btn btn-outline btn-sm">
-                        <i class="fas fa-phone"></i>
-                        Bellen
-                    </a>
-                    <a href="contact.html" class="btn btn-primary btn-sm">
-                        <i class="fas fa-file-invoice"></i>
-                        Gratis offerte
-                    </a>
-                </div>
-            </nav>
-
-            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+  <section>
+    <div class="container">
+      <div class="service-detail fade-up" id="conformite">
+        <div class="service-detail__img"><img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=900&q=80" alt="AREI-conformiteit"></div>
+        <div class="service-detail__text">
+          <p class="eyebrow">01 — Absolute prioriteit</p>
+          <h2>AREI-conformiteit</h2>
+          <p>Het AREI is verplicht bij elke verkoop, verhuur of grote renovatie. Wij analyseren uw installatie en brengen deze in orde voor een geslaagde AREI-keuring.</p>
+          <ul class="service-detail__features">
+            <li><i class="fas fa-check"></i> Volledig diagnose</li>
+            <li><i class="fas fa-check"></i> Aanpassing schakelkast</li>
+            <li><i class="fas fa-check"></i> Aardverbinding conform</li>
+            <li><i class="fas fa-check"></i> 30mA differentieelschakelaar</li>
+            <li><i class="fas fa-check"></i> Eénlijnschema geleverd</li>
+            <li><i class="fas fa-check"></i> Begeleiding tot keuring</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary"><i class="fas fa-file-invoice"></i> Offerte aanvragen</a>
         </div>
-    </header>
-
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <h1>Onze Elektrische Diensten</h1>
-            <p class="lead">Volledige oplossingen voor al uw elektriciteitsbehoeften</p>
+      </div>
+      <div class="service-detail service-detail--reverse fade-up" id="renovation">
+        <div class="service-detail__text">
+          <p class="eyebrow">02 — Volledige installatie</p>
+          <h2>Elektrische renovatie</h2>
+          <p>Totale of gedeeltelijke vernieuwing van uw installatie. Nieuwe bekabeling, nieuwe circuits, moderne schakelkast — alles ontworpen voor duurzaamheid en veiligheid.</p>
+          <ul class="service-detail__features">
+            <li><i class="fas fa-check"></i> Vervanging bekabeling</li>
+            <li><i class="fas fa-check"></i> Nieuwe circuits & stopcontacten</li>
+            <li><i class="fas fa-check"></i> Moderne schakelkast</li>
+            <li><i class="fas fa-check"></i> Geïntegreerde LED-verlichting</li>
+            <li><i class="fas fa-check"></i> AREI-conforme installatie</li>
+            <li><i class="fas fa-check"></i> Volledige documentatie</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary"><i class="fas fa-file-invoice"></i> Offerte aanvragen</a>
         </div>
-    </section>
-
-    <!-- Main Content -->
-    <section style="padding: var(--space-3xl) 0;">
-        <div class="container">
-            <!-- Introduction -->
-            <div style="max-width: 800px; margin: 0 auto var(--space-4xl); text-align: center;">
-                <h2 class="mb-lg">Volledige expertise ten dienste van uw projecten</h2>
-                <p style="font-size: var(--text-lg); line-height: 1.8; color: var(--neutral-700);">
-                    Van AREI-conformiteit tot volledige renovatie, inclusief noodpanne en installatie van domotica-oplossingen, <strong>Lumina Electric</strong> begeleidt u met professionalisme en nauwkeurigheid.
-                </p>
-            </div>
-
-            <!-- Services Grid -->
-            <div class="grid grid-3" style="margin-bottom: var(--space-4xl);">
-                <!-- Service 1: AREI Conformiteit -->
-                <div class="service-card">
-                    <div class="service-card-icon">
-                        <i class="fas fa-clipboard-check"></i>
-                    </div>
-                    <h3>AREI-conformiteit</h3>
-                    <p>Volledige analyse van uw elektrische installatie en aanpassing aan AREI-normen om uw keuring te slagen.</p>
-                    <ul>
-                        <li>Volledige diagnose van de installatie</li>
-                        <li>Aanpassing van het schakelbord</li>
-                        <li>Conforme aarding</li>
-                        <li>Verplichte 30mA differentieelschakelaar</li>
-                        <li>Eendraadschema en situatieschema</li>
-                    </ul>
-                    <a href="diensten/arei-conformiteit.html" class="btn btn-outline">
-                        Meer info
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-
-                <!-- Service 2: Renovatie -->
-                <div class="service-card">
-                    <div class="service-card-icon">
-                        <i class="fas fa-home"></i>
-                    </div>
-                    <h3>Elektrische renovatie</h3>
-                    <p>Volledige of gedeeltelijke vernieuwing van uw elektrische installatie voor meer veiligheid en comfort.</p>
-                    <ul>
-                        <li>Vervanging van de bedrading</li>
-                        <li>Nieuwe circuits en stopcontacten</li>
-                        <li>Modern schakelbord</li>
-                        <li>Geïntegreerde LED-verlichting</li>
-                        <li>Veilige installatie</li>
-                    </ul>
-                    <a href="diensten/elektrische-renovatie.html" class="btn btn-outline">
-                        Meer info
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-
-                <!-- Service 3: Panne -->
-                <div class="service-card">
-                    <div class="service-card-icon">
-                        <i class="fas fa-tools"></i>
-                    </div>
-                    <h3>Elektrische panne</h3>
-                    <p>Snelle interventie om uw elektrische pannes op te lossen. Service beschikbaar 7/7 voor noodgevallen.</p>
-                    <ul>
-                        <li>Kortsluiting en uitschakeling</li>
-                        <li>Totale stroomuitval</li>
-                        <li>Aardingsprobleem</li>
-                        <li>Schakelbord dat uitschakelt</li>
-                        <li>Interventie binnen 2-4u in noodgeval</li>
-                    </ul>
-                    <a href="diensten/storing.html" class="btn btn-outline">
-                        Meer info
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-
-                <!-- Service 4: Schakelbord -->
-                <div class="service-card">
-                    <div class="service-card-icon">
-                        <i class="fas fa-network-wired"></i>
-                    </div>
-                    <h3>Elektrisch schakelbord</h3>
-                    <p>Installatie, vervanging of aanpassing aan de normen van uw elektrisch schakelbord met aangepaste bescherming.</p>
-                    <ul>
-                        <li>AREI-conform schakelbord</li>
-                        <li>30mA differentieelschakelaar</li>
-                        <li>Aangepaste stroomonderbrekers</li>
-                        <li>Aanbevolen bliksemafleider</li>
-                        <li>Uitbreiding van circuits</li>
-                    </ul>
-                    <a href="diensten/elektrisch-bord.html" class="btn btn-outline">
-                        Meer info
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-
-                <!-- Service 5: Domotica -->
-                <div class="service-card">
-                    <div class="service-card-icon">
-                        <i class="fas fa-lightbulb"></i>
-                    </div>
-                    <h3>Domotica & Verlichting</h3>
-                    <p>Intelligente oplossingen om uw woning te automatiseren: aangesloten verlichting, rolluiken, thermostaat, beveiliging.</p>
-                    <ul>
-                        <li>Intelligente LED-verlichting</li>
-                        <li>Geautomatiseerde rolluiken</li>
-                        <li>Aangesloten thermostaat</li>
-                        <li>Aanwezigheidsdetectie</li>
-                        <li>Controle via smartphone</li>
-                    </ul>
-                    <a href="diensten/domotica.html" class="btn btn-outline">
-                        Meer info
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-
-                <!-- Service 6: Laadpaal -->
-                <div class="service-card">
-                    <div class="service-card-icon">
-                        <i class="fas fa-charging-station"></i>
-                    </div>
-                    <h3>Laadpaal elektrische auto</h3>
-                    <p>Professionele installatie van laadpaal voor elektrische auto met advies over beschikbare premies.</p>
-                    <ul>
-                        <li>Performante wallbox</li>
-                        <li>Hulp bij premies (Brussels Gewest, Vlaams-Brabant, Waals-Brabant)</li>
-                        <li>Veilige installatie</li>
-                        <li>Snelladen tot 22kW</li>
-                        <li>Compatible met alle merken</li>
-                    </ul>
-                    <a href="diensten/laadpaal.html" class="btn btn-outline">
-                        Meer info
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-
-                <!-- Service 7: Zonnepanelen -->
-                <div class="service-card">
-                    <div class="service-card-icon">
-                        <i class="fas fa-solar-panel"></i>
-                    </div>
-                    <h3>Zonnepanelen</h3>
-                    <p>Elektrische aansluiting van uw fotovoltaïsche installatie. Optimalisatie en inbedrijfstelling van de omvormer.</p>
-                    <ul>
-                        <li>Aansluiting omvormer</li>
-                        <li>PV-aarding</li>
-                        <li>AC/DC-bescherming</li>
-                        <li>Bidirectionele meter</li>
-                        <li>Productieoptimalisatie</li>
-                    </ul>
-                    <a href="diensten/zonnepanelen.html" class="btn btn-outline">
-                        Meer info
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-
-                <!-- Service 8: Alarm & Bewaking -->
-                <div class="service-card">
-                    <div class="service-card-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>Alarm & Bewaking</h3>
-                    <p>High-end beveiligingssystemen voor woningen en professionele ruimtes. Betrouwbare en discrete bescherming.</p>
-                    <ul>
-                        <li>Geavanceerde inbraakdetectie</li>
-                        <li>High-resolution camera's</li>
-                        <li>Bediening op afstand</li>
-                        <li>Instant alerts</li>
-                        <li>Beveiligde infrastructuur</li>
-                    </ul>
-                    <a href="diensten/alarm-bewaking.html" class="btn btn-outline">
-                        Meer info
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- CTA Section -->
-            <div style="background: var(--primary-pale); padding: var(--space-3xl); border-radius: var(--radius-xl); text-align: center;">
-                <h2 class="mb-lg">Een project in elektriciteit?</h2>
-                <p style="font-size: var(--text-lg); color: var(--neutral-700); margin-bottom: var(--space-xl); max-width: 600px; margin-left: auto; margin-right: auto;">
-                    Neem contact met ons op voor een gratis en gepersonaliseerde offerte. Wij bestuderen uw project en stellen u de beste oplossing voor.
-                </p>
-                <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap;">
-                    <a href="contact.html" class="btn btn-primary btn-lg">
-                        <i class="fas fa-file-invoice"></i>
-                        Vraag een gratis offerte aan
-                    </a>
-                    <a href="tel:+32485166635" class="btn btn-outline btn-lg">
-                        <i class="fas fa-phone"></i>
-                        +32 485 16 66 35
-                    </a>
-                </div>
-            </div>
+        <div class="service-detail__img"><img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=80" alt="Elektrische renovatie"></div>
+      </div>
+      <div class="service-detail fade-up" id="depannage">
+        <div class="service-detail__img"><img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=900&q=80" alt="Elektrische herstelling noodgeval"></div>
+        <div class="service-detail__text">
+          <p class="eyebrow">03 — 7d/7</p>
+          <h2>Elektrische herstelling</h2>
+          <p>Plotse panne, zekering die uitvalt, totale stroomonderbreking — wij interveniëren binnen 2 tot 4 uur. Nauwkeurige diagnose, snelle oplossing.</p>
+          <ul class="service-detail__features">
+            <li><i class="fas fa-check"></i> Kortsluiting & automatisch</li>
+            <li><i class="fas fa-check"></i> Totale stroompanne</li>
+            <li><i class="fas fa-check"></i> Aardverbindingsprobleem</li>
+            <li><i class="fas fa-check"></i> Zekering die uitvalt</li>
+            <li><i class="fas fa-check"></i> Interventie 2-4u</li>
+            <li><i class="fas fa-check"></i> Beschikbaar weekends</li>
+          </ul>
+          <a href="tel:+32485166635" class="btn btn-primary"><i class="fas fa-phone"></i> Noodoproep</a>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-main">
-                <div class="footer-about">
-                    <a href="index.html" class="footer-logo">
-                        <img src="../images/logo-lumina-electric.png" alt="Lumina Electric" style="height: 160px; width: auto; margin-bottom: var(--space-lg);">
-                    </a>
-                    <p>Uw betrouwbare partner voor alle elektrische werken in België. AREI gecertificeerd elektricien.</p>
-                </div>
-                
-                <div class="footer-column">
-                    <h3 class="footer-title">Snelle Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="diensten.html">Diensten</a></li>
-                        <li><a href="realisaties.html">Realisaties</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
-                        <li><a href="over-ons.html">Over ons</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h3 class="footer-title">Diensten</h3>
-                    <ul class="footer-links">
-                        <li><a href="diensten/arei-conformiteit.html">AREI Conformiteit</a></li>
-                        <li><a href="diensten/elektrische-renovatie.html">Renovatie</a></li>
-                        <li><a href="diensten/panne.html">Panne</a></li>
-                        <li><a href="diensten/laadpaal.html">Laadpaal</a></li>
-                        <li><a href="diensten/domotica.html">Domotica</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h3 class="footer-title">Contact</h3>
-                    <div class="footer-contact-item">
-                        <i class="fas fa-phone"></i>
-                        <a href="tel:+32485166635">+32 485 16 66 35</a>
-                    </div>
-                    <div class="footer-contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <a href="mailto:info@luminaelectric.be">info@luminaelectric.be</a>
-                    </div>
-                    <div class="footer-contact-item">
-                        <i class="fab fa-whatsapp"></i>
-                        <a href="https://wa.me/32485166635" target="_blank">WhatsApp</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2026 Lumina Electric. Alle rechten voorbehouden.</p>
-                <div class="footer-legal">
-                    <a href="privacy.html">Privacy</a>
-                    <a href="juridisch.html">Juridische vermeldingen</a>
-                </div>
-            </div>
+      </div>
+      <div class="service-detail service-detail--reverse fade-up" id="tableau">
+        <div class="service-detail__text">
+          <p class="eyebrow">04 — Hart van de installatie</p>
+          <h2>Schakelkast</h2>
+          <p>Uw schakelkast is het hart van uw installatie. Installatie, vervanging of conformering: wij garanderen een moderne, georganiseerde en AREI-conforme kast.</p>
+          <ul class="service-detail__features">
+            <li><i class="fas fa-check"></i> AREI-conforme kast</li>
+            <li><i class="fas fa-check"></i> 30mA differentieel</li>
+            <li><i class="fas fa-check"></i> Gekalibreerde automaten</li>
+            <li><i class="fas fa-check"></i> Overspanningsbeveiliging</li>
+            <li><i class="fas fa-check"></i> Uitbreiding circuits</li>
+            <li><i class="fas fa-check"></i> Duidelijke etikettering</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary"><i class="fas fa-file-invoice"></i> Offerte aanvragen</a>
         </div>
-    </footer>
+        <div class="service-detail__img"><img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=900&q=80" alt="Schakelkast"></div>
+      </div>
+      <div class="service-detail fade-up" id="domotique">
+        <div class="service-detail__img"><img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80" alt="Domotica smart home"></div>
+        <div class="service-detail__text">
+          <p class="eyebrow">05 — Slimme woning</p>
+          <h2>Domotica & Smart Home</h2>
+          <p>Beheer uw woning via uw smartphone. Verlichting, rolluiken, thermostaat, beveiliging — automatiseer alles voor meer comfort en energiebesparing.</p>
+          <ul class="service-detail__features">
+            <li><i class="fas fa-check"></i> Slimme LED-verlichting</li>
+            <li><i class="fas fa-check"></i> Geautomatiseerde rolluiken</li>
+            <li><i class="fas fa-check"></i> Verbonden thermostaat</li>
+            <li><i class="fas fa-check"></i> Aanwezigheidsdetectie</li>
+            <li><i class="fas fa-check"></i> Bediening via smartphone</li>
+            <li><i class="fas fa-check"></i> Compatibel Alexa / Google</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary"><i class="fas fa-file-invoice"></i> Offerte aanvragen</a>
+        </div>
+      </div>
+      <div class="service-detail service-detail--reverse fade-up" id="borne">
+        <div class="service-detail__text">
+          <p class="eyebrow">06 — Elektrische mobiliteit</p>
+          <h2>Laadpaal EV</h2>
+          <p>Gecertificeerde professionele installatie van uw wallbox. Tot 22kW, compatibel met alle merken elektrische voertuigen. Wij begeleiden u bij de beschikbare premies.</p>
+          <ul class="service-detail__features">
+            <li><i class="fas fa-check"></i> Gecertificeerde wallbox</li>
+            <li><i class="fas fa-check"></i> Gecertificeerde installatie</li>
+            <li><i class="fas fa-check"></i> Tot 22kW</li>
+            <li><i class="fas fa-check"></i> Hulp bij premies</li>
+            <li><i class="fas fa-check"></i> Compatibel alle merken</li>
+            <li><i class="fas fa-check"></i> Aangepaste netwerkbeveiliging</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary"><i class="fas fa-file-invoice"></i> Offerte aanvragen</a>
+        </div>
+        <div class="service-detail__img"><img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=900&q=80" alt="Laadpaal EV"></div>
+      </div>
+      <div class="service-detail fade-up" id="solaire">
+        <div class="service-detail__img"><img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=900&q=80" alt="Zonnepanelen"></div>
+        <div class="service-detail__text">
+          <p class="eyebrow">07 — Hernieuwbare energie</p>
+          <h2>Zonnepanelen</h2>
+          <p>Aansluiting en optimalisatie van uw fotovoltaïsche installatie. Inverter in dienst stelling, AC/DC-beveiligingen, bidirectionele teller.</p>
+          <ul class="service-detail__features">
+            <li><i class="fas fa-check"></i> Inverter aansluiting</li>
+            <li><i class="fas fa-check"></i> PV-aardverbinding</li>
+            <li><i class="fas fa-check"></i> AC & DC beveiliging</li>
+            <li><i class="fas fa-check"></i> Bidirectionele teller</li>
+            <li><i class="fas fa-check"></i> Productie optimalisatie</li>
+            <li><i class="fas fa-check"></i> Netwerkconformiteit</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary"><i class="fas fa-file-invoice"></i> Offerte aanvragen</a>
+        </div>
+      </div>
 
-    <script src="../js/main.js"></script>
+      <!-- Thuisbatterijen -->
+      <div class="service-detail service-detail--reverse fade-up" id="batteries">
+        <div class="service-detail__text">
+          <p class="eyebrow">08 — Hernieuwbare energie</p>
+          <h2>Thuisbatterijen</h2>
+          <p>Sla de energie op die uw zonnepanelen produceren en gebruik ze wanneer u ze nodig heeft. Onze residentiële batterijoplossingen verminderen uw netafhankelijkheid en maximaliseren uw zelfverbruik.</p>
+          <ul class="service-detail__features">
+            <li><i class="fas fa-check"></i> Installatie lithium-ion batterij</li>
+            <li><i class="fas fa-check"></i> AC/DC koppeling met omvormer</li>
+            <li><i class="fas fa-check"></i> Maximaal zelfverbruik</li>
+            <li><i class="fas fa-check"></i> Real-time monitoring</li>
+            <li><i class="fas fa-check"></i> Verhoogde netOnafhankelijkheid</li>
+            <li><i class="fas fa-check"></i> Compatibel met Powerwall & BYD</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary"><i class="fas fa-file-invoice"></i> Offerte aanvragen</a>
+        </div>
+        <div class="service-detail__img"><img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=900&q=80" alt="Thuisbatterijen energieopslag"></div>
+      </div>
+
+      <div class="service-detail fade-up" id="alarme">
+        <div class="service-detail__img"><img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=900&q=80" alt="Alarm en bewaking"></div>
+        <div class="service-detail__text">
+          <p class="eyebrow">09 — Veiligheid & bescherming</p>
+          <h2>Alarm & Bewaking</h2>
+          <p>Bescherm uw eigendom met hoogwaardige beveiligingssystemen. Inbraakdetectie, HD-camera's, realtime meldingen — betrouwbare en discrete bescherming.</p>
+          <ul class="service-detail__features">
+            <li><i class="fas fa-check"></i> Geavanceerde inbraakdetectie</li>
+            <li><i class="fas fa-check"></i> HD-camera's</li>
+            <li><i class="fas fa-check"></i> Bediening op afstand</li>
+            <li><i class="fas fa-check"></i> Directe meldingen</li>
+            <li><i class="fas fa-check"></i> Beveiligde infrastructuur</li>
+            <li><i class="fas fa-check"></i> Discrete installatie</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary"><i class="fas fa-file-invoice"></i> Offerte aanvragen</a>
+        </div>
+      </div>
+
+      <!-- Residentiële renovatie -->
+      <div class="service-detail service-detail--reverse fade-up" id="renovatie-residentieel">
+        <div class="service-detail__text">
+          <p class="eyebrow">10 — Renovatie & bouw</p>
+          <h2>Residentiële renovatie</h2>
+          <p>Via onze vertrouwde partners begeleiden wij u bij uw volledige residentiële renovatieproject. Van keuken tot badkamer, van vloerbekleding tot isolatie — één aanspreekpunt voor alles.</p>
+          <ul class="service-detail__features">
+            <li><i class="fas fa-check"></i> Keuken & badkamer</li>
+            <li><i class="fas fa-check"></i> Vloer- & wandbekleding</li>
+            <li><i class="fas fa-check"></i> Thermische & akoestische isolatie</li>
+            <li><i class="fas fa-check"></i> Binnen- & buitenschrijnwerk</li>
+            <li><i class="fas fa-check"></i> Coördinatie alle vakken</li>
+            <li><i class="fas fa-check"></i> Volledige werfopvolging</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary"><i class="fas fa-file-invoice"></i> Offerte aanvragen</a>
+        </div>
+        <div class="service-detail__img"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80" alt="Residentiële renovatie"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-inner fade-up">
+        <h2>Een elektrisch project?</h2>
+        <p>Neem contact op voor een gratis en gepersonaliseerde offerte. Antwoord binnen 24u.</p>
+        <div class="cta-buttons">
+          <a href="contact.html" class="btn btn-primary btn-lg"><i class="fas fa-file-invoice"></i> Gratis offerte</a>
+          <a href="tel:+32485166635" class="btn btn-outline-white btn-lg"><i class="fas fa-phone"></i> +32 485 16 66 35</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__main">
+        <div class="footer__brand">
+          <img src="../images/logo-white.svg" alt="Lumina Electric">
+          <p>Expert in elektriciteit in België. AREI-conformiteit, renovatie, herstellingen en smart home installaties.</p>
+          <p class="footer__tva">BTW: BE1008470101</p>
+        </div>
+        <div class="footer__col">
+          <h4>Diensten</h4>
+          <ul class="footer__links">
+            <li><a href="#conformite">AREI-conformiteit</a></li>
+            <li><a href="#renovation">Elektrische renovatie</a></li>
+            <li><a href="#depannage">Spoedservice</a></li>
+            <li><a href="#domotique">Domotica</a></li>
+            <li><a href="#borne">Laadpaal EV</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Bedrijf</h4>
+          <ul class="footer__links">
+            <li><a href="over-ons.html">Over ons</a></li>
+            <li><a href="realisaties.html">Realisaties</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Contact</h4>
+          <div class="footer__contact-item"><i class="fas fa-phone"></i><a href="tel:+32485166635">+32 485 16 66 35</a></div>
+          <div class="footer__contact-item"><i class="fas fa-envelope"></i><a href="mailto:info@luminaelectric.be">info@luminaelectric.be</a></div>
+          <div class="footer__contact-item"><i class="fab fa-whatsapp"></i><a href="https://wa.me/32485166635" target="_blank" rel="noopener">WhatsApp</a></div>
+          <div class="footer__contact-item"><i class="fas fa-clock"></i><span>Ma-Vr: 8u-18u · Za: 9u-13u</span></div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 Lumina Electric. Alle rechten voorbehouden.</p>
+        <div class="footer__legal">
+          <a href="../mentions-legales.html">Juridische vermeldingen</a>
+          <a href="../confidentialite.html">Privacybeleid</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="../js/main.js"></script>
 </body>
 </html>

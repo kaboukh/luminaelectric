@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "Lumina Electric (static site)",
+      "runtimeExecutable": "cmd",
+      "runtimeArgs": ["/c", "C:\\Users\\kabou\\OneDrive - Lumina Solutions\\Lumina\\Website\\Claude website\\.claude\\serve.cmd"],
+      "port": 5500
+    }
+  ]
+}

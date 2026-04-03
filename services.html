@@ -1,347 +1,415 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Services Électricité Belgique | Lumina Electric - RGIE, Rénovation, Dépannage</title>
-    <meta name="description" content="Tous nos services d'électricité en Belgique : conformité RGIE, rénovation électrique, dépannage, tableaux, domotique, bornes de recharge. Devis gratuit.">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/logo-lumina-electric.png">
-    <link rel="apple-touch-icon" href="images/logo-lumina-electric.png">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
-    <link rel="stylesheet" href="css/variables.css">
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/pages.css">
-    <link rel="stylesheet" href="css/mobile.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services Électricité Belgique | Lumina Electric — RGIE, Rénovation, Dépannage</title>
+  <meta name="description" content="Tous nos services d'électricité en Belgique : conformité RGIE, rénovation électrique, dépannage, tableaux, domotique, bornes de recharge. Devis gratuit.">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .service-detail {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+      padding: 80px 0;
+      border-bottom: 1px solid var(--gray-100);
+    }
+    .service-detail:last-child { border-bottom: none; }
+    .service-detail--reverse .service-detail__img { order: 2; }
+    .service-detail--reverse .service-detail__text { order: 1; }
+    .service-detail__img {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-xl);
+    }
+    .service-detail__img img {
+      width: 100%; height: 400px;
+      object-fit: cover; display: block;
+      transition: transform var(--dur) var(--ease);
+    }
+    .service-detail__img:hover img { transform: scale(1.04); }
+    .service-detail__text .eyebrow {
+      font-size: 0.875rem; font-weight: 600;
+      color: var(--accent-dark); text-transform: uppercase;
+      letter-spacing: 0.1em; margin-bottom: 14px;
+    }
+    .service-detail__text h2 { margin-bottom: 16px; }
+    .service-detail__text p { font-size: 1.0625rem; color: var(--gray-600); line-height: 1.8; margin-bottom: 16px; }
+    .service-detail__features {
+      list-style: none; margin: 24px 0 32px;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+    }
+    .service-detail__features li {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 0.9375rem; color: var(--gray-700);
+    }
+    .service-detail__features li i { color: var(--accent-dark); font-size: 0.875rem; flex-shrink: 0; }
+    @media (max-width: 900px) {
+      .service-detail { grid-template-columns: 1fr; gap: 40px; }
+      .service-detail--reverse .service-detail__img,
+      .service-detail--reverse .service-detail__text { order: unset; }
+      .service-detail__features { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
-    <!-- Top Bar -->
-    <div class="top-bar">
-        <div class="top-bar-container">
-            <div class="top-bar-info">
-                <a href="tel:+32485166635" class="top-bar-item">
-                    <i class="fas fa-phone"></i>
-                    <span>+32 485 16 66 35</span>
-                </a>
-                <a href="mailto:info@luminaelectric.be" class="top-bar-item">
-                    <i class="fas fa-envelope"></i>
-                    <span>info@luminaelectric.be</span>
-                </a>
-            </div>
-            <div class="lang-switcher">
-                <button class="active">FR</button>
-                <button onclick="window.location.href='nl/diensten.html'">NL</button>
-                <button onclick="window.location.href='en/services.html'">EN</button>
-            </div>
+
+  <div class="urgence-banner">
+    <a href="tel:+32485166635">
+      <i class="fas fa-bolt"></i>
+      Urgence électrique 7j/7 — Intervention sous 2-4h &nbsp;·&nbsp; +32 485 16 66 35
+      <i class="fas fa-arrow-right"></i>
+    </a>
+  </div>
+
+  <nav class="nav nav--transparent" id="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__logo">
+          <img src="images/logo-white.svg" alt="Lumina Electric" class="nav__logo-white">
+          <img src="images/logo-color.svg" alt="Lumina Electric" class="nav__logo-color">
+        </a>
+        <ul class="nav__links">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="services.html" class="active">Services</a></li>
+          <li><a href="realisations.html">Réalisations</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="a-propos.html">À propos</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav__cta">
+          <div class="nav__lang">
+            <button class="active">FR</button>
+            <button onclick="location.href='nl/diensten.html'">NL</button>
+            <button onclick="location.href='en/services.html'">EN</button>
+          </div>
+          <a href="tel:+32485166635" class="nav__phone"><i class="fas fa-phone"></i> Appeler</a>
+          <a href="contact.html" class="nav__devis">Devis gratuit</a>
         </div>
+        <button class="nav__toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
     </div>
+  </nav>
 
-    <!-- Header -->
-    <header class="header" id="header">
-        <div class="header-container">
-            <a href="index.html" class="logo">
-                <img src="images/logo-lumina-electric.png" alt="Lumina Electric - cherish your energy" style="height: 120px; width: auto;">
-            </a>
+  <div class="nav__mobile" id="mobileMenu">
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="services.html" class="active">Services</a></li>
+      <li><a href="realisations.html">Réalisations</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="a-propos.html">À propos</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav__mobile-cta">
+      <a href="contact.html" class="btn btn-primary"><i class="fas fa-file-invoice"></i> Devis gratuit</a>
+      <a href="tel:+32485166635" class="btn btn-outline"><i class="fas fa-phone"></i> +32 485 16 66 35</a>
+    </div>
+  </div>
 
-            <nav class="nav">
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="index.html" class="nav-link">Accueil</a></li>
-                    <li><a href="services.html" class="nav-link active">Services</a></li>
-                    <li><a href="realisations.html" class="nav-link">Réalisations</a></li>
-                    <li><a href="faq.html" class="nav-link">FAQ</a></li>
-                    <li><a href="a-propos.html" class="nav-link">À propos</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
-                </ul>
-                
-                <div class="header-cta">
-                    <a href="tel:+32485166635" class="btn btn-outline btn-sm">
-                        <i class="fas fa-phone"></i>
-                        Appeler
-                    </a>
-                    <a href="contact.html" class="btn btn-primary btn-sm">
-                        <i class="fas fa-file-invoice"></i>
-                        Devis gratuit
-                    </a>
-                </div>
-            </nav>
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-header__eyebrow fade-in">Nos expertises</span>
+      <h1 class="fade-up">Nos Services Électriques</h1>
+      <p class="fade-up">Des solutions complètes pour tous vos besoins en électricité en Belgique.</p>
+    </div>
+  </section>
 
-            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+  <!-- Intro -->
+  <section style="padding: 80px 0 0;">
+    <div class="container">
+      <div class="section-header fade-up" style="margin-bottom: 0;">
+        <h2>Une expertise complète à votre service</h2>
+        <p style="max-width: 700px;">De la mise en conformité RGIE à la rénovation complète, en passant par le dépannage d'urgence et la domotique, Lumina Electric vous accompagne avec professionnalisme et rigueur.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Details -->
+  <section>
+    <div class="container">
+
+      <!-- Conformité RGIE -->
+      <div class="service-detail fade-up" id="conformite">
+        <div class="service-detail__img">
+          <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=900&q=80" alt="Mise en conformité RGIE">
         </div>
-    </header>
-
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <h1>Nos Services Électriques</h1>
-            <p class="lead">Des solutions complètes pour tous vos besoins en électricité</p>
+        <div class="service-detail__text">
+          <p class="eyebrow">01 — Priorité absolue</p>
+          <h2>Mise en conformité RGIE</h2>
+          <p>Le RGIE est obligatoire lors de toute vente, location ou rénovation majeure. Nous analysons votre installation et la mettons aux normes RGIE/AREI pour garantir la sécurité et réussir le contrôle.</p>
+          <ul class="service-detail__features">
+            <li><i class="fas fa-check"></i> Diagnostic complet de l'installation</li>
+            <li><i class="fas fa-check"></i> Adaptation du tableau électrique</li>
+            <li><i class="fas fa-check"></i> Mise à la terre conforme</li>
+            <li><i class="fas fa-check"></i> Différentiel 30mA obligatoire</li>
+            <li><i class="fas fa-check"></i> Schéma unifilaire fourni</li>
+            <li><i class="fas fa-check"></i> Accompagnement au contrôle</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary"><i class="fas fa-file-invoice"></i> Demander un devis</a>
         </div>
-    </section>
+      </div>
 
-    <!-- Main Content -->
-    <section style="padding: var(--space-3xl) 0;">
-        <div class="container">
-            <!-- Introduction -->
-            <div style="max-width: 800px; margin: 0 auto var(--space-4xl); text-align: center;">
-                <h2 class="mb-lg">Une expertise complète au service de vos projets</h2>
-                <p style="font-size: var(--text-lg); line-height: 1.8; color: var(--neutral-700);">
-                    De la mise en conformité RGIE à la rénovation complète, en passant par le dépannage d'urgence et l'installation de solutions domotiques, <strong>Lumina Electric</strong> vous accompagne avec professionnalisme et rigueur.
-                </p>
-            </div>
-
-            <!-- Services Grid -->
-            <div class="grid grid-3" style="margin-bottom: var(--space-4xl);">
-                <!-- Service 1: Conformité RGIE -->
-                <div class="service-card">
-                    <div class="service-card-icon">
-                        <i class="fas fa-clipboard-check"></i>
-                    </div>
-                    <h3>Mise en conformité RGIE</h3>
-                    <p>Analyse complète de votre installation électrique et mise aux normes RGIE/AREI pour réussir votre contrôle.</p>
-                    <ul>
-                        <li>Diagnostic complet de l'installation</li>
-                        <li>Adaptation du tableau électrique</li>
-                        <li>Mise à la terre conforme</li>
-                        <li>Différentiel 30mA obligatoire</li>
-                        <li>Schémas unifilaire et de position</li>
-                    </ul>
-                    <a href="services/conformite-rgie.html" class="btn btn-outline">
-                        En savoir plus
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-
-                <!-- Service 2: Rénovation -->
-                <div class="service-card">
-                    <div class="service-card-icon">
-                        <i class="fas fa-home"></i>
-                    </div>
-                    <h3>Rénovation électrique</h3>
-                    <p>Remise à neuf complète ou partielle de votre installation électrique pour plus de sécurité et de confort.</p>
-                    <ul>
-                        <li>Remplacement du câblage</li>
-                        <li>Nouveaux circuits et prises</li>
-                        <li>Tableau électrique moderne</li>
-                        <li>Éclairage LED intégré</li>
-                        <li>Installation sécurisée</li>
-                    </ul>
-                    <a href="services/renovation-electrique.html" class="btn btn-outline">
-                        En savoir plus
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-
-                <!-- Service 3: Dépannage -->
-                <div class="service-card">
-                    <div class="service-card-icon">
-                        <i class="fas fa-tools"></i>
-                    </div>
-                    <h3>Dépannage électrique</h3>
-                    <p>Intervention rapide pour résoudre vos pannes électriques. Service disponible 7j/7 pour les urgences.</p>
-                    <ul>
-                        <li>Court-circuit et disjonction</li>
-                        <li>Panne de courant totale</li>
-                        <li>Problème de mise à la terre</li>
-                        <li>Tableau qui saute</li>
-                        <li>Intervention sous 2-4h en urgence</li>
-                    </ul>
-                    <a href="services/depannage.html" class="btn btn-outline">
-                        En savoir plus
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-
-                <!-- Service 4: Tableau électrique -->
-                <div class="service-card">
-                    <div class="service-card-icon">
-                        <i class="fas fa-network-wired"></i>
-                    </div>
-                    <h3>Tableau électrique</h3>
-                    <p>Installation, remplacement ou mise aux normes de votre tableau électrique avec protections adaptées.</p>
-                    <ul>
-                        <li>Tableau aux normes RGIE</li>
-                        <li>Différentiel 30mA</li>
-                        <li>Disjoncteurs adaptés</li>
-                        <li>Parafoudre recommandé</li>
-                        <li>Extension de circuits</li>
-                    </ul>
-                    <a href="services/tableau-electrique.html" class="btn btn-outline">
-                        En savoir plus
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-
-                <!-- Service 5: Domotique -->
-                <div class="service-card">
-                    <div class="service-card-icon">
-                        <i class="fas fa-lightbulb"></i>
-                    </div>
-                    <h3>Domotique & Éclairage</h3>
-                    <p>Solutions intelligentes pour automatiser votre habitat : éclairage connecté, volets, thermostat, sécurité.</p>
-                    <ul>
-                        <li>Éclairage intelligent LED</li>
-                        <li>Volets automatisés</li>
-                        <li>Thermostat connecté</li>
-                        <li>Détection de présence</li>
-                        <li>Contrôle via smartphone</li>
-                    </ul>
-                    <a href="services/domotique.html" class="btn btn-outline">
-                        En savoir plus
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-
-                <!-- Service 6: Borne de recharge -->
-                <div class="service-card">
-                    <div class="service-card-icon">
-                        <i class="fas fa-charging-station"></i>
-                    </div>
-                    <h3>Borne de recharge EV</h3>
-                    <p>Installation professionnelle de borne de recharge pour voiture électrique avec conseils sur les primes disponibles.</p>
-                    <ul>
-                        <li>Wallbox performante</li>
-                        <li>Aide aux primes (Bruxelles-Capitale, Brabant Flamand, Brabant Wallon)</li>
-                        <li>Installation sécurisée</li>
-                        <li>Charge rapide jusqu'à 22kW</li>
-                        <li>Compatible toutes marques</li>
-                    </ul>
-                    <a href="services/borne-recharge.html" class="btn btn-outline">
-                        En savoir plus
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-
-                <!-- Service 7: Panneaux solaires -->
-                <div class="service-card">
-                    <div class="service-card-icon">
-                        <i class="fas fa-solar-panel"></i>
-                    </div>
-                    <h3>Panneaux solaires</h3>
-                    <p>Raccordement électrique de votre installation photovoltaïque. Optimisation et mise en service de l'onduleur.</p>
-                    <ul>
-                        <li>Raccordement onduleur</li>
-                        <li>Mise à la terre PV</li>
-                        <li>Protection AC/DC</li>
-                        <li>Compteur bidirectionnel</li>
-                        <li>Optimisation production</li>
-                    </ul>
-                    <a href="services/panneaux-solaires.html" class="btn btn-outline">
-                        En savoir plus
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-
-                <!-- Service 9: Alarme & Surveillance -->
-                <div class="service-card">
-                    <div class="service-card-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>Alarme & Surveillance</h3>
-                    <p>Systèmes de sécurité haut de gamme pour résidences et espaces professionnels. Protection fiable et discrète.</p>
-                    <ul>
-                        <li>Détection intrusion avancée</li>
-                        <li>Caméras haute résolution</li>
-                        <li>Contrôle à distance</li>
-                        <li>Alertes instantanées</li>
-                        <li>Infrastructure sécurisée</li>
-                    </ul>
-                    <a href="services/alarme-surveillance.html" class="btn btn-outline">
-                        En savoir plus
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- CTA Section -->
-            <div style="background: var(--primary-pale); padding: var(--space-3xl); border-radius: var(--radius-xl); text-align: center;">
-                <h2 class="mb-lg">Un projet en électricité ?</h2>
-                <p style="font-size: var(--text-lg); color: var(--neutral-700); margin-bottom: var(--space-xl); max-width: 600px; margin-left: auto; margin-right: auto;">
-                    Contactez-nous pour un devis gratuit et personnalisé. Nous étudions votre projet et vous proposons la meilleure solution.
-                </p>
-                <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap;">
-                    <a href="contact.html" class="btn btn-primary btn-lg">
-                        <i class="fas fa-file-invoice"></i>
-                        Demander un devis gratuit
-                    </a>
-                    <a href="tel:+32485166635" class="btn btn-outline btn-lg">
-                        <i class="fas fa-phone"></i>
-                        +32 485 16 66 35
-                    </a>
-                </div>
-            </div>
+      <!-- Rénovation -->
+      <div class="service-detail service-detail--reverse fade-up" id="renovation">
+        <div class="service-detail__text">
+          <p class="eyebrow">02 — Installation complète</p>
+          <h2>Rénovation électrique</h2>
+          <p>Remise à neuf totale ou partielle de votre installation. Câblage neuf, nouveaux circuits, tableau moderne — tout est pensé pour la durabilité, la sécurité et le confort.</p>
+          <ul class="service-detail__features">
+            <li><i class="fas fa-check"></i> Remplacement du câblage</li>
+            <li><i class="fas fa-check"></i> Nouveaux circuits & prises</li>
+            <li><i class="fas fa-check"></i> Tableau électrique moderne</li>
+            <li><i class="fas fa-check"></i> Éclairage LED intégré</li>
+            <li><i class="fas fa-check"></i> Installation conforme RGIE</li>
+            <li><i class="fas fa-check"></i> Documentation complète</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary"><i class="fas fa-file-invoice"></i> Demander un devis</a>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-main">
-                <div class="footer-about">
-                    <a href="index.html" class="footer-logo">
-                        <img src="images/logo-lumina-electric.png" alt="Lumina Electric" style="height: 160px; width: auto; margin-bottom: var(--space-lg);">
-                    </a>
-                    <p>Votre partenaire de confiance pour tous vos travaux électriques en Belgique. Électricien certifié RGIE/AREI.</p>
-                </div>
-                
-                <div class="footer-column">
-                    <h3 class="footer-title">Liens rapides</h3>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Accueil</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="realisations.html">Réalisations</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
-                        <li><a href="a-propos.html">À propos</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h3 class="footer-title">Services</h3>
-                    <ul class="footer-links">
-                        <li><a href="services/conformite-rgie.html">Conformité RGIE</a></li>
-                        <li><a href="services/renovation-electrique.html">Rénovation</a></li>
-                        <li><a href="services/depannage.html">Dépannage</a></li>
-                        <li><a href="services/borne-recharge.html">Borne de recharge</a></li>
-                        <li><a href="services/domotique.html">Domotique</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h3 class="footer-title">Contact</h3>
-                    <div class="footer-contact-item">
-                        <i class="fas fa-phone"></i>
-                        <a href="tel:+32485166635">+32 485 16 66 35</a>
-                    </div>
-                    <div class="footer-contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <a href="mailto:info@luminaelectric.be">info@luminaelectric.be</a>
-                    </div>
-                    <div class="footer-contact-item">
-                        <i class="fab fa-whatsapp"></i>
-                        <a href="https://wa.me/32485166635" target="_blank">WhatsApp</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2026 Lumina Electric. Tous droits réservés.</p>
-                <div class="footer-legal">
-                    <a href="privacy.html">Confidentialité</a>
-                    <a href="mentions-legales.html">Mentions légales</a>
-                </div>
-            </div>
+        <div class="service-detail__img">
+          <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=80" alt="Rénovation électrique">
         </div>
-    </footer>
+      </div>
 
-    <script src="js/main.js"></script>
+      <!-- Dépannage -->
+      <div class="service-detail fade-up" id="depannage">
+        <div class="service-detail__img">
+          <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=900&q=80" alt="Dépannage électrique urgence">
+        </div>
+        <div class="service-detail__text">
+          <p class="eyebrow">03 — 7j/7</p>
+          <h2>Dépannage électrique</h2>
+          <p>Panne soudaine, disjoncteur qui saute, coupure totale — nous intervenons sous 2 à 4 heures. Diagnostic précis, solution rapide, sécurité rétablie.</p>
+          <ul class="service-detail__features">
+            <li><i class="fas fa-check"></i> Court-circuit & disjonction</li>
+            <li><i class="fas fa-check"></i> Panne de courant totale</li>
+            <li><i class="fas fa-check"></i> Problème de mise à la terre</li>
+            <li><i class="fas fa-check"></i> Tableau qui saute</li>
+            <li><i class="fas fa-check"></i> Intervention 2-4h en urgence</li>
+            <li><i class="fas fa-check"></i> Disponible week-end & jours fériés</li>
+          </ul>
+          <a href="tel:+32485166635" class="btn btn-primary"><i class="fas fa-phone"></i> Appel d'urgence</a>
+        </div>
+      </div>
+
+      <!-- Tableau -->
+      <div class="service-detail service-detail--reverse fade-up" id="tableau">
+        <div class="service-detail__text">
+          <p class="eyebrow">04 — Le cœur de l'installation</p>
+          <h2>Tableau électrique</h2>
+          <p>Votre tableau est le cœur de votre installation. Installation, remplacement ou mise aux normes : nous garantissons un coffret moderne, organisé et conforme RGIE.</p>
+          <ul class="service-detail__features">
+            <li><i class="fas fa-check"></i> Tableau aux normes RGIE</li>
+            <li><i class="fas fa-check"></i> Différentiel 30mA</li>
+            <li><i class="fas fa-check"></i> Disjoncteurs calibrés</li>
+            <li><i class="fas fa-check"></i> Parafoudre recommandé</li>
+            <li><i class="fas fa-check"></i> Extension de circuits</li>
+            <li><i class="fas fa-check"></i> Étiquetage clair et précis</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary"><i class="fas fa-file-invoice"></i> Demander un devis</a>
+        </div>
+        <div class="service-detail__img">
+          <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=900&q=80" alt="Tableau électrique">
+        </div>
+      </div>
+
+      <!-- Domotique -->
+      <div class="service-detail fade-up" id="domotique">
+        <div class="service-detail__img">
+          <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80" alt="Domotique smart home">
+        </div>
+        <div class="service-detail__text">
+          <p class="eyebrow">05 — Maison intelligente</p>
+          <h2>Domotique & Smart Home</h2>
+          <p>Contrôlez votre maison depuis votre smartphone. Éclairage, volets, thermostat, sécurité — automatisez tout pour plus de confort et d'économies d'énergie.</p>
+          <ul class="service-detail__features">
+            <li><i class="fas fa-check"></i> Éclairage intelligent LED</li>
+            <li><i class="fas fa-check"></i> Volets automatisés</li>
+            <li><i class="fas fa-check"></i> Thermostat connecté</li>
+            <li><i class="fas fa-check"></i> Détection de présence</li>
+            <li><i class="fas fa-check"></i> Contrôle via smartphone</li>
+            <li><i class="fas fa-check"></i> Compatibilité Alexa / Google</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary"><i class="fas fa-file-invoice"></i> Demander un devis</a>
+        </div>
+      </div>
+
+      <!-- Borne EV -->
+      <div class="service-detail service-detail--reverse fade-up" id="borne">
+        <div class="service-detail__text">
+          <p class="eyebrow">06 — Mobilité électrique</p>
+          <h2>Borne de recharge EV</h2>
+          <p>Installation professionnelle certifiée de votre wallbox. Jusqu'à 22kW, compatible avec toutes les marques de véhicules électriques. Nous vous guidons sur les primes disponibles.</p>
+          <ul class="service-detail__features">
+            <li><i class="fas fa-check"></i> Wallbox performante</li>
+            <li><i class="fas fa-check"></i> Installation certifiée</li>
+            <li><i class="fas fa-check"></i> Jusqu'à 22kW</li>
+            <li><i class="fas fa-check"></i> Aide aux primes disponibles</li>
+            <li><i class="fas fa-check"></i> Compatible toutes marques</li>
+            <li><i class="fas fa-check"></i> Protection réseau adaptée</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary"><i class="fas fa-file-invoice"></i> Demander un devis</a>
+        </div>
+        <div class="service-detail__img">
+          <img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=900&q=80" alt="Borne de recharge EV">
+        </div>
+      </div>
+
+      <!-- Solaire -->
+      <div class="service-detail fade-up" id="solaire">
+        <div class="service-detail__img">
+          <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=900&q=80" alt="Panneaux solaires photovoltaïques">
+        </div>
+        <div class="service-detail__text">
+          <p class="eyebrow">07 — Énergie renouvelable</p>
+          <h2>Panneaux solaires</h2>
+          <p>Raccordement et optimisation de votre installation photovoltaïque. Mise en service de l'onduleur, protection AC/DC, compteur bidirectionnel — tout est géré.</p>
+          <ul class="service-detail__features">
+            <li><i class="fas fa-check"></i> Raccordement onduleur</li>
+            <li><i class="fas fa-check"></i> Mise à la terre PV</li>
+            <li><i class="fas fa-check"></i> Protection AC & DC</li>
+            <li><i class="fas fa-check"></i> Compteur bidirectionnel</li>
+            <li><i class="fas fa-check"></i> Optimisation production</li>
+            <li><i class="fas fa-check"></i> Conformité réseau</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary"><i class="fas fa-file-invoice"></i> Demander un devis</a>
+        </div>
+      </div>
+
+      <!-- Batteries résidentielles -->
+      <div class="service-detail service-detail--reverse fade-up" id="batteries">
+        <div class="service-detail__text">
+          <p class="eyebrow">08 — Énergie renouvelable</p>
+          <h2>Batteries résidentielles</h2>
+          <p>Stockez l'énergie produite par vos panneaux solaires et consommez-la quand vous en avez besoin. Nos solutions de batteries résidentielles réduisent votre dépendance au réseau et maximisent votre autoconsommation.</p>
+          <ul class="service-detail__features">
+            <li><i class="fas fa-check"></i> Installation batterie lithium-ion</li>
+            <li><i class="fas fa-check"></i> Couplage AC/DC avec onduleur</li>
+            <li><i class="fas fa-check"></i> Maximisation autoconsommation</li>
+            <li><i class="fas fa-check"></i> Monitoring en temps réel</li>
+            <li><i class="fas fa-check"></i> Indépendance réseau accrue</li>
+            <li><i class="fas fa-check"></i> Compatibilité Powerwall & BYD</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary"><i class="fas fa-file-invoice"></i> Demander un devis</a>
+        </div>
+        <div class="service-detail__img">
+          <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=900&q=80" alt="Batteries résidentielles stockage énergie">
+        </div>
+      </div>
+
+      <!-- Alarme -->
+      <div class="service-detail service-detail--reverse fade-up" id="alarme">
+        <div class="service-detail__text">
+          <p class="eyebrow">09 — Sécurité & protection</p>
+          <h2>Alarme & Surveillance</h2>
+          <p>Protégez votre bien avec des systèmes de sécurité haut de gamme. Détection intrusion, caméras HD, alertes en temps réel — une protection fiable et discrète.</p>
+          <ul class="service-detail__features">
+            <li><i class="fas fa-check"></i> Détection intrusion avancée</li>
+            <li><i class="fas fa-check"></i> Caméras haute résolution</li>
+            <li><i class="fas fa-check"></i> Contrôle à distance</li>
+            <li><i class="fas fa-check"></i> Alertes instantanées</li>
+            <li><i class="fas fa-check"></i> Infrastructure sécurisée</li>
+            <li><i class="fas fa-check"></i> Installation discrète</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary"><i class="fas fa-file-invoice"></i> Demander un devis</a>
+        </div>
+        <div class="service-detail__img">
+          <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=900&q=80" alt="Alarme et surveillance">
+        </div>
+      </div>
+
+      <!-- Rénovation résidentielle -->
+      <div class="service-detail fade-up" id="renovation-residentielle">
+        <div class="service-detail__img">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80" alt="Rénovation résidentielle générale">
+        </div>
+        <div class="service-detail__text">
+          <p class="eyebrow">10 — Rénovation & construction</p>
+          <h2>Rénovation résidentielle</h2>
+          <p>Via nos partenaires de confiance, nous vous accompagnons dans votre projet de rénovation résidentielle complète. De la cuisine à la salle de bain, en passant par les revêtements et l'isolation — un seul interlocuteur pour tout gérer.</p>
+          <ul class="service-detail__features">
+            <li><i class="fas fa-check"></i> Cuisine & salle de bain</li>
+            <li><i class="fas fa-check"></i> Revêtements sols & murs</li>
+            <li><i class="fas fa-check"></i> Isolation thermique & phonique</li>
+            <li><i class="fas fa-check"></i> Menuiseries intérieures & extérieures</li>
+            <li><i class="fas fa-check"></i> Coordination tous corps de métier</li>
+            <li><i class="fas fa-check"></i> Suivi de chantier complet</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary"><i class="fas fa-file-invoice"></i> Demander un devis</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-inner fade-up">
+        <h2>Un projet en électricité ?</h2>
+        <p>Contactez-nous pour un devis gratuit et personnalisé. Réponse sous 24h.</p>
+        <div class="cta-buttons">
+          <a href="contact.html" class="btn btn-primary btn-lg"><i class="fas fa-file-invoice"></i> Devis gratuit</a>
+          <a href="tel:+32485166635" class="btn btn-outline-white btn-lg"><i class="fas fa-phone"></i> +32 485 16 66 35</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__main">
+        <div class="footer__brand">
+          <img src="images/logo-white.svg" alt="Lumina Electric" class="nav__logo-white">
+          <img src="images/logo-color.svg" alt="Lumina Electric" class="nav__logo-color">
+          <p>Expert en électricité en Belgique. Conformité RGIE, rénovation, dépannage et installations smart home.</p>
+          <p class="footer__tva">TVA : BE1008470101</p>
+        </div>
+        <div class="footer__col">
+          <h4>Services</h4>
+          <ul class="footer__links">
+            <li><a href="#conformite">Conformité RGIE</a></li>
+            <li><a href="#renovation">Rénovation électrique</a></li>
+            <li><a href="#depannage">Dépannage urgent</a></li>
+            <li><a href="#tableau">Tableau électrique</a></li>
+            <li><a href="#domotique">Domotique</a></li>
+            <li><a href="#borne">Borne EV</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Entreprise</h4>
+          <ul class="footer__links">
+            <li><a href="a-propos.html">À propos</a></li>
+            <li><a href="realisations.html">Réalisations</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Contact</h4>
+          <div class="footer__contact-item"><i class="fas fa-phone"></i><a href="tel:+32485166635">+32 485 16 66 35</a></div>
+          <div class="footer__contact-item"><i class="fas fa-envelope"></i><a href="mailto:info@luminaelectric.be">info@luminaelectric.be</a></div>
+          <div class="footer__contact-item"><i class="fab fa-whatsapp"></i><a href="https://wa.me/32485166635" target="_blank" rel="noopener">WhatsApp</a></div>
+          <div class="footer__contact-item"><i class="fas fa-clock"></i><span>Lun-Ven : 8h-18h · Sam : 9h-13h</span></div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 Lumina Electric. Tous droits réservés.</p>
+        <div class="footer__legal">
+          <a href="mentions-legales.html">Mentions légales</a>
+          <a href="confidentialite.html">Confidentialité</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>

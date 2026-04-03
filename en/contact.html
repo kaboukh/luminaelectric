@@ -1,386 +1,307 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Free Quote Electrician Brussels & Brabant | Contact Lumina Electric</title>
-    <meta name="description" content="Request your free quote online. Response within 24h by phone or email. Professional electrician RGIE certified in Brussels-Capital, Flemish Brabant and Walloon Brabant.">
-    
-    <link rel="icon" type="image/png" href="../images/logo-lumina-electric.png">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
-    <link rel="stylesheet" href="../css/variables.css">
-    <link rel="stylesheet" href="../css/components.css">
-    <link rel="stylesheet" href="../css/layout.css">
-    <link rel="stylesheet" href="../css/pages.css">
-    <link rel="stylesheet" href="../css/mobile.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Quote Electrician Brussels & Brabant | Contact Lumina Electric</title>
+  <meta name="description" content="Request your free quote online. Response within 24h. RGIE-certified electrician in Brussels-Capital, Flemish Brabant and Walloon Brabant.">
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <!-- Top Bar -->
-    <div class="top-bar">
-        <div class="top-bar-container">
-            <div class="top-bar-info">
-                <a href="tel:+32485166635" class="top-bar-item">
-                    <i class="fas fa-phone"></i>
-                    <span>+32 485 16 66 35</span>
-                </a>
-                <a href="mailto:info@luminaelectric.be" class="top-bar-item">
-                    <i class="fas fa-envelope"></i>
-                    <span>info@luminaelectric.be</span>
-                </a>
-            </div>
-            <div class="lang-switcher">
-                <button onclick="window.location.href='../contact.html'">FR</button>
-                <button onclick="window.location.href='../nl/contact.html'">NL</button>
-                <button class="active">EN</button>
-            </div>
+  <div class="urgence-banner">
+    <a href="tel:+32485166635"><i class="fas fa-bolt"></i> Electrical emergency 7d/7 — Response within 2-4h &nbsp;·&nbsp; +32 485 16 66 35 <i class="fas fa-arrow-right"></i></a>
+  </div>
+  <nav class="nav nav--transparent" id="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__logo">
+          <img src="../images/logo-white.svg" alt="Lumina Electric" class="nav__logo-white">
+          <img src="../images/logo-color.svg" alt="Lumina Electric" class="nav__logo-color">
+        </a>
+        <ul class="nav__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+        <div class="nav__cta">
+          <div class="nav__lang">
+            <button onclick="location.href='../contact.html'">FR</button>
+            <button onclick="location.href='../nl/contact.html'">NL</button>
+            <button class="active">EN</button>
+          </div>
+          <a href="tel:+32485166635" class="nav__phone"><i class="fas fa-phone"></i> Call</a>
         </div>
+        <button class="nav__toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
     </div>
+  </nav>
+  <div class="nav__mobile" id="mobileMenu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <div class="nav__mobile-cta">
+      <a href="tel:+32485166635" class="btn btn-primary"><i class="fas fa-phone"></i> +32 485 16 66 35</a>
+    </div>
+  </div>
 
-    <!-- Header -->
-    <header class="header" id="header">
-        <div class="header-container">
-            <a href="index.html" class="logo">
-                <img src="../images/logo-lumina-electric.png" alt="Lumina Electric - cherish your energy" style="height: 120px; width: auto;">
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-header__eyebrow fade-in">Response within 24h</span>
+      <h1 class="fade-up">Request a free quote</h1>
+      <p class="fade-up">Fill in the form or call us directly. We'll get back to you quickly.</p>
+    </div>
+  </section>
+
+  <section style="padding:var(--section-pad) 0;">
+    <div class="container">
+      <div class="contact-grid">
+
+        <div class="contact-form-wrap fade-up">
+          <h2>Contact form</h2>
+          <form id="contactForm" name="contact-en" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="contact-en">
+            <p style="display:none;"><label>Do not fill: <input name="bot-field"></label></p>
+
+            <div class="form-group">
+              <label class="form-label" for="name">Full name <span class="req">*</span></label>
+              <input type="text" id="name" name="name" class="form-control" required placeholder="Your full name">
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="phone">Phone <span class="req">*</span></label>
+                <input type="tel" id="phone" name="phone" class="form-control" required placeholder="+32 485 16 66 35">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="email">Email <span class="req">*</span></label>
+                <input type="email" id="email" name="email" class="form-control" required placeholder="your@email.be">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="postal_code">Postal code <span class="req">*</span></label>
+                <input type="text" id="postal_code" name="postal_code" class="form-control" required placeholder="1000" maxlength="4" pattern="[0-9]{4}">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="city">City <span class="req">*</span></label>
+                <input type="text" id="city" name="city" class="form-control" required placeholder="Brussels">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="service_type">Project type <span class="req">*</span></label>
+              <select id="service_type" name="service_type" class="form-control" required>
+                <option value="">Select a service</option>
+                <option value="rgie-compliance">RGIE compliance</option>
+                <option value="renovation">Full electrical renovation</option>
+                <option value="emergency">Emergency repair</option>
+                <option value="panel">Breaker panel</option>
+                <option value="lighting">LED lighting</option>
+                <option value="smarthome">Smart home / Automation</option>
+                <option value="ev-charger">EV charging station</option>
+                <option value="solar">Solar panels</option>
+                <option value="alarm">Alarm & Surveillance</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="message">Project description <span class="req">*</span></label>
+              <textarea id="message" name="message" class="form-control" required minlength="20" placeholder="Describe your project: type of work, urgency, any specific constraints..."></textarea>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="availability">Preferred availability</label>
+              <select id="availability" name="availability" class="form-control">
+                <option value="asap">As soon as possible</option>
+                <option value="this-week">This week</option>
+                <option value="2-weeks">Within 2 weeks</option>
+                <option value="1-month">Within a month</option>
+                <option value="flexible">No rush</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="referral">How did you find us?</label>
+              <select id="referral" name="referral" class="form-control">
+                <option value="">Select</option>
+                <option value="google">Google</option>
+                <option value="recommendation">Recommendation</option>
+                <option value="social-media">Social media</option>
+                <option value="flyer">Flyer / Ad</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Photos / Documents <span style="color:var(--gray-400);font-weight:400;">(optional — max. 5 files, 10 MB each)</span></label>
+              <div class="upload-zone" id="uploadZone">
+                <input type="file" id="fileInput" name="files" multiple accept="image/*,.pdf,.doc,.docx" style="display:none;">
+                <div class="upload-zone__inner" id="uploadInner">
+                  <i class="fas fa-cloud-upload-alt"></i>
+                  <p>Drag files here or <button type="button" onclick="document.getElementById('fileInput').click()">browse</button></p>
+                  <span>JPG, PNG, PDF, DOC — 10 MB max per file</span>
+                </div>
+                <ul class="upload-list" id="uploadList"></ul>
+              </div>
+            </div>
+
+            <div class="form-check">
+              <input type="checkbox" id="privacy" name="privacy" required>
+              <label for="privacy">I accept the <a href="../confidentialite.html" target="_blank">privacy policy</a> and the processing of my personal data. <span class="req">*</span></label>
+            </div>
+
+            <div class="form-check">
+              <input type="checkbox" id="newsletter" name="newsletter">
+              <label for="newsletter">I'd like to receive tips and news by email (optional)</label>
+            </div>
+
+            <div class="form-submit">
+              <button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center;">
+                <i class="fas fa-paper-plane"></i> Send my request
+              </button>
+              <p style="font-size:0.8125rem;color:var(--gray-400);text-align:center;margin-top:12px;">* Required fields · Response guaranteed within 24h</p>
+            </div>
+          </form>
+        </div>
+
+        <div class="contact-sidebar fade-up">
+
+          <div class="contact-card">
+            <div class="contact-card__icon"><i class="fas fa-phone"></i></div>
+            <h4>By phone</h4>
+            <a href="tel:+32485166635" style="font-size:1.375rem;font-weight:800;color:var(--gray-900);display:block;margin:6px 0;">+32 485 16 66 35</a>
+            <p class="contact-card__meta">Mon-Fri: 8am-6pm · Sat: 9am-1pm</p>
+            <p class="contact-card__meta" style="color:var(--red);font-weight:600;margin-top:6px;"><i class="fas fa-bolt"></i> Emergency: available 7d/7</p>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-card__icon"><i class="fas fa-envelope"></i></div>
+            <h4>By email</h4>
+            <a href="mailto:info@luminaelectric.be">info@luminaelectric.be</a>
+            <p class="contact-card__meta" style="margin-top:6px;">Response within 24h (business days)</p>
+          </div>
+
+          <div class="contact-card whatsapp-card">
+            <div class="contact-card__icon" style="background:linear-gradient(135deg,#25D366,#128C7E);">
+              <i class="fab fa-whatsapp" style="color:white;"></i>
+            </div>
+            <h4>Via WhatsApp</h4>
+            <p>Chat with us directly and share photos of your installation.</p>
+            <a href="https://wa.me/32485166635" target="_blank" rel="noopener" class="btn btn-outline btn-sm" style="margin-top:14px;">
+              Open WhatsApp <i class="fas fa-external-link-alt"></i>
             </a>
+          </div>
 
-            <nav class="nav">
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="services.html" class="nav-link">Services</a></li>
-                    <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
-                    <li><a href="faq.html" class="nav-link">FAQ</a></li>
-                    <li><a href="about.html" class="nav-link">About us</a></li>
-                    <li><a href="contact.html" class="nav-link active">Contact</a></li>
-                </ul>
-                
-                <div class="header-cta">
-                    <a href="tel:+32485166635" class="btn btn-outline btn-sm">
-                        <i class="fas fa-phone"></i>
-                        Call
-                    </a>
-                    <a href="contact.html" class="btn btn-primary btn-sm">
-                        <i class="fas fa-file-invoice"></i>
-                        Free quote
-                    </a>
-                </div>
-            </nav>
-
-            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </header>
-
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <h1>Request a free quote</h1>
-            <p class="lead">Fill out the form below or call us directly. We respond within 24 hours.</p>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact-page">
-        <div class="container">
-            <div class="contact-grid">
-                <!-- Form -->
-                <div class="contact-form-container">
-                    <h2 class="mb-lg">Contact form</h2>
-                    
-                    <div class="alert alert-info">
-                        <i class="fas fa-clock"></i>
-                        <strong>Response within 24h maximum</strong><br>
-                        We will review your request and contact you quickly by phone or email.
-                    </div>
-                    
-                    <form id="contactForm" name="contact-en" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-                        <!-- Netlify Forms fields -->
-                        <input type="hidden" name="form-name" value="contact-en">
-                        <p style="display:none;">
-                            <label>Don't fill this out (anti-spam) : <input name="bot-field" /></label>
-                        </p>
-                        
-                        <!-- Personal information -->
-                        <div class="form-group">
-                            <label for="name" class="form-label required">Full name</label>
-                            <input type="text" id="name" name="name" class="form-control" required placeholder="Your first and last name">
-                        </div>
-                        
-                        <div class="grid grid-2">
-                            <div class="form-group">
-                                <label for="phone" class="form-label required">Phone</label>
-                                <input type="tel" id="phone" name="phone" class="form-control" required placeholder="+32 485 16 66 35">
-                                <span class="form-help">We will call you back quickly</span>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="email" class="form-label required">Email</label>
-                                <input type="email" id="email" name="email" class="form-control" required placeholder="your@email.com">
-                            </div>
-                        </div>
-                        
-                        <!-- Location -->
-                        <div class="grid grid-2">
-                            <div class="form-group">
-                                <label for="postal_code" class="form-label required">Postal code</label>
-                                <input type="text" id="postal_code" name="postal_code" class="form-control" required placeholder="1000" maxlength="4" pattern="[0-9]{4}">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="city" class="form-label required">City</label>
-                                <input type="text" id="city" name="city" class="form-control" required placeholder="Brussels">
-                            </div>
-                        </div>
-                        
-                        <!-- Project type -->
-                        <div class="form-group">
-                            <label for="service_type" class="form-label required">Type of project</label>
-                            <select id="service_type" name="service_type" class="form-control" required>
-                                <option value="">Select a service</option>
-                                <option value="rgie-compliance">RGIE Compliance</option>
-                                <option value="renovation">Complete electrical renovation</option>
-                                <option value="emergency">Emergency / Troubleshooting</option>
-                                <option value="panel">Electrical panel</option>
-                                <option value="lighting">LED Lighting</option>
-                                <option value="home-automation">Home automation / Smart home</option>
-                                <option value="ev-charger">EV charging station</option>
-                                <option value="solar">Solar panels / Optimization</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        
-                        <!-- Description -->
-                        <div class="form-group">
-                            <label for="message" class="form-label required">Project description</label>
-                            <textarea id="message" name="message" class="form-control" required minlength="20" placeholder="Describe your project briefly: type of work, urgency, special requirements..."></textarea>
-                            <span class="form-help">Minimum 20 characters</span>
-                        </div>
-                        
-                        <!-- Photos (optional) -->
-                        <div class="form-group">
-                            <label for="photos" class="form-label">Attach photos (optional)</label>
-                            <input type="file" id="photos" name="photos" class="form-control" multiple accept="image/*">
-                            <span class="form-help">Photos of your current installation (max 5 photos, 10MB)</span>
-                        </div>
-                        
-                        <!-- Availability -->
-                        <div class="form-group">
-                            <label for="availability" class="form-label">Desired availability</label>
-                            <select id="availability" name="availability" class="form-control">
-                                <option value="asap">As soon as possible</option>
-                                <option value="this-week">This week</option>
-                                <option value="2-weeks">Within 2 weeks</option>
-                                <option value="1-month">Within a month</option>
-                                <option value="flexible">Flexible</option>
-                            </select>
-                        </div>
-                        
-                        <!-- How did you hear about us -->
-                        <div class="form-group">
-                            <label for="referral" class="form-label">How did you hear about us?</label>
-                            <select id="referral" name="referral" class="form-control">
-                                <option value="">Select</option>
-                                <option value="google">Google</option>
-                                <option value="recommendation">Recommendation</option>
-                                <option value="social-media">Social media</option>
-                                <option value="flyer">Flyer / Advertisement</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        
-                        <!-- GDPR consents -->
-                        <div class="form-check">
-                            <input type="checkbox" id="privacy" name="privacy" required>
-                            <label for="privacy">
-                                I accept the <a href="legal.html#privacy" target="_blank">privacy policy</a> and the processing of my personal data. *
-                            </label>
-                        </div>
-                        
-                        <div class="form-check">
-                            <input type="checkbox" id="newsletter" name="newsletter">
-                            <label for="newsletter">
-                                I want to receive tips and news by email (optional)
-                            </label>
-                        </div>
-                        
-                        <!-- Submit button -->
-                        <button type="submit" class="btn btn-primary btn-lg btn-full mt-lg">
-                            <i class="fas fa-paper-plane"></i>
-                            Send my request
-                        </button>
-                        
-                        <p style="font-size: var(--text-sm); color: var(--neutral-600); text-align: center; margin-top: var(--space-md);">
-                            * Required fields
-                        </p>
-                    </form>
-                </div>
-                
-                <!-- Contact information -->
-                <div class="contact-info">
-                    <h2 class="mb-lg">Other ways to contact us</h2>
-                    
-                    <!-- Direct contact -->
-                    <div class="card mb-lg">
-                        <div class="card-body">
-                            <h3 style="font-size: var(--text-xl); margin-bottom: var(--space-lg);">
-                                <i class="fas fa-phone" style="color: var(--primary);"></i>
-                                By phone
-                            </h3>
-                            <p><strong>Main line</strong></p>
-                            <p style="font-size: var(--text-2xl); color: var(--primary); font-weight: var(--font-bold); margin-bottom: var(--space-md);">
-                                <a href="tel:+32485166635">+32 485 16 66 35</a>
-                            </p>
-                            <p style="font-size: var(--text-sm); color: var(--neutral-600);">
-                                Mon-Fri: 8am-6pm<br>
-                                Sat: 9am-1pm
-                            </p>
-                            <p style="font-size: var(--text-sm); color: var(--error); font-weight: var(--font-semibold); margin-top: var(--space-md);">
-                                <i class="fas fa-exclamation-triangle"></i>
-                                Emergency: Available 7/7
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <!-- Email -->
-                    <div class="card mb-lg">
-                        <div class="card-body">
-                            <h3 style="font-size: var(--text-xl); margin-bottom: var(--space-lg);">
-                                <i class="fas fa-envelope" style="color: var(--primary);"></i>
-                                By email
-                            </h3>
-                            <p><a href="mailto:info@luminaelectric.be" style="font-size: var(--text-lg); color: var(--primary);">
-                                info@luminaelectric.be
-                            </a></p>
-                            <p style="font-size: var(--text-sm); color: var(--neutral-600); margin-top: var(--space-sm);">
-                                Response within 24h (business days)
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <!-- WhatsApp -->
-                    <a href="https://wa.me/32485166635" class="card mb-lg" style="display: block; text-decoration: none; transition: transform var(--transition-base);" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">
-                        <div class="card-body">
-                            <h3 style="font-size: var(--text-xl); margin-bottom: var(--space-lg);">
-                                <i class="fab fa-whatsapp" style="color: #25D366;"></i>
-                                Via WhatsApp
-                            </h3>
-                            <p style="font-size: var(--text-base); margin-bottom: var(--space-sm);">
-                                Send us a message
-                            </p>
-                            <p style="font-size: var(--text-sm); color: var(--neutral-600);">
-                                Quick response during office hours
-                            </p>
-                        </div>
-                    </a>
-                    
-                    <!-- Service areas -->
-                    <div class="card" style="background: var(--primary-pale); border: 2px solid var(--primary-light);">
-                        <div class="card-body">
-                            <h3 style="font-size: var(--text-xl); margin-bottom: var(--space-lg); color: var(--primary);">
-                                <i class="fas fa-map-marked-alt"></i>
-                                Service areas
-                            </h3>
-                            <ul style="list-style: none; padding: 0;">
-                                <li style="margin-bottom: var(--space-sm); color: var(--neutral-700);">
-                                    <i class="fas fa-check-circle" style="color: var(--primary); margin-right: var(--space-sm);"></i>
-                                    Brussels-Capital Region
-                                </li>
-                                <li style="margin-bottom: var(--space-sm); color: var(--neutral-700);">
-                                    <i class="fas fa-check-circle" style="color: var(--primary); margin-right: var(--space-sm);"></i>
-                                    Flemish Brabant
-                                </li>
-                                <li style="color: var(--neutral-700);">
-                                    <i class="fas fa-check-circle" style="color: var(--primary); margin-right: var(--space-sm);"></i>
-                                    Walloon Brabant
-                                </li>
-                            </ul>
-                            <p style="font-size: var(--text-sm); color: var(--neutral-600); margin-top: var(--space-md);">
-                                <strong>VAT No:</strong> BE1008470101
-                            </p>
-                        </div>
-                    </div>
-                </div>
+          <div class="contact-card urgent-card">
+            <div class="contact-card__icon" style="background:linear-gradient(135deg,#ff3b30,#c0392b);">
+              <i class="fas fa-bolt" style="color:white;"></i>
             </div>
+            <h4>Electrical emergency</h4>
+            <p style="color:var(--gray-600);">Total power cut, burning smell, safety risk?</p>
+            <a href="tel:+32485166635" class="btn btn-sm" style="background:var(--red);color:white;margin-top:14px;width:100%;justify-content:center;">
+              <i class="fas fa-phone"></i> Emergency call 7d/7
+            </a>
+          </div>
+
+          <div class="contact-card">
+            <h4 style="margin-bottom:12px;"><i class="fas fa-lightbulb" style="color:var(--accent-dark);"></i> To speed up your quote</h4>
+            <ul style="list-style:none;font-size:0.875rem;color:var(--gray-600);line-height:1.9;">
+              <li>✓ Approximate age of the installation</li>
+              <li>✓ Property size (m²)</li>
+              <li>✓ Number of rooms</li>
+              <li>✓ Photos of the current installation</li>
+              <li>✓ Urgency or preferred timeline</li>
+            </ul>
+          </div>
+
+          <div class="contact-card" style="background:var(--near-black);border-color:transparent;">
+            <h4 style="color:white;margin-bottom:10px;"><i class="fas fa-map-marker-alt" style="color:var(--accent);"></i> Service areas</h4>
+            <ul style="list-style:none;font-size:0.875rem;color:rgba(255,255,255,0.6);line-height:2;">
+              <li><i class="fas fa-check" style="color:var(--accent);margin-right:6px;"></i> Brussels-Capital (all 19 municipalities)</li>
+              <li><i class="fas fa-check" style="color:var(--accent);margin-right:6px;"></i> Flemish Brabant (Leuven, Vilvoorde, Halle...)</li>
+              <li><i class="fas fa-check" style="color:var(--accent);margin-right:6px;"></i> Walloon Brabant (Waterloo, Wavre, Nivelles...)</li>
+            </ul>
+          </div>
+
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <div class="footer-logo">
-                        <img src="../images/logo-lumina-electric.png" alt="Lumina Electric" style="height: 60px; width: auto; margin-bottom: 1rem;">
-                    </div>
-                    <p style="color: var(--neutral-400); margin-bottom: 1rem;">Professional electrician in Belgium. RGIE compliance, renovation, troubleshooting and smart installations.</p>
-                    <div class="footer-social">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    </div>
-                </div>
+  <section style="background:var(--gray-50);padding:48px 0;">
+    <div class="container-narrow">
+      <div class="text-center fade-up">
+        <p style="font-size:0.875rem;color:var(--gray-400);line-height:1.8;">
+          <i class="fas fa-shield-alt" style="color:var(--green);margin-right:6px;"></i>
+          Your data is protected. In accordance with <strong>GDPR</strong>, your personal information is used solely to process your quote request and will never be shared with third parties.
+          <a href="../confidentialite.html" style="color:var(--accent-dark);">Privacy policy</a>
+        </p>
+      </div>
+    </div>
+  </section>
 
-                <div class="footer-column">
-                    <h4 class="footer-title">Services</h4>
-                    <ul class="footer-links">
-                        <li><a href="services.html">RGIE Compliance</a></li>
-                        <li><a href="services.html">Electrical renovation</a></li>
-                        <li><a href="services.html">Emergency troubleshooting</a></li>
-                        <li><a href="services.html">Electrical panel</a></li>
-                        <li><a href="services.html">Home automation</a></li>
-                        <li><a href="services.html">EV charging station</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-column">
-                    <h4 class="footer-title">Company</h4>
-                    <ul class="footer-links">
-                        <li><a href="about.html">About us</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="legal.html">Legal notice</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-column">
-                    <h4 class="footer-title">Contact</h4>
-                    <ul class="footer-contact">
-                        <li>
-                            <i class="fas fa-phone"></i>
-                            <a href="tel:+32485166635">+32 485 16 66 35</a>
-                        </li>
-                        <li>
-                            <i class="fas fa-envelope"></i>
-                            <a href="mailto:info@luminaelectric.be">info@luminaelectric.be</a>
-                        </li>
-                        <li>
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Brussels-Capital, Flemish Brabant, Walloon Brabant</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-id-card"></i>
-                            <strong>VAT No:</strong> BE1008470101
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2026 Lumina Electric. All rights reserved.</p>
-                <div class="footer-bottom-links">
-                    <a href="legal.html">Legal notice</a>
-                    <a href="legal.html#privacy">Privacy policy</a>
-                </div>
-            </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__main">
+        <div class="footer__brand">
+          <img src="../images/logo-white.svg" alt="Lumina Electric">
+          <p>Electrical expert in Belgium. RGIE compliance, renovation, emergency repairs and smart home installations.</p>
+          <p class="footer__tva">VAT: BE1008470101</p>
         </div>
-    </footer>
-
-    <script src="../js/main.js"></script>
+        <div class="footer__col">
+          <h4>Services</h4>
+          <ul class="footer__links">
+            <li><a href="services.html#compliance">RGIE Compliance</a></li>
+            <li><a href="services.html#renovation">Electrical renovation</a></li>
+            <li><a href="services.html#emergency">Emergency repairs</a></li>
+            <li><a href="services.html#smarthome">Smart home</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Company</h4>
+          <ul class="footer__links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Contact</h4>
+          <div class="footer__contact-item"><i class="fas fa-phone"></i><a href="tel:+32485166635">+32 485 16 66 35</a></div>
+          <div class="footer__contact-item"><i class="fas fa-envelope"></i><a href="mailto:info@luminaelectric.be">info@luminaelectric.be</a></div>
+          <div class="footer__contact-item"><i class="fab fa-whatsapp"></i><a href="https://wa.me/32485166635" target="_blank" rel="noopener">WhatsApp</a></div>
+          <div class="footer__contact-item"><i class="fas fa-clock"></i><span>Mon-Fri: 8am-6pm · Sat: 9am-1pm</span></div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 Lumina Electric. All rights reserved.</p>
+        <div class="footer__legal">
+          <a href="../mentions-legales.html">Legal notice</a>
+          <a href="../confidentialite.html">Privacy policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="../js/main.js"></script>
+  <style>
+    .upload-zone{border:2px dashed var(--gray-200);border-radius:var(--radius);background:var(--gray-50);transition:border-color var(--dur-fast) var(--ease),background var(--dur-fast) var(--ease);overflow:hidden}.upload-zone.drag-over{border-color:var(--accent);background:var(--accent-glow)}.upload-zone__inner{display:flex;flex-direction:column;align-items:center;padding:32px 20px;gap:8px;cursor:pointer}.upload-zone__inner i{font-size:2rem;color:var(--gray-300)}.upload-zone__inner p{font-size:.9375rem;color:var(--gray-600);margin:0}.upload-zone__inner p button{background:none;border:none;color:var(--accent-dark);font-weight:600;cursor:pointer;padding:0;font-size:inherit;text-decoration:underline}.upload-zone__inner span{font-size:.8125rem;color:var(--gray-400)}.upload-list{list-style:none;padding:0 16px 16px;display:flex;flex-direction:column;gap:8px}.upload-list:empty{display:none}.upload-list li{display:flex;align-items:center;gap:10px;background:white;border:1px solid var(--gray-100);border-radius:10px;padding:10px 14px;font-size:.875rem}.upload-list li .file-icon{color:var(--accent-dark);flex-shrink:0}.upload-list li .file-name{flex:1;font-weight:500;color:var(--gray-800);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.upload-list li .file-size{color:var(--gray-400);font-size:.8125rem;flex-shrink:0}.upload-list li .file-remove{background:none;border:none;cursor:pointer;color:var(--gray-400);font-size:1rem;padding:0;line-height:1;transition:color var(--dur-fast) var(--ease)}.upload-list li .file-remove:hover{color:var(--red)}.upload-list li.file-error{border-color:#fecaca;background:#fff5f5}.upload-list li.file-error .file-name{color:var(--red)}
+  </style>
+  <script>
+    (function(){const MAX_FILES=5,MAX_SIZE=10*1024*1024,zone=document.getElementById('uploadZone'),input=document.getElementById('fileInput'),list=document.getElementById('uploadList'),inner=document.getElementById('uploadInner');let files=[];function fmt(b){return b<1048576?(b/1024).toFixed(0)+' KB':(b/1048576).toFixed(1)+' MB'}function ico(f){return f.type.startsWith('image/')?'fa-file-image':f.type==='application/pdf'?'fa-file-pdf':'fa-file-alt'}function render(){list.innerHTML='';files.forEach((f,i)=>{const li=document.createElement('li');if(f.error)li.classList.add('file-error');li.innerHTML=`<i class="fas ${ico(f)} file-icon"></i><span class="file-name" title="${f.name}">${f.name}</span><span class="file-size">${f.error?f.error:fmt(f.size)}</span><button type="button" class="file-remove" aria-label="Remove"><i class="fas fa-times"></i></button>`;li.querySelector('.file-remove').addEventListener('click',()=>{files.splice(i,1);render()});list.appendChild(li)});inner.style.display=files.length>=MAX_FILES?'none':'';const dt=new DataTransfer();files.filter(f=>!f.error).forEach(f=>dt.items.add(f));input.files=dt.files}function add(newFiles){Array.from(newFiles).forEach(f=>{if(files.length>=MAX_FILES)return;if(files.find(x=>x.name===f.name&&x.size===f.size))return;if(f.size>MAX_SIZE)f.error='File too large (max 10 MB)';files.push(f)});render()}inner.addEventListener('click',e=>{if(e.target.tagName!=='BUTTON')input.click()});input.addEventListener('change',()=>{add(input.files);input.value=''});zone.addEventListener('dragover',e=>{e.preventDefault();zone.classList.add('drag-over')});zone.addEventListener('dragleave',()=>zone.classList.remove('drag-over'));zone.addEventListener('drop',e=>{e.preventDefault();zone.classList.remove('drag-over');add(e.dataTransfer.files)})})();
+  </script>
 </body>
 </html>

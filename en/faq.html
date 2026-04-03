@@ -1,981 +1,279 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>FAQ - Frequently Asked Questions | Lumina Electric</title>
-    <meta name="description" content="Answers to your questions about RGIE compliance, electrical renovations, electrical panels, EV charging stations and emergency repairs in Belgium.">
-    
-    <link rel="icon" type="image/png" href="../images/logo-lumina-electric.png">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
-    <link rel="stylesheet" href="../css/variables.css">
-    <link rel="stylesheet" href="../css/components.css">
-    <link rel="stylesheet" href="../css/layout.css">
-    <link rel="stylesheet" href="../css/pages.css">
-    <link rel="stylesheet" href="../css/mobile.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ Electricity Belgium | Frequently asked questions — Lumina Electric</title>
+  <meta name="description" content="All answers to your questions about electricity, RGIE, quotes and our services. RGIE-certified electrician in Brussels and Brabant.">
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <!-- Top Bar -->
-    <div class="top-bar">
-        <div class="top-bar-container">
-            <div class="top-bar-info">
-                <a href="tel:+32485166635" class="top-bar-item">
-                    <i class="fas fa-phone"></i>
-                    <span>+32 485 16 66 35</span>
-                </a>
-                <a href="mailto:info@luminaelectric.be" class="top-bar-item">
-                    <i class="fas fa-envelope"></i>
-                    <span>info@luminaelectric.be</span>
-                </a>
-            </div>
-            <div class="lang-switcher">
-                <button onclick="window.location.href='../faq.html'">FR</button>
-                <button onclick="window.location.href='../nl/faq.html'">NL</button>
-                <button class="active">EN</button>
-            </div>
+  <div class="urgence-banner">
+    <a href="tel:+32485166635"><i class="fas fa-bolt"></i> Electrical emergency 7d/7 — Response within 2-4h &nbsp;·&nbsp; +32 485 16 66 35 <i class="fas fa-arrow-right"></i></a>
+  </div>
+  <nav class="nav nav--transparent" id="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__logo">
+          <img src="../images/logo-white.svg" alt="Lumina Electric" class="nav__logo-white">
+          <img src="../images/logo-color.svg" alt="Lumina Electric" class="nav__logo-color">
+        </a>
+        <ul class="nav__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="faq.html" class="active">FAQ</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav__cta">
+          <div class="nav__lang">
+            <button onclick="location.href='../faq.html'">FR</button>
+            <button onclick="location.href='../nl/faq.html'">NL</button>
+            <button class="active">EN</button>
+          </div>
+          <a href="tel:+32485166635" class="nav__phone"><i class="fas fa-phone"></i> Call</a>
+          <a href="contact.html" class="nav__devis">Free quote</a>
         </div>
+        <button class="nav__toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
     </div>
+  </nav>
+  <div class="nav__mobile" id="mobileMenu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="faq.html" class="active">FAQ</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav__mobile-cta">
+      <a href="contact.html" class="btn btn-primary"><i class="fas fa-file-invoice"></i> Free quote</a>
+      <a href="tel:+32485166635" class="btn btn-outline"><i class="fas fa-phone"></i> +32 485 16 66 35</a>
+    </div>
+  </div>
 
-    <!-- Header -->
-    <header class="header" id="header">
-        <div class="header-container">
-            <a href="index.html" class="logo">
-                <img src="../images/logo-lumina-electric.png" alt="Lumina Electric" style="height: 120px; width: auto;">
-            </a>
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-header__eyebrow fade-in">Frequently asked questions</span>
+      <h1 class="fade-up">Got questions?</h1>
+      <p class="fade-up">Find all the answers to the most common questions our clients ask about electricity, RGIE and our services.</p>
+    </div>
+  </section>
 
-            <nav class="nav">
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="services.html" class="nav-link">Services</a></li>
-                    <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
-                    <li><a href="faq.html" class="nav-link active">FAQ</a></li>
-                    <li><a href="about.html" class="nav-link">About</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
-                </ul>
-                <div class="header-cta">
-                    <a href="tel:+32485166635" class="btn btn-outline btn-sm">
-                        <i class="fas fa-phone"></i> Call us
-                    </a>
-                    <a href="contact.html" class="btn btn-primary btn-sm">
-                        <i class="fas fa-file-invoice"></i> Free quote
-                    </a>
-                </div>
-            </nav>
+  <section style="padding:var(--section-pad) 0;">
+    <div class="container-narrow">
 
-            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+      <div class="fade-up" style="margin-bottom:64px;">
+        <div style="display:flex;align-items:center;gap:14px;margin-bottom:32px;">
+          <div style="width:44px;height:44px;background:linear-gradient(135deg,var(--accent),var(--accent-dark));border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <i class="fas fa-clipboard-check" style="color:var(--gray-900);font-size:1.1rem;"></i>
+          </div>
+          <h2 style="font-size:1.75rem;margin:0;">RGIE Compliance</h2>
         </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="page-header">
-        <div class="container" style="max-width: 800px; text-align: center;">
-            <span style="display: inline-block; padding: var(--space-xs) var(--space-lg); background: rgba(255,255,255,0.25); border-radius: var(--radius-full); font-size: var(--text-sm); font-weight: 600; letter-spacing: 1px; margin-bottom: var(--space-lg); color: white;">HELP & SUPPORT</span>
-            <h1>Frequently Asked Questions</h1>
-            <p class="lead" style="color: rgba(255,255,255,0.95);">Everything you need to know about our electrical services, RGIE compliance, and your projects.</p>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question"><span>What is RGIE and when is it mandatory?</span><i class="fas fa-chevron-down"></i></button>
+            <div class="faq-answer">
+              <p>The RGIE (General Regulation on Electrical Installations) is the Belgian standard defining safety rules for electrical installations. An RGIE inspection is <strong>mandatory</strong> in the following cases:</p>
+              <ul>
+                <li>Sale or rental of a property</li>
+                <li>New installation or major renovation (installation over 25 years old)</li>
+                <li>Significant modification to the existing installation</li>
+                <li>Periodic inspection every 25 years for a residential property</li>
+              </ul>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question"><span>How much does an RGIE compliance check cost?</span><i class="fas fa-chevron-down"></i></button>
+            <div class="faq-answer"><p>The cost varies depending on the size and type of installation, generally between <strong>€150 and €350</strong> for a standard home. If non-conformities are found, remediation works typically cost between <strong>€500 and €3,000</strong> depending on the scope of changes needed.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question"><span>Do you provide the single-line diagram and RGIE documents?</span><i class="fas fa-chevron-down"></i></button>
+            <div class="faq-answer">
+              <p>Absolutely. After every intervention we hand you all the <strong>required regulatory documents</strong>:</p>
+              <ul>
+                <li>Single-line diagram of the installation</li>
+                <li>Circuit position diagram</li>
+                <li>RGIE certificate of conformity</li>
+                <li>Official inspection report</li>
+                <li>Invoices and material warranties</li>
+              </ul>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question"><span>My home is over 25 years old. Do I have to get it compliant?</span><i class="fas fa-chevron-down"></i></button>
+            <div class="faq-answer"><p>Not necessarily right away — unless you are selling, renting or doing significant electrical work. However, an installation over 25 years old often carries <strong>real safety risks</strong> (ageing cables, missing RCDs, inadequate earthing). We recommend a preventive diagnostic.</p></div>
+          </div>
         </div>
-    </section>
+      </div>
 
-    <!-- Quick Links -->
-    <section style="background: var(--neutral-50); padding: var(--space-2xl) 0;">
-        <div class="container" style="max-width: 1000px;">
-            <p style="text-align: center; margin-bottom: var(--space-lg); color: var(--neutral-600);">Jump to category</p>
-            <div style="display: flex; justify-content: center; gap: var(--space-md); flex-wrap: wrap;">
-                <a href="#compliance" class="category-link">
-                    <i class="fas fa-shield-check"></i>
-                    RGIE Compliance
-                </a>
-                <a href="#works" class="category-link">
-                    <i class="fas fa-tools"></i>
-                    Works & Renovation
-                </a>
-                <a href="#panels" class="category-link">
-                    <i class="fas fa-project-diagram"></i>
-                    Electrical panels
-                </a>
-                <a href="#charging" class="category-link">
-                    <i class="fas fa-charging-station"></i>
-                    EV Charging
-                </a>
-                <a href="#troubleshooting" class="category-link">
-                    <i class="fas fa-exclamation-triangle"></i>
-                    Troubleshooting
-                </a>
-                <a href="#process" class="category-link">
-                    <i class="fas fa-map-marked-alt"></i>
-                    Process & Areas
-                </a>
-                <a href="#technical" class="category-link">
-                    <i class="fas fa-graduation-cap"></i>
-                    Technical questions
-                </a>
-            </div>
+      <div class="fade-up" style="margin-bottom:64px;">
+        <div style="display:flex;align-items:center;gap:14px;margin-bottom:32px;">
+          <div style="width:44px;height:44px;background:linear-gradient(135deg,var(--accent),var(--accent-dark));border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <i class="fas fa-file-invoice-dollar" style="color:var(--gray-900);font-size:1.1rem;"></i>
+          </div>
+          <h2 style="font-size:1.75rem;margin:0;">Quotes & Pricing</h2>
         </div>
-    </section>
-
-    <!-- FAQ Content -->
-    <section style="padding: var(--space-3xl) 0;">
-        <div class="container" style="max-width: 900px;">
-
-            <!-- RGIE Compliance -->
-            <div id="compliance" class="faq-category">
-                <div class="faq-category-header">
-                    <i class="fas fa-shield-check"></i>
-                    <h2>Compliance & RGIE</h2>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>When is RGIE compliance mandatory?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>RGIE compliance is mandatory in three main situations:</p>
-                        <ul>
-                            <li><strong>Property sale</strong>: A passing inspection is required to complete the transaction</li>
-                            <li><strong>New installation</strong>: Any new installation must be validated by an accredited body</li>
-                            <li><strong>Major modification</strong>: During substantial works (extension, major renovation, new panel)</li>
-                        </ul>
-                        <p>The inspection is conducted by an accredited body that issues a compliance certificate valid for 25 years (if no modifications are made).</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>What happens if my installation isn't compliant?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>A non-compliant installation doesn't prevent sale, but has several consequences:</p>
-                        <ul>
-                            <li><strong>Price negotiation</strong>: The buyer typically requests a discount</li>
-                            <li><strong>Compliance deadline</strong>: The buyer gets 18 months to carry out the necessary works</li>
-                            <li><strong>Safety risk</strong>: A faulty installation presents genuine hazards</li>
-                        </ul>
-                        <p><strong>Our recommendation:</strong> Address compliance before selling. This secures the transaction, adds value to the property, and avoids difficult negotiations.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Do you provide the mandatory diagrams?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Yes, absolutely. We systematically provide:</p>
-                        <ul>
-                            <li><strong>Single-line diagram</strong>: Simplified representation of the electrical installation with protection devices</li>
-                            <li><strong>Position diagram</strong>: Architectural plan showing the precise location of electrical points</li>
-                        </ul>
-                        <p>These documents are essential for RGIE inspection and are provided in both paper and digital format.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Do I need to redo my entire installation to be compliant?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p><strong>No, not necessarily.</strong> Our approach is optimized and strategic:</p>
-                        <ul>
-                            <li>We conduct a <strong>precise assessment</strong> to identify only the non-compliant elements</li>
-                            <li>We prioritize interventions based on their <strong>safety and regulatory impact</strong></li>
-                            <li>We address <strong>only the deficient components</strong>, without unnecessary work</li>
-                        </ul>
-                        <p>The goal: achieve compliance at the best cost, without redoing what's already working properly.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Works & Renovation -->
-            <div id="works" class="faq-category">
-                <div class="faq-category-header">
-                    <i class="fas fa-tools"></i>
-                    <h2>Works & Renovation</h2>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Do you handle complete electrical renovations?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Yes. We carry out <strong>partial or complete</strong> electrical renovations according to your needs:</p>
-                        <ul>
-                            <li><strong>Partial renovation</strong>: Panel replacement, critical circuit upgrades</li>
-                            <li><strong>Complete renovation</strong>: Full rewiring, new panel, modern lighting, smart home integration</li>
-                        </ul>
-                        <p>Each project includes: technical analysis, detailed quote, schedule adherence, RGIE compliance, and comprehensive documentation.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Do you work with other trades?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p><strong>Yes, we coordinate your entire project.</strong></p>
-                        <p>Through our network of selected and reliable partners (plumbers, plasterers, painters, carpenters), we offer <strong>turnkey comprehensive renovations</strong>:</p>
-                        <ul>
-                            <li>Single point of contact for all management</li>
-                            <li>Optimal coordination between trades</li>
-                            <li>Controlled schedule and deadline respect</li>
-                            <li>Guaranteed quality across all services</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>How long do the works take?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Duration depends on the project scope:</p>
-                        <ul>
-                            <li><strong>Panel replacement</strong>: 1 to 2 days</li>
-                            <li><strong>Targeted compliance work</strong>: 2 to 5 days</li>
-                            <li><strong>Partial renovation</strong>: 1 to 2 weeks</li>
-                            <li><strong>Complete renovation</strong>: 3 to 6 weeks</li>
-                        </ul>
-                        <p>After the initial technical assessment, we provide a <strong>precise and structured schedule</strong> with key milestones and projected dates.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Do you provide detailed quotes?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p><strong>Yes, complete transparency.</strong> Every Lumina Electric quote is:</p>
-                        <ul>
-                            <li><strong>Detailed</strong>: Each work item is clearly identified</li>
-                            <li><strong>Transparent</strong>: Unit prices, quantities, materials specified</li>
-                            <li><strong>No surprises</strong>: No hidden fees or unexpected charges</li>
-                            <li><strong>Structured</strong>: Logical organization by zone or phase</li>
-                        </ul>
-                        <p>We explain each line during quote presentation to ensure your complete understanding.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Electrical Panels -->
-            <div id="panels" class="faq-category">
-                <div class="faq-category-header">
-                    <i class="fas fa-project-diagram"></i>
-                    <h2>Electrical Panels & Safety</h2>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>When should an electrical panel be replaced?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Replacement is necessary in several cases:</p>
-                        <ul>
-                            <li><strong>Obsolete panel</strong>: Over 30 years old, wire fuses, no RCDs</li>
-                            <li><strong>Undersized</strong>: Circuit breakers tripping regularly, lack of circuits</li>
-                            <li><strong>RGIE non-compliance</strong>: Missing mandatory protections</li>
-                            <li><strong>Saturation</strong>: No room to add circuits (EV, smart home...)</li>
-                        </ul>
-                        <p>A modern panel improves the <strong>safety</strong>, <strong>stability</strong>, and <strong>scalability</strong> of your installation.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Do you install mandatory 30mA RCDs?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p><strong>Yes, systematically.</strong> 30mA RCDs are mandatory under RGIE to protect people from electric shock.</p>
-                        <p>We install:</p>
-                        <ul>
-                            <li><strong>Type A RCDs</strong>: For standard circuits</li>
-                            <li><strong>Type B RCDs</strong>: For EV charging stations (mandatory)</li>
-                            <li><strong>Selectivity</strong>: Smart organization to minimize nuisance tripping</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Do you offer alarm and surveillance systems?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Yes. We install <strong>complete and integrated security systems</strong>:</p>
-                        <ul>
-                            <li><strong>Intrusion alarm</strong>: Motion detectors, door/window contacts, control panel</li>
-                            <li><strong>Video surveillance</strong>: IP cameras with remote smartphone access</li>
-                            <li><strong>Smart home integration</strong>: Link with lighting, blinds, notifications</li>
-                        </ul>
-                        <p>Secured infrastructure with protected power supply and backup during network outage.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- EV Charging -->
-            <div id="charging" class="faq-category">
-                <div class="faq-category-header">
-                    <i class="fas fa-charging-station"></i>
-                    <h2>EV Charging & Modernization</h2>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Do you install charging stations for electric vehicles?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p><strong>Yes, complete and compliant installation.</strong></p>
-                        <p>Our service includes:</p>
-                        <ul>
-                            <li><strong>Capacity analysis</strong>: Verification that your installation supports the load</li>
-                            <li><strong>Secured dedicated circuit</strong>: Reinforced cabling, Type B RCD protection</li>
-                            <li><strong>Wallbox installation</strong>: 7kW (single-phase), 11kW or 22kW (three-phase) according to your vehicle</li>
-                            <li><strong>Certificates for subsidies</strong>: Complete documentation for grant applications</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Is my installation ready for an EV charger?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>That depends on several factors. We conduct a <strong>comprehensive technical analysis</strong>:</p>
-                        <ul>
-                            <li><strong>Available power</strong>: Meter and panel capacity</li>
-                            <li><strong>Cable sizing</strong>: Correct dimensions between panel and charger</li>
-                            <li><strong>Optimal location</strong>: Distance, accessibility, protection</li>
-                        </ul>
-                        <p>If your installation requires reinforcement, we propose the necessary adaptations (main breaker upgrade, panel extension...).</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Electrical Troubleshooting -->
-            <div id="troubleshooting" class="faq-category">
-                <div class="faq-category-header">
-                    <i class="fas fa-exclamation-triangle"></i>
-                    <h2>Electrical Troubleshooting</h2>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Do you provide emergency service 7/7?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p><strong>Yes, we are available 7 days a week for electrical emergencies.</strong></p>
-                        <p>Our emergency repair service guarantees:</p>
-                        <ul>
-                            <li><strong>Rapid intervention</strong>: 2 to 4 hour response time depending on location</li>
-                            <li><strong>On-site diagnosis</strong>: Immediate identification of the problem</li>
-                            <li><strong>Immediate repair</strong>: If possible with available equipment</li>
-                            <li><strong>Temporary solution</strong>: Safe restoration of service pending permanent repair if necessary</li>
-                        </ul>
-                        <p>Call <strong>+32 485 16 66 35</strong> for an emergency.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>What to do in case of a complete power outage?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p><strong>Follow these steps before calling us:</strong></p>
-                        <ol>
-                            <li><strong>Check your electrical panel</strong>: Is a circuit breaker tripped? Try to reset it (only once)</li>
-                            <li><strong>Check the meter</strong>: Is the main breaker down?</li>
-                            <li><strong>Compare with neighbors</strong>: Do they also have an outage? (network failure)</li>
-                        </ol>
-                        <p><strong>If the problem persists:</strong></p>
-                        <ul>
-                            <li>Do not attempt to reset multiple times (risk of worsening the situation)</li>
-                            <li>Unplug sensitive devices (computers, appliances)</li>
-                            <li>Contact us immediately at +32 485 16 66 35</li>
-                        </ul>
-                        <p><em>Note: If the outage affects the entire neighborhood, contact your network operator (Sibelga, Fluvius...).</em></p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>What are the most common electrical faults?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>The faults we handle most frequently:</p>
-                        <ul>
-                            <li><strong>Short circuit</strong>: Breaker trips immediately upon reset (damaged cable, defective appliance)</li>
-                            <li><strong>Overload</strong>: Breaker trips after a few minutes (too many devices on one circuit)</li>
-                            <li><strong>Defective outlet or switch</strong>: No power at an outlet or light fixture</li>
-                            <li><strong>Faulty electrical panel</strong>: Circuit breaker or RCD out of service</li>
-                            <li><strong>Ground fault</strong>: RCD trips for no apparent reason</li>
-                        </ul>
-                        <p>Our precise diagnosis quickly identifies the source of the fault and provides a lasting solution.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>How much does electrical troubleshooting cost?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p><strong>The cost varies depending on several factors:</strong></p>
-                        <ul>
-                            <li><strong>Travel fees</strong>: Variable depending on location (included in quote)</li>
-                            <li><strong>Labor</strong>: Qualified electrician hourly rate</li>
-                            <li><strong>Materials</strong>: Necessary replacement parts</li>
-                            <li><strong>Emergency</strong>: Surcharge for evening/weekend service (if applicable)</li>
-                        </ul>
-                        <p><strong>Guaranteed transparency:</strong></p>
-                        <ul>
-                            <li>Clear quote before work begins (except in case of immediate danger)</li>
-                            <li>No hidden fees</li>
-                            <li>Detailed explanation of necessary work</li>
-                        </ul>
-                        <p>Call us for a quick estimate: <strong>+32 485 16 66 35</strong></p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>My RCD keeps tripping, what should I do?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p><strong>An RCD that trips frequently indicates a current leakage problem.</strong></p>
-                        <p><strong>Possible causes:</strong></p>
-                        <ul>
-                            <li><strong>Defective appliance</strong>: Washing machine, refrigerator, oven... (faulty insulation)</li>
-                            <li><strong>Moisture</strong>: Water infiltration in an outlet or junction box</li>
-                            <li><strong>Damaged cable</strong>: Perforated insulation (construction work, rodents...)</li>
-                            <li><strong>Oversensitive RCD</strong>: 30mA unsuitable for the installation</li>
-                        </ul>
-                        <p><strong>Our intervention:</strong></p>
-                        <ul>
-                            <li>Systematic testing of each circuit</li>
-                            <li>Insulation resistance measurement</li>
-                            <li>Precise fault location</li>
-                            <li>Repair or replacement of the faulty component</li>
-                        </ul>
-                        <p><em>Never disable the RCD: it protects against electrocution.</em></p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Can I do small electrical repairs myself?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p><strong>For your safety, we advise against any intervention on the electrical installation if you do not have the required skills.</strong></p>
-                        <p><strong>You can do:</strong></p>
-                        <ul>
-                            <li>Change a light bulb</li>
-                            <li>Reset a circuit breaker (only once)</li>
-                            <li>Unplug a defective appliance</li>
-                        </ul>
-                        <p><strong>Call a professional for:</strong></p>
-                        <ul>
-                            <li>Replacing an outlet or switch</li>
-                            <li>Repairing a damaged cable</li>
-                            <li>Working in the electrical panel</li>
-                            <li>Any work on the fixed installation</li>
-                        </ul>
-                        <p><strong>Risks:</strong> electrocution, fire, installation damage, insurance invalidation.</p>
-                        <p>When in doubt, contact us: <strong>+32 485 16 66 35</strong></p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Process & Areas -->
-            <div id="process" class="faq-category">
-                <div class="faq-category-header">
-                    <i class="fas fa-map-marked-alt"></i>
-                    <h2>Process & Service Areas</h2>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Do you only work on emergencies?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p><strong>No, we handle all types of projects:</strong></p>
-                        <ul>
-                            <li><strong>Planned projects</strong>: Renovations, extensions, new installations</li>
-                            <li><strong>Compliance work</strong>: Pre-sale preparation, periodic inspection</li>
-                            <li><strong>Emergency repairs</strong>: Fast 24/7 intervention for breakdowns</li>
-                            <li><strong>Modernizations</strong>: Smart home, LED lighting, EV chargers</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>What areas do you serve?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Our priority service areas:</p>
-                        <ul>
-                            <li><strong>Brussels-Capital Region</strong>: All municipalities</li>
-                            <li><strong>Flemish Brabant</strong>: Leuven, Vilvoorde, Dilbeek, Halle, Tervuren and surrounding areas</li>
-                            <li><strong>Walloon Brabant</strong>: Waterloo, Wavre, Nivelles, Braine-l'Alleud, Ottignies-LLN</li>
-                        </ul>
-                        <p>For major projects, we also consider requests in other regions.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Do you offer turnkey solutions?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p><strong>Yes, complete project management.</strong></p>
-                        <p>We coordinate the entire project with our selected partners:</p>
-                        <ul>
-                            <li><strong>Single point of contact</strong>: You only manage one relationship</li>
-                            <li><strong>Global coordination</strong>: Schedule, trades, deliveries</li>
-                            <li><strong>Smooth and structured management</strong>: Constraint anticipation</li>
-                            <li><strong>Overall warranty</strong>: Accountability for the entire service</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Why choose Lumina Electric?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Our difference: <strong>structured and value-oriented approach.</strong></p>
-                        <ul>
-                            <li><strong>Uncompromising compliance</strong>: Strict adherence to RGIE and safety standards</li>
-                            <li><strong>Global coordination</strong>: Complete management of your project with reliable partners</li>
-                            <li><strong>Careful execution</strong>: Professional finishes, clean sites</li>
-                            <li><strong>Sustainable value</strong>: Scalable installations, comprehensive documentation</li>
-                            <li><strong>Total transparency</strong>: Detailed quotes, continuous communication, no surprises</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>How do I start a project with Lumina Electric?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p><strong>Simple in 4 steps:</strong></p>
-                        <ol style="padding-left: var(--space-lg);">
-                            <li><strong>Initial contact</strong>: Phone, email, or online form</li>
-                            <li><strong>Technical visit</strong>: We assess your installation and needs</li>
-                            <li><strong>Detailed proposal</strong>: Transparent quote with tailored solutions</li>
-                            <li><strong>Planning & execution</strong>: Schedule respect, regular follow-up, compliant delivery</li>
-                        </ol>
-                        <p style="margin-top: var(--space-md);"><a href="contact.html" class="btn btn-primary">Start my project</a></p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Technical Questions -->
-            <div id="technical" class="faq-category">
-                <div class="faq-category-header">
-                    <i class="fas fa-graduation-cap"></i>
-                    <h2>Advanced Technical Questions</h2>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>How do you size an electrical panel during renovation?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>We conduct a <strong>comprehensive and forward-looking load analysis</strong>:</p>
-                        <ul>
-                            <li><strong>Current consumption</strong>: Calculation of existing loads per circuit</li>
-                            <li><strong>Future equipment</strong>: Anticipation of EV chargers, heat pumps, smart home, air conditioning</li>
-                            <li><strong>Reserve margins</strong>: 20-30% additional capacity for evolution</li>
-                            <li><strong>Optimal distribution</strong>: Structured circuit organization by zone</li>
-                        </ul>
-                        <p>Goal: design a <strong>scalable, structured, and RGIE-compliant</strong> panel that meets your current and future needs.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>How do you optimize protection selectivity?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p><strong>Selectivity</strong> limits the impact of a fault on the entire installation:</p>
-                        <ul>
-                            <li><strong>Smart distribution</strong>: Circuits distributed across multiple RCDs</li>
-                            <li><strong>Adapted sizing</strong>: Circuit breakers sized according to loads</li>
-                            <li><strong>Discrimination</strong>: Only the faulty circuit's protection trips</li>
-                            <li><strong>Sensitive circuits isolated</strong>: Freezer, alarm, server on dedicated protections</li>
-                        </ul>
-                        <p>Result: fewer nuisance trips, better service continuity.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>How do you verify earthing quality?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Earthing is crucial for personal safety. We check:</p>
-                        <ul>
-                            <li><strong>Conductor continuity</strong>: Verification of all protective connections</li>
-                            <li><strong>Earth electrode resistance</strong>: Measurement with earth tester (< 30Ω required)</li>
-                            <li><strong>Equipotential bonding</strong>: Connection of metal masses (water, gas, heating)</li>
-                            <li><strong>Trip tests</strong>: Verification that RCDs respond correctly</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Do you build in reserve capacity for future needs?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p><strong>Yes, systematically.</strong> We anticipate future technological needs:</p>
-                        <ul>
-                            <li><strong>Free slots</strong>: 20-30% available space in the panel</li>
-                            <li><strong>Power capacity</strong>: Sizing for adding EV charger, heat pump, air conditioning</li>
-                            <li><strong>Network infrastructure</strong>: Pre-wiring for smart home, cameras, alarm</li>
-                            <li><strong>Solar preparation</strong>: Dedicated circuits ready for solar panels and battery</li>
-                        </ul>
-                        <p>Your installation remains <strong>scalable without major overhaul</strong>.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>How do you secure alarm system integration?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Alarm system reliability depends on secured power supply:</p>
-                        <ul>
-                            <li><strong>Protected dedicated circuit</strong>: Power on separate protection</li>
-                            <li><strong>Battery backup</strong>: Autonomy during mains outage</li>
-                            <li><strong>Secured network infrastructure</strong>: CAT6 RJ45 cabling for IP cameras</li>
-                            <li><strong>Surge protection</strong>: SPD on sensitive circuits</li>
-                        </ul>
-                        <p>Guarantee of <strong>service continuity</strong> even during electrical issues.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Single-phase or three-phase: how do you decide?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>The choice depends on <strong>required power and equipment</strong>:</p>
-                        <ul>
-                            <li><strong>Single-phase (230V)</strong>: Sufficient up to 9-10 kVA, standard homes</li>
-                            <li><strong>Three-phase (400V)</strong>: Recommended beyond 10 kVA or for powerful equipment</li>
-                        </ul>
-                        <p><strong>Three-phase recommended if:</strong></p>
-                        <ul>
-                            <li>11kW or 22kW EV charger</li>
-                            <li>Powerful heat pump</li>
-                            <li>Workshop with machinery</li>
-                            <li>Large area to heat/cool</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>What are the benefits of three-phase?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Three-phase offers several technical advantages:</p>
-                        <ul>
-                            <li><strong>Higher available power</strong>: Up to 3× the capacity of single-phase</li>
-                            <li><strong>Better load distribution</strong>: Balanced distribution across 3 phases</li>
-                            <li><strong>Smaller cable sizes</strong>: Less current per phase for same power</li>
-                            <li><strong>Professional equipment compatibility</strong>: Machinery, powerful EV chargers</li>
-                            <li><strong>Fewer trips</strong>: Distributed load, better absorbed power peaks</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>How do you manage phase balancing in three-phase?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Good balancing is essential in three-phase:</p>
-                        <ul>
-                            <li><strong>Strategic distribution</strong>: Circuit distribution across the 3 phases</li>
-                            <li><strong>Load analysis</strong>: Identification of major consumers (oven, dryer, heat pump...)</li>
-                            <li><strong>Smart balancing</strong>: Distribution to avoid phase overload</li>
-                            <li><strong>Measurement and optimization</strong>: Current monitoring per phase during commissioning</li>
-                        </ul>
-                        <p>Goal: <strong>network stability</strong>, no nuisance trips, equipment longevity.</p>
-                    </div>
-                </div>
-            </div>
-
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question"><span>How quickly can I get a quote?</span><i class="fas fa-chevron-down"></i></button>
+            <div class="faq-answer"><p>We respond within <strong>24 hours</strong> of your request. For small jobs, a phone estimate is possible. For larger projects, we arrange a technical visit within 2-3 days and send you a detailed quote within 48h after the visit.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question"><span>Is the quote really free and with no commitment?</span><i class="fas fa-chevron-down"></i></button>
+            <div class="faq-answer"><p>Yes, completely. Our quote is <strong>100% free</strong> and with absolutely no obligation on your part. It includes the breakdown of work, materials used, completion timeline and all-inclusive price. No surprises at the end.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question"><span>Do you offer payment in instalments?</span><i class="fas fa-chevron-down"></i></button>
+            <div class="faq-answer"><p>For larger projects, we can discuss <strong>staged payments</strong> aligned with construction milestones (deposit on order, balance on completion). Contact us to discuss this when drawing up your quote.</p></div>
+          </div>
         </div>
-    </section>
+      </div>
 
-    <!-- CTA Section -->
-    <section style="background: var(--neutral-50); padding: var(--space-3xl) 0;">
-        <div class="container">
-            <div style="max-width: 800px; margin: 0 auto; text-align: center; padding: var(--space-3xl); background: linear-gradient(135deg, var(--primary-dark), var(--primary)); border-radius: var(--radius-xl); color: white;">
-                <i class="fas fa-lightbulb" style="font-size: 3rem; margin-bottom: var(--space-lg); opacity: 0.9;"></i>
-                <h2 style="font-size: var(--text-3xl); font-weight: 700; margin-bottom: var(--space-md); color: white;">Every project is unique</h2>
-                <p style="font-size: var(--text-lg); margin-bottom: var(--space-xl); color: rgba(255,255,255,0.9); line-height: 1.6;">
-                    We prioritize rigorous technical analysis to propose a tailored, compliant, and sustainable solution.
-                </p>
-                <a href="contact.html" class="btn btn-primary btn-lg" style="background: white; color: var(--primary); border: none;">
-                    <i class="fas fa-calendar-check"></i> Request a custom assessment
-                </a>
-                <p style="margin-top: var(--space-lg); font-size: var(--text-sm); color: rgba(255,255,255,0.7);">
-                    Response within 24h • Free quote • No obligation
-                </p>
-            </div>
+      <div class="fade-up" style="margin-bottom:64px;">
+        <div style="display:flex;align-items:center;gap:14px;margin-bottom:32px;">
+          <div style="width:44px;height:44px;background:linear-gradient(135deg,var(--accent),var(--accent-dark));border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <i class="fas fa-tools" style="color:var(--gray-900);font-size:1.1rem;"></i>
+          </div>
+          <h2 style="font-size:1.75rem;margin:0;">Repairs & Emergencies</h2>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-main">
-                <div class="footer-about">
-                    <a href="index.html" class="footer-logo">
-                        <img src="../images/logo-lumina-electric.png" alt="Lumina Electric" style="height: 160px; width: auto; margin-bottom: var(--space-lg);">
-                    </a>
-                    <p>Electrical expert in Belgium. Service in Brussels-Capital Region, Flemish Brabant and Walloon Brabant.</p>
-                    <p style="margin-top: var(--space-md); font-size: var(--text-sm);">
-                        <strong>VAT No:</strong> BE1008470101
-                    </p>
-                </div>
-                
-                <div class="footer-col">
-                    <h4 class="footer-title">Services</h4>
-                    <ul class="footer-links">
-                        <li><a href="services/rgie-compliance.html">RGIE Compliance</a></li>
-                        <li><a href="services/electrical-renovation.html">Electrical renovation</a></li>
-                        <li><a href="services/troubleshooting.html">Emergency</a></li>
-                        <li><a href="services/home-automation.html">Smart Home</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-col">
-                    <h4 class="footer-title">Company</h4>
-                    <ul class="footer-links">
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-col">
-                    <h4 class="footer-title">Contact</h4>
-                    <div class="footer-contact-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <a href="tel:+32485166635">+32 485 16 66 35</a>
-                        </div>
-                    </div>
-                    <div class="footer-contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <a href="mailto:info@luminaelectric.be">info@luminaelectric.be</a>
-                        </div>
-                    </div>
-                    <div class="footer-contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            Brussels-Capital, Flemish Brabant & Walloon Brabant
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2024 Lumina Electric. All rights reserved.</p>
-                <div class="footer-legal">
-                    <a href="legal.html">Legal</a>
-                    <a href="privacy.html">Privacy</a>
-                </div>
-            </div>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question"><span>Do you respond to emergencies at weekends?</span><i class="fas fa-chevron-down"></i></button>
+            <div class="faq-answer"><p>Yes, we offer a <strong>7d/7 emergency repair service</strong>. For serious electrical failures (total outage, burning smell, safety risk), we intervene within <strong>2 to 4 hours</strong>, even on weekends and public holidays. An emergency surcharge may apply outside business hours.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question"><span>My breaker keeps tripping. What should I do?</span><i class="fas fa-chevron-down"></i></button>
+            <div class="faq-answer"><p>A breaker that trips repeatedly indicates a <strong>serious problem</strong>: circuit overload, short circuit, insulation fault or faulty appliance. Do not try to force the breaker. Call us — we carry out a precise and safe diagnosis.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question"><span>I smell burning in my home. Is that serious?</span><i class="fas fa-chevron-down"></i></button>
+            <div class="faq-answer"><p>Yes, a burning smell is a <strong>serious warning sign</strong>. Immediately switch off the main breaker and leave the building if you see smoke. Call us urgently on <a href="tel:+32485166635" style="color:var(--accent-dark);font-weight:600;">+32 485 16 66 35</a> — electrical overheating can lead to a fire.</p></div>
+          </div>
         </div>
-    </footer>
+      </div>
 
-    <script src="../js/main.js"></script>
+      <div class="fade-up" style="margin-bottom:64px;">
+        <div style="display:flex;align-items:center;gap:14px;margin-bottom:32px;">
+          <div style="width:44px;height:44px;background:linear-gradient(135deg,var(--accent),var(--accent-dark));border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <i class="fas fa-charging-station" style="color:var(--gray-900);font-size:1.1rem;"></i>
+          </div>
+          <h2 style="font-size:1.75rem;margin:0;">EV Chargers & Solar Panels</h2>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question"><span>Are there subsidies for installing an EV charger?</span><i class="fas fa-chevron-down"></i></button>
+            <div class="faq-answer">
+              <p>Yes! Subsidies are available depending on your region:</p>
+              <ul>
+                <li><strong>Brussels-Capital</strong>: energy grant for home EV chargers</li>
+                <li><strong>Flemish Brabant</strong>: regional Flanders grants for individuals</li>
+                <li><strong>Walloon Brabant</strong>: Walloon grants via the URE programme</li>
+              </ul>
+              <p>We guide you through the process to claim them.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question"><span>Do you install the solar panels themselves?</span><i class="fas fa-chevron-down"></i></button>
+            <div class="faq-answer"><p>No — our expertise covers the <strong>electrical side</strong> of the installation: inverter connection, PV earthing, AC/DC protections, bidirectional meter and commissioning. For panel mounting on the roof, we work in coordination with qualified partner installers.</p></div>
+          </div>
+        </div>
+      </div>
 
-    <style>
-        .category-link {
-            display: inline-flex;
-            align-items: center;
-            gap: var(--space-xs);
-            padding: var(--space-sm) var(--space-lg);
-            background: white;
-            border: 1px solid var(--neutral-300);
-            border-radius: var(--radius-full);
-            color: var(--neutral-700);
-            text-decoration: none;
-            font-size: var(--text-sm);
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
+      <div class="fade-up">
+        <div style="display:flex;align-items:center;gap:14px;margin-bottom:32px;">
+          <div style="width:44px;height:44px;background:linear-gradient(135deg,var(--accent),var(--accent-dark));border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <i class="fas fa-info-circle" style="color:var(--gray-900);font-size:1.1rem;"></i>
+          </div>
+          <h2 style="font-size:1.75rem;margin:0;">General</h2>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question"><span>Which areas do you cover?</span><i class="fas fa-chevron-down"></i></button>
+            <div class="faq-answer">
+              <p>We cover all of <strong>central Belgium</strong>:</p>
+              <ul>
+                <li>Brussels-Capital (all 19 municipalities)</li>
+                <li>Flemish Brabant (Leuven, Vilvoorde, Dilbeek, Halle, Tervuren, etc.)</li>
+                <li>Walloon Brabant (Waterloo, Wavre, Nivelles, Braine-l'Alleud, Ottignies-LLN, etc.)</li>
+              </ul>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question"><span>Do you work for businesses and professionals too?</span><i class="fas fa-chevron-down"></i></button>
+            <div class="faq-answer"><p>Yes, we serve both <strong>private individuals</strong> and <strong>professionals</strong>: SMEs, offices, retail premises, restaurants, co-owned buildings. Contact us to discuss your specific needs.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question"><span>Do you offer maintenance contracts?</span><i class="fas fa-chevron-down"></i></button>
+            <div class="faq-answer"><p>We offer <strong>periodic inspection visits</strong> to ensure your electrical installation remains in good condition. For businesses and co-owned buildings, tailored maintenance contracts can be established. Ask us for a personalised quote.</p></div>
+          </div>
+        </div>
+      </div>
 
-        .category-link:hover {
-            background: var(--primary);
-            color: white;
-            border-color: var(--primary);
-            transform: translateY(-2px);
-        }
+    </div>
+  </section>
 
-        .category-link i {
-            font-size: 1rem;
-        }
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-inner fade-up">
+        <h2>Can't find your answer?</h2>
+        <p>Contact us directly — we answer all your questions within 24h.</p>
+        <div class="cta-buttons">
+          <a href="contact.html" class="btn btn-primary btn-lg"><i class="fas fa-envelope"></i> Send a message</a>
+          <a href="tel:+32485166635" class="btn btn-outline-white btn-lg"><i class="fas fa-phone"></i> Call directly</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        .faq-category {
-            margin-bottom: var(--space-3xl);
-        }
-
-        .faq-category-header {
-            display: flex;
-            align-items: center;
-            gap: var(--space-md);
-            margin-bottom: var(--space-xl);
-            padding-bottom: var(--space-lg);
-            border-bottom: 2px solid var(--primary);
-        }
-
-        .faq-category-header i {
-            font-size: 2rem;
-            color: var(--primary);
-        }
-
-        .faq-category-header h2 {
-            font-size: var(--text-2xl);
-            font-weight: 700;
-            margin: 0;
-        }
-
-        .faq-item {
-            background: white;
-            border: 1px solid var(--neutral-200);
-            border-radius: var(--radius-lg);
-            margin-bottom: var(--space-md);
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-
-        .faq-item:hover {
-            border-color: var(--primary);
-            box-shadow: var(--shadow-sm);
-        }
-
-        .faq-question {
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: var(--space-lg);
-            background: none;
-            border: none;
-            text-align: left;
-            cursor: pointer;
-            font-size: var(--text-lg);
-            font-weight: 600;
-            color: var(--neutral-900);
-            transition: all 0.3s ease;
-        }
-
-        .faq-question:hover {
-            color: var(--primary);
-        }
-
-        .faq-question i {
-            transition: transform 0.3s ease;
-            color: var(--primary);
-        }
-
-        .faq-item.active .faq-question i {
-            transform: rotate(180deg);
-        }
-
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s ease, padding 0.4s ease;
-            padding: 0 var(--space-lg);
-        }
-
-        .faq-item.active .faq-answer {
-            max-height: 3000px;
-            padding: 0 var(--space-lg) var(--space-lg);
-        }
-
-        .faq-answer p {
-            color: var(--neutral-700);
-            line-height: 1.7;
-            margin-bottom: var(--space-md);
-        }
-
-        .faq-answer ul, .faq-answer ol {
-            color: var(--neutral-700);
-            line-height: 1.7;
-            margin-bottom: var(--space-md);
-        }
-
-        .faq-answer li {
-            margin-bottom: var(--space-sm);
-        }
-
-        .faq-answer strong {
-            color: var(--neutral-900);
-        }
-
-        @media (max-width: 768px) {
-            .faq-category-header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .faq-question {
-                font-size: var(--text-md);
-                padding: var(--space-md);
-            }
-
-            .category-link {
-                font-size: var(--text-xs);
-                padding: var(--space-xs) var(--space-md);
-            }
-        }
-    </style>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__main">
+        <div class="footer__brand">
+          <img src="../images/logo-white.svg" alt="Lumina Electric">
+          <p>Electrical expert in Belgium. RGIE compliance, renovation, emergency repairs and smart home installations.</p>
+          <p class="footer__tva">VAT: BE1008470101</p>
+        </div>
+        <div class="footer__col">
+          <h4>Services</h4>
+          <ul class="footer__links">
+            <li><a href="services.html#compliance">RGIE Compliance</a></li>
+            <li><a href="services.html#renovation">Electrical renovation</a></li>
+            <li><a href="services.html#emergency">Emergency repairs</a></li>
+            <li><a href="services.html#smarthome">Smart home</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Company</h4>
+          <ul class="footer__links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Contact</h4>
+          <div class="footer__contact-item"><i class="fas fa-phone"></i><a href="tel:+32485166635">+32 485 16 66 35</a></div>
+          <div class="footer__contact-item"><i class="fas fa-envelope"></i><a href="mailto:info@luminaelectric.be">info@luminaelectric.be</a></div>
+          <div class="footer__contact-item"><i class="fab fa-whatsapp"></i><a href="https://wa.me/32485166635" target="_blank" rel="noopener">WhatsApp</a></div>
+          <div class="footer__contact-item"><i class="fas fa-clock"></i><span>Mon-Fri: 8am-6pm · Sat: 9am-1pm</span></div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 Lumina Electric. All rights reserved.</p>
+        <div class="footer__legal">
+          <a href="../mentions-legales.html">Legal notice</a>
+          <a href="../confidentialite.html">Privacy policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="../js/main.js"></script>
 </body>
 </html>
