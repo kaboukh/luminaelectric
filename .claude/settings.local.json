@@ -78,7 +78,15 @@
       "Bash(curl -s -o bat3.jpg \"https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?auto=format&fit=crop&w=900&q=80\")",
       "Bash(curl -s -o bat4.jpg \"https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=900&q=80\")",
       "Bash(curl -s -o bat5.jpg \"https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=900&q=80\")",
-      "Bash(curl -s -o bat6.jpg \"https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=900&q=80\")"
+      "Bash(curl -s -o bat6.jpg \"https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=900&q=80\")",
+      "Bash(sed -i 's|<span data-counter data-target=\"50\" data-suffix=\"+\">50+</span>|<span>5★</span>|g' \"C:\\\\Users\\\\kabou\\\\OneDrive - Lumina Solutions\\\\Lumina\\\\Website\\\\Claude website\\\\index.html\")",
+      "Bash(sed -i 's|<div class=\"hero__stat-label\">Projets réalisés</div>|<div class=\"hero__stat-label\">Avis Google</div>|g' \"C:\\\\Users\\\\kabou\\\\OneDrive - Lumina Solutions\\\\Lumina\\\\Website\\\\Claude website\\\\index.html\")",
+      "Bash(sed -i 's|<span data-counter data-target=\"50\" data-suffix=\"+\">50+</span>|<span>5★</span>|g' \"C:\\\\Users\\\\kabou\\\\OneDrive - Lumina Solutions\\\\Lumina\\\\Website\\\\Claude website\\\\nl\\\\index.html\")",
+      "Bash(sed -i 's|<div class=\"hero__stat-label\">Projecten gerealiseerd</div>|<div class=\"hero__stat-label\">Google Reviews</div>|g' \"C:\\\\Users\\\\kabou\\\\OneDrive - Lumina Solutions\\\\Lumina\\\\Website\\\\Claude website\\\\nl\\\\index.html\")",
+      "Bash(sed -i 's|<span data-counter data-target=\"50\" data-suffix=\"+\">50+</span>|<span>5★</span>|g' \"C:\\\\Users\\\\kabou\\\\OneDrive - Lumina Solutions\\\\Lumina\\\\Website\\\\Claude website\\\\en\\\\index.html\")",
+      "Bash(sed -i 's|<div class=\"hero__stat-label\">Projects completed</div>|<div class=\"hero__stat-label\">Google Reviews</div>|g' \"C:\\\\Users\\\\kabou\\\\OneDrive - Lumina Solutions\\\\Lumina\\\\Website\\\\Claude website\\\\en\\\\index.html\")",
+      "Bash(node -e ':*)",
+      "Bash(powershell.exe -Command ':*)"
     ]
   }
 }
