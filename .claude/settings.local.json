@@ -86,7 +86,10 @@
       "Bash(sed -i 's|<span data-counter data-target=\"50\" data-suffix=\"+\">50+</span>|<span>5★</span>|g' \"C:\\\\Users\\\\kabou\\\\OneDrive - Lumina Solutions\\\\Lumina\\\\Website\\\\Claude website\\\\en\\\\index.html\")",
       "Bash(sed -i 's|<div class=\"hero__stat-label\">Projects completed</div>|<div class=\"hero__stat-label\">Google Reviews</div>|g' \"C:\\\\Users\\\\kabou\\\\OneDrive - Lumina Solutions\\\\Lumina\\\\Website\\\\Claude website\\\\en\\\\index.html\")",
       "Bash(node -e ':*)",
-      "Bash(powershell.exe -Command ':*)"
+      "Bash(powershell.exe -Command ':*)",
+      "Bash(powershell.exe -File \"C:\\\\Users\\\\kabou\\\\OneDrive - Lumina Solutions\\\\Lumina\\\\Website\\\\Claude website\\\\.claude\\\\add-mobile-lang.ps1\")",
+      "Bash(powershell.exe -ExecutionPolicy Bypass -File \"C:\\\\Users\\\\kabou\\\\OneDrive - Lumina Solutions\\\\Lumina\\\\Website\\\\Claude website\\\\.claude\\\\add-mobile-lang.ps1\")",
+      "Bash(powershell.exe -ExecutionPolicy Bypass -Command ' *)"
     ]
   }
 }

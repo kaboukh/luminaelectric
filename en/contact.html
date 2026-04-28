@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+﻿﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -8,6 +8,7 @@
   <link rel="icon" type="image/png" href="../images/favicon.png">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script>!function(){var t=localStorage.getItem("lumina-theme");if(t)document.documentElement.setAttribute("data-theme",t);else if(window.matchMedia("(prefers-color-scheme: dark)").matches)document.documentElement.setAttribute("data-theme","dark");}();</script>
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -25,7 +26,7 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="../blog/index.html">Blog</a></li>
+          <li><a href="/en/blog/">Blog</a></li>
           <li><a href="faq.html">FAQ</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html" class="active">Contact</a></li>
@@ -47,11 +48,16 @@
       <li><a href="index.html">Home</a></li>
       <li><a href="services.html">Services</a></li>
       <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="../blog/index.html">Blog</a></li>
+      <li><a href="/en/blog/">Blog</a></li>
       <li><a href="faq.html">FAQ</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="contact.html" class="active">Contact</a></li>
     </ul>
+    <div class="nav__mobile-lang">
+      <button onclick="location.href='/'">FR</button>
+      <button onclick="location.href='/nl/'">NL</button>
+      <button class="active">EN</button>
+    </div>
     <div class="nav__mobile-cta">
       <a href="tel:+32485166635" class="btn btn-primary"><i class="fas fa-phone"></i> +32 485 16 66 35</a>
     </div>
@@ -71,9 +77,12 @@
 
         <div class="contact-form-wrap fade-up">
           <h2>Contact form</h2>
-          <form id="contactForm" name="contact-en" method="POST" enctype="multipart/form-data" data-netlify="true" netlify-honeypot="bot-field">
-            <input type="hidden" name="form-name" value="contact-en">
-            <p style="display:none;"><label>Do not fill: <input name="bot-field"></label></p>
+          <form id="contactForm" method="POST" action="https://formsubmit.co/info@luminaelectric.be" enctype="multipart/form-data">
+            <input type="hidden" name="_subject" value="New quote request — Lumina Electric">
+            <input type="hidden" name="_next" value="https://luminaelectric.be/en/merci.html">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="text" name="_honey" style="display:none;">
 
             <div class="form-group">
               <label class="form-label" for="name">Full name <span class="req">*</span></label>

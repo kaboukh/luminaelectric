@@ -2,6 +2,69 @@
    LUMINA ELECTRIC — Main JS
    =================================== */
 
+// ===== DARK MODE (runs immediately to prevent flash) =====
+(function () {
+  function getTheme() {
+    const saved = localStorage.getItem('lumina-theme');
+    if (saved === 'dark' || saved === 'light') return saved;
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+
+  function applyTheme(theme, updateBtn) {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('lumina-theme', theme);
+    if (updateBtn) {
+      const btn = document.getElementById('themeToggle');
+      if (btn) btn.textContent = theme === 'dark' ? '☀' : '🌙';
+    }
+  }
+
+  // Apply immediately (before DOMContentLoaded — prevents FOUC)
+  applyTheme(getTheme(), false);
+
+  // Inject toggle button & wire up after DOM is ready
+  document.addEventListener('DOMContentLoaded', function () {
+    const navCta = document.querySelector('.nav__cta');
+    if (navCta) {
+      const btn = document.createElement('button');
+      btn.id = 'themeToggle';
+      btn.className = 'theme-toggle';
+      btn.setAttribute('aria-label', 'Basculer mode sombre/clair');
+      btn.textContent = document.documentElement.getAttribute('data-theme') === 'dark' ? '☀' : '🌙';
+      btn.addEventListener('click', function () {
+        const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        applyTheme(next, true);
+      });
+      // Insert before the phone link
+      const phone = navCta.querySelector('.nav__phone');
+      navCta.insertBefore(btn, phone || navCta.firstChild);
+    }
+
+    // Mobile menu toggle (smaller, at bottom of lang switcher)
+    const mobileLang = document.querySelector('.nav__mobile-lang');
+    if (mobileLang) {
+      const mBtn = document.createElement('button');
+      mBtn.className = 'theme-toggle';
+      mBtn.style.cssText = 'width:100%;border-radius:8px;height:44px;font-size:0.95rem;gap:8px;display:flex;align-items:center;justify-content:center;margin-top:8px;';
+      const cur = document.documentElement.getAttribute('data-theme');
+      mBtn.textContent = cur === 'dark' ? '☀  Mode clair' : '🌙  Mode sombre';
+      mBtn.addEventListener('click', function () {
+        const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        applyTheme(next, true);
+        mBtn.textContent = next === 'dark' ? '☀  Mode clair' : '🌙  Mode sombre';
+      });
+      mobileLang.parentNode.insertBefore(mBtn, mobileLang.nextSibling);
+    }
+
+    // React to OS preference changes (when user hasn't set explicit preference)
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function (e) {
+      if (!localStorage.getItem('lumina-theme')) {
+        applyTheme(e.matches ? 'dark' : 'light', true);
+      }
+    });
+  });
+})();
+
 // ===== NAV SCROLL BEHAVIOR =====
 const nav = document.getElementById('nav');
 
