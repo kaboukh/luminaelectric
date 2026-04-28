@@ -113,17 +113,21 @@ section { padding: var(--section-pad) 0; }
               top var(--dur-fast) var(--ease);
 }
 
+/* Light mode : la nav est désormais sous la urgence-banner (plus au-dessus du hero),
+   donc on la garde TOUJOURS solide blanche pour un rendu propre, qu'on soit en haut ou scrollé.
+   La distinction --transparent / --solid se joue juste sur l'intensité de l'ombre. */
 .nav--transparent {
-  background: rgba(0,0,0,0.2);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04);
 }
 
 .nav--solid {
-  background: rgba(255,255,255,0.88);
+  background: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
-  box-shadow: 0 1px 0 rgba(0,0,0,0.08);
+  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.08), 0 1px 0 rgba(0, 0, 0, 0.06);
 }
 
 .nav__inner {
@@ -149,11 +153,10 @@ section { padding: var(--section-pad) 0; }
   width: auto;
 }
 
-/* Dual logo: color on light nav, white on dark nav */
-.nav__logo-white { display: block; }
-.nav__logo-color { display: none; }
-.nav--solid .nav__logo-white { display: none; }
-.nav--solid .nav__logo-color { display: block; }
+/* Logo : la nav étant toujours blanche en light mode, on affiche toujours la version couleur.
+   La version blanche est réservée au dark mode (override plus bas). */
+.nav__logo-white { display: none; }
+.nav__logo-color { display: block; }
 
 .nav__logo-text {
   font-size: 1.1rem;
@@ -161,7 +164,7 @@ section { padding: var(--section-pad) 0; }
   letter-spacing: -0.02em;
 }
 
-.nav--transparent .nav__logo-text { color: white; }
+.nav--transparent .nav__logo-text,
 .nav--solid .nav__logo-text { color: var(--gray-900); }
 
 .nav__links {
@@ -180,11 +183,11 @@ section { padding: var(--section-pad) 0; }
   white-space: nowrap;
 }
 
-.nav--transparent .nav__links a { color: rgba(255,255,255,0.9); }
-.nav--transparent .nav__links a:hover { color: white; background: rgba(255,255,255,0.12); }
-
+.nav--transparent .nav__links a,
 .nav--solid .nav__links a { color: var(--gray-900); }
+.nav--transparent .nav__links a:hover,
 .nav--solid .nav__links a:hover { color: var(--gray-900); background: var(--gray-50); }
+.nav--transparent .nav__links a.active,
 .nav--solid .nav__links a.active { color: var(--accent-dark); }
 
 .nav__cta {
@@ -202,9 +205,9 @@ section { padding: var(--section-pad) 0; }
   transition: all var(--dur-fast) var(--ease);
 }
 
-.nav--transparent .nav__phone { color: white; border: 1px solid rgba(255,255,255,0.3); }
-.nav--transparent .nav__phone:hover { background: rgba(255,255,255,0.15); }
+.nav--transparent .nav__phone,
 .nav--solid .nav__phone { color: var(--gray-900); border: 1px solid var(--gray-200); }
+.nav--transparent .nav__phone:hover,
 .nav--solid .nav__phone:hover { background: var(--gray-50); }
 
 .nav__devis {
@@ -224,16 +227,14 @@ section { padding: var(--section-pad) 0; }
   box-shadow: 0 4px 20px var(--accent-glow);
 }
 
-/* Language switcher */
+/* Language switcher — look unifié, valable pour les 2 états */
 .nav__lang {
   display: flex;
   gap: 2px;
-  background: rgba(255,255,255,0.1);
+  background: var(--gray-100);
   border-radius: 8px;
   padding: 2px;
 }
-
-.nav--solid .nav__lang { background: var(--gray-100); }
 
 .nav__lang button {
   font-size: 0.75rem;
@@ -243,16 +244,12 @@ section { padding: var(--section-pad) 0; }
   border-radius: 6px;
   cursor: pointer;
   background: transparent;
+  color: var(--gray-600);
   transition: all var(--dur-fast) var(--ease);
 }
 
-.nav--transparent .nav__lang button { color: rgba(255,255,255,0.7); }
-.nav--transparent .nav__lang button.active,
-.nav--transparent .nav__lang button:hover { color: white; background: rgba(255,255,255,0.2); }
-
-.nav--solid .nav__lang button { color: var(--gray-600); }
-.nav--solid .nav__lang button.active { color: var(--gray-900); background: white; box-shadow: var(--shadow-sm); }
-.nav--solid .nav__lang button:hover { color: var(--gray-900); }
+.nav__lang button.active { color: var(--gray-900); background: white; box-shadow: var(--shadow-sm); }
+.nav__lang button:hover { color: var(--gray-900); }
 
 /* Mobile toggle */
 .nav__toggle {
@@ -447,7 +444,7 @@ section { padding: var(--section-pad) 0; }
 .hero__bg {
   position: absolute;
   inset: 0;
-  background-image: url('https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=1920&q=80');
+  background-image: url('https://images.unsplash.com/photo-1660330589693-99889d60181e?auto=format&fit=crop&w=1920&q=80');
   background-size: cover;
   background-position: center;
   transform: scale(1.05);
@@ -1094,16 +1091,26 @@ section { padding: var(--section-pad) 0; }
   flex-wrap: wrap;
 }
 
-/* ===== URGENCE BANNER ===== */
+/* ===== URGENCE BANNER =====
+   Hauteur fixée explicitement à chaque breakpoint pour éviter tout chevauchement
+   avec la nav fixée en dessous. */
+:root { --urgence-h: 48px; }
+
 .urgence-banner {
   background: var(--red);
-  padding: 14px 16px;
+  height: var(--urgence-h);
+  padding: 0 16px;
   text-align: center;
-  position: fixed; /* fixée tout en haut, au-dessus de la nav */
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Séparation nette avec la nav en dessous (évite l'effet "bavure" rouge → blanc) */
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.18);
 }
 
 .urgence-banner a {
@@ -1114,26 +1121,27 @@ section { padding: var(--section-pad) 0; }
   font-size: 0.9375rem;
   font-weight: 600;
   text-decoration: none;
-  flex-wrap: wrap;
-  justify-content: center;
+  white-space: nowrap;
+  line-height: 1;
 }
 
 .urgence-banner i { font-size: 1rem; }
 
-/* Sur mobile : le numéro doit rester sur la même ligne, on raccourcit le texte */
 .urgence-banner .urgence-full { display: inline; }
 .urgence-banner .urgence-short { display: none; }
 
+/* Mobile : on raccourcit le texte et on baisse la hauteur */
 @media (max-width: 640px) {
-  .urgence-banner { padding: 10px 12px; font-size: 0.85rem; }
-  .urgence-banner a { font-size: 0.8rem; gap: 6px; line-height: 1.3; }
-  .urgence-banner a > i:last-child { display: none; } /* masque la flèche → finale sur mobile */
+  :root { --urgence-h: 40px; }
+  .urgence-banner { padding: 0 12px; }
+  .urgence-banner a { font-size: 0.85rem; gap: 6px; }
+  .urgence-banner a > i:last-child { display: none; }
   .urgence-banner .urgence-full { display: none; }
   .urgence-banner .urgence-short { display: inline; }
 }
 
-/* Compense la stack fixe (urgence-banner + nav) pour que le contenu commence en dessous */
-body { padding-top: calc(var(--urgence-h, 48px) + var(--nav-height)); }
+/* Compense la stack fixe (urgence-banner + nav) — plus de calc dynamique */
+body { padding-top: calc(var(--urgence-h) + var(--nav-height)); }
 
 /* ===== PAGE HEADER ===== */
 .page-hero {
@@ -1880,9 +1888,9 @@ select.form-control { cursor: pointer; }
   flex-shrink: 0;
   line-height: 1;
 }
-.nav--transparent .theme-toggle { color: rgba(255,255,255,0.85); }
-.nav--transparent .theme-toggle:hover { background: rgba(255,255,255,0.12); }
+.nav--transparent .theme-toggle,
 .nav--solid .theme-toggle { color: var(--gray-900); }
+.nav--transparent .theme-toggle:hover,
 .nav--solid .theme-toggle:hover { background: var(--gray-100); }
 
 @media (max-width: 900px) {
@@ -1923,22 +1931,28 @@ select.form-control { cursor: pointer; }
   --shadow-lg: 0 20px 80px rgba(0,0,0,0.7);
 }
 
-/* Nav solid */
-.dark-scheme .nav--solid,
-[data-theme="dark"] .nav--solid {
+/* Nav (transparent OU solid — même look en dark mode) */
+.dark-scheme .nav--solid, .dark-scheme .nav--transparent,
+[data-theme="dark"] .nav--solid, [data-theme="dark"] .nav--transparent {
   background: rgba(28, 28, 30, 0.95) !important;
   box-shadow: 0 1px 0 rgba(255,255,255,0.06) !important;
 }
-.dark-scheme .nav--solid .nav__links a,
-[data-theme="dark"] .nav--solid .nav__links a { color: #f5f5f7; }
-.dark-scheme .nav--solid .nav__links a:hover,
-[data-theme="dark"] .nav--solid .nav__links a:hover { background: rgba(255,255,255,0.06); }
-.dark-scheme .nav--solid .nav__logo-color,
-[data-theme="dark"] .nav--solid .nav__logo-color { filter: brightness(1.1); }
-.dark-scheme .nav--solid .theme-toggle,
-[data-theme="dark"] .nav--solid .theme-toggle { color: #f5f5f7 !important; }
-.dark-scheme .nav--solid .theme-toggle:hover,
-[data-theme="dark"] .nav--solid .theme-toggle:hover { background: rgba(255,255,255,0.08) !important; }
+.dark-scheme .nav__links a,
+[data-theme="dark"] .nav__links a { color: #f5f5f7 !important; }
+.dark-scheme .nav__links a:hover,
+[data-theme="dark"] .nav__links a:hover { background: rgba(255,255,255,0.06) !important; }
+.dark-scheme .nav__logo-white,
+[data-theme="dark"] .nav__logo-white { display: block !important; }
+.dark-scheme .nav__logo-color,
+[data-theme="dark"] .nav__logo-color { display: none !important; }
+.dark-scheme .nav__phone,
+[data-theme="dark"] .nav__phone { color: #f5f5f7 !important; border-color: rgba(255,255,255,0.18) !important; }
+.dark-scheme .nav__phone:hover,
+[data-theme="dark"] .nav__phone:hover { background: rgba(255,255,255,0.06) !important; }
+.dark-scheme .theme-toggle,
+[data-theme="dark"] .theme-toggle { color: #f5f5f7 !important; }
+.dark-scheme .theme-toggle:hover,
+[data-theme="dark"] .theme-toggle:hover { background: rgba(255,255,255,0.08) !important; }
 
 /* Nav lang switcher */
 .dark-scheme .nav__lang button,

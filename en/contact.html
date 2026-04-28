@@ -77,12 +77,12 @@
 
         <div class="contact-form-wrap fade-up">
           <h2>Contact form</h2>
-          <form id="contactForm" method="POST" action="https://formsubmit.co/info@luminaelectric.be" enctype="multipart/form-data">
-            <input type="hidden" name="_subject" value="New quote request — Lumina Electric">
-            <input type="hidden" name="_next" value="https://luminaelectric.be/en/merci.html">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_template" value="table">
-            <input type="text" name="_honey" style="display:none;">
+          <form id="contactForm" method="POST" action="https://api.web3forms.com/submit" enctype="multipart/form-data">
+            <input type="hidden" name="access_key" value="89bb61db-18a6-49b2-ab87-a4189c5edaf8">
+            <input type="hidden" name="subject" value="New quote request — Lumina Electric">
+            <input type="hidden" name="from_name" value="Lumina Electric website (EN)">
+            <input type="hidden" name="redirect" value="https://luminaelectric.be/en/merci.html">
+            <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off">
 
             <div class="form-group">
               <label class="form-label" for="name">Full name <span class="req">*</span></label>
