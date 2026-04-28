@@ -37,7 +37,7 @@
     }
     .stats-band__grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 32px;
       text-align: center;
     }
@@ -65,7 +65,7 @@
 </head>
 <body>
   <div class="urgence-banner">
-    <a href="tel:+32485166635"><i class="fas fa-bolt"></i> Electrical emergency 7d/7 — Response within 2-4h &nbsp;·&nbsp; +32 485 16 66 35 <i class="fas fa-arrow-right"></i></a>
+    <a href="tel:+32485166635"><i class="fas fa-bolt"></i> <span class="urgence-full">Electrical emergency 7d/7 — Response within 2-4h &nbsp;·&nbsp; </span>+32 485 16 66 35 <i class="fas fa-arrow-right"></i></a>
   </div>
   <nav class="nav nav--transparent" id="nav">
     <div class="container">
@@ -288,7 +288,7 @@
         <span class="section-header__eyebrow">Testimonials</span>
         <h2>What our clients say</h2>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;" class="stagger">
+      <div style="display:grid;grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));gap:24px;" class="stagger">
         <div class="fade-up" style="background:white;border-radius:var(--radius);padding:32px;border:1px solid var(--gray-100);box-shadow:var(--shadow-sm);">
           <div style="display:flex;gap:4px;margin-bottom:16px;color:var(--accent);">
             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>

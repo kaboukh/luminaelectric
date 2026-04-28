@@ -16,7 +16,7 @@
     .filter-btn:hover { border-color:var(--accent); color:var(--accent-dark); }
     .filter-btn.active { background:var(--accent); border-color:var(--accent); color:var(--gray-900); }
     .stats-band { background:var(--near-black); padding:64px 0; }
-    .stats-band__grid { display:grid; grid-template-columns:repeat(4,1fr); gap:32px; text-align:center; }
+    .stats-band__grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:32px; text-align:center; }
     .stat-block__number { font-size:3.5rem; font-weight:800; color:white; letter-spacing:-0.04em; line-height:1; }
     .stat-block__number span { color:var(--accent); }
     .stat-block__label { font-size:0.875rem; color:rgba(255,255,255,0.5); margin-top:8px; text-transform:uppercase; letter-spacing:0.08em; }
@@ -25,7 +25,7 @@
 </head>
 <body>
   <div class="urgence-banner">
-    <a href="tel:+32485166635"><i class="fas fa-bolt"></i> Elektrisch noodgeval 7d/7 — Interventie binnen 2-4u &nbsp;·&nbsp; +32 485 16 66 35 <i class="fas fa-arrow-right"></i></a>
+    <a href="tel:+32485166635"><i class="fas fa-bolt"></i> <span class="urgence-full">Elektrisch noodgeval 7d/7 — Interventie binnen 2-4u &nbsp;·&nbsp; </span>+32 485 16 66 35 <i class="fas fa-arrow-right"></i></a>
   </div>
   <nav class="nav nav--transparent" id="nav">
     <div class="container">
@@ -204,7 +204,7 @@
         <span class="section-header__eyebrow">Getuigenissen</span>
         <h2>Wat onze klanten zeggen</h2>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;" class="stagger">
+      <div style="display:grid;grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));gap:24px;" class="stagger">
         <div class="fade-up" style="background:white;border-radius:var(--radius);padding:32px;border:1px solid var(--gray-100);box-shadow:var(--shadow-sm);">
           <div style="display:flex;gap:4px;margin-bottom:16px;color:var(--accent);">
             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>

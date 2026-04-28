@@ -65,6 +65,16 @@
   });
 })();
 
+// ===== URGENCE BANNER HEIGHT (used to offset the fixed nav and body padding) =====
+function updateUrgenceHeight() {
+  const banner = document.querySelector('.urgence-banner');
+  const h = banner ? banner.offsetHeight : 0;
+  document.documentElement.style.setProperty('--urgence-h', h + 'px');
+}
+updateUrgenceHeight();
+window.addEventListener('resize', updateUrgenceHeight);
+window.addEventListener('load', updateUrgenceHeight); // re-run after fonts/images settle
+
 // ===== NAV SCROLL BEHAVIOR =====
 const nav = document.getElementById('nav');
 
