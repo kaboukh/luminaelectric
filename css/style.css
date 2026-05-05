@@ -435,10 +435,24 @@ section { padding: var(--section-pad) 0; }
   height: 100vh;
   min-height: 700px;
   display: flex;
-  align-items: center;
+  /* `safe center` : empêche le contenu de déborder *vers le haut* derrière la nav
+     fixée quand la pile de contenu (badge + h1 + sous-titre + CTAs empilés + stats
+     repliées) est plus haute que la boîte hero — cas typique sur Android où la
+     barre d'URL réduit la hauteur visible. iOS Safari ne montrait pas le bug. */
+  align-items: safe center;
   justify-content: center;
   overflow: hidden;
   background: var(--near-black);
+}
+
+/* Filet de sécurité supplémentaire en mobile : on garantit un padding sous la
+   stack fixe (urgence-banner + nav) pour que le contenu ne touche jamais la nav,
+   même si `safe center` n'est pas supporté par un navigateur ancien. */
+@media (max-width: 900px) {
+  .hero {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
 }
 
 .hero__bg {
